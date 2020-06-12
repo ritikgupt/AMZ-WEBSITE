@@ -4,12 +4,6 @@ var a = require('express');
 var morgan = require('morgan');
 var port = process.env.PORT || 5000;
 var app = a();
-
-
-var HomeRoutes=require('./routes/home')
-app.use(HomeRoutes)
-
-
 app.use(a.urlencoded({extended: true}));
 app.use(a.json());
 app.set('view engine', 'ejs');
@@ -25,7 +19,8 @@ app.use(g());
 app.use(cors({
   credentials: true,
 }));
-
+var HomeRoutes=require('./routes/home')
+app.use(HomeRoutes)
 
 
 app.use(function(req, res, next) {
