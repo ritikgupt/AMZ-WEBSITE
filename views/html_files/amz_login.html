@@ -10,23 +10,23 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="../assets/img/favicon.png" rel="icon">
-  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="../../public/img/favicon.png" rel="icon">
+  <link href="../../public/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="../assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="../assets/vendor/venobox/venobox.css" rel="stylesheet">
-  <link href="../assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../../public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../public/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="../../public/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../../public/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="../../public/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="../../public/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="../../public/vendor/aos/aos.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="../assets/css/style.css" rel="stylesheet">
+  <link href="../../public/css/style.css" rel="stylesheet">
 
 </head>
 
@@ -36,16 +36,16 @@
   <header id="header" class="fixed-top ">
     <div class="container-fluid d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="index.html">AMZ</a></h1>
+      <h1 class="logo mr-auto"><a href="./home.html">AMZ</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <!-- <a href="home.html" class="logo mr-auto"><img src="../public/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li ><a href="../index.html">Home</a></li>
+          <li ><a href="./home.html">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#services">Internship</a></li>
-          <li><a href="#portfolio">Past Workshop</a></li>
+          <li><a href="#portfolio">Events</a></li>
           <li class="drop-down"><a href="">Programmes</a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
@@ -75,12 +75,12 @@
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
+  <section id="amz-login" class="d-flex align-items-center">
 
     <div class="container">
-        <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-12">
-                <div class="form-title text-center">
+        <div class="row mt-3 ">
+            <div class="col-lg-8 col-md-8 col-sm-12 order-2 order-lg-1">
+                <!-- <div class="form-title text-center">
                     <p>Login</p>
                   </div>
                   <div class="d-flex flex-column text-center">
@@ -102,34 +102,52 @@
                       </div>
                       
                     </form>
-               </div>
+               </div> -->
             </div>
-           <div class="col-lg-6 col-md-6 col-sm-12">
-                <div class="form-title text-center">
-                    <p>Login</p>
+           <div class="col-lg-4 col-md-4 col-sm-12 order-1 order-lg-2">
+                <div class="form-title text-left mb-5">
+                    <h2>Amz Login</h2>
+                    <p>Don't have an account <span><a href="./amz_signin.html"> Create your account,</a></span>
+                    <br>it takes less than a minute</p>
                 </div>
                 <div class="d-flex flex-column text-center">
-                <form class="modal-form" action="">
+                <form class="login-form" action="">
                   <div class="form-group">
-                    <input type="email" class="form-control" id="email" placeholder="USER ID">
+                    <input type="email" class="form-control" id="email" placeholder="USER ID" autocomplete="off">
                   </div>
                   <div class="form-group">
-                    <input type="password" class="form-control" id="password" placeholder="PASSWORD">
+                    <input type="password" class="form-control" id="password" placeholder="PASSWORD" autocomplete="off">
                   </div>
-                  <button type="submit" class="btn byn-danger btn-round">Login</button>
+                  
                   <div class="row">
-                    <div class="col-6">
+                    <div class="col-md-6 col-sm-12 offset-md-6 mr-auto">
                       <button type="button" class="btn btn-info btn-block btn-round">Login</button>
                     </div>
-                    <div class="col-6">
-                      <button type="button" class="btn btn-info btn-block btn-round">Reset</button>
+                  </div>
+
+                  <div class="row mt-3">
+                    <div class="col-12">
+                      <p class="text-left text-black">Connect with social media</p>
+                    <hr class="my-4 text-white">
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6 col-sm-12 social-links mb-3">
+                      <a href="" class="btn btn-primary btn-block  btn-round facebook">Facebook</a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 social-links mb-3">
+                      <a href="" class="btn btn-primary btn-block btn-round twitter">Twitter</a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 social-links mb-3">
+                      <a href="" class="btn btn-primary btn-block btn-round google">Google+</a>
                     </div>
                   </div>
                   
                 </form>
-           </div>
+              </div>
+              
         </div>
     </div>
+    
   </section><!-- End Hero -->
 
 
@@ -159,18 +177,18 @@
   
 
   <!-- Vendor JS Files -->
-  <script src="../assets/vendor/jquery/jquery.min.js"></script>
-  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="../assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="../assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="../assets/vendor/counterup/counterup.min.js"></script>
-  <script src="../assets/vendor/venobox/venobox.min.js"></script>
-  <script src="../assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../../public/vendor/jquery/jquery.min.js"></script>
+  <script src="../../public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../../public/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="../../public/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="../../public/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../../public/vendor/counterup/counterup.min.js"></script>
+  <script src="../../public/vendor/venobox/venobox.min.js"></script>
+  <script src="../../public/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="../../public/vendor/aos/aos.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="../assets/js/main.js"></script>
+  <script src="../../public/js/main.js"></script>
 
 </body>
 
