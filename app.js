@@ -1,28 +1,30 @@
-var compression = require('compression');
-var createError = require('http-errors');
-var a = require('express');
-var morgan = require('morgan');
-var port = process.env.PORT || 5000;
-var app = a();
+const compression = require('compression');
+const createError = require('http-errors');
+const a = require('express');
+const morgan = require('morgan');
+const port = process.env.PORT || 5000;
+const app = a();
 app.use(a.urlencoded({extended: true}));
 app.use(a.json());
 app.set('view engine', 'ejs');
 app.use(a.static('public'));
 app.use('/uploads', a.static('uploads'));
 app.use(compression());
-var winston = require('./config/winston');
+const winston = require('./config/winston');
 app.use(morgan('combined', { stream: winston.stream }));
-var g = require('express-sanitizer');
-var cors = require('cors');
+const g = require('express-sanitizer');
+const cors = require('cors');
 app.use(a.static('uploads'));
 app.use(g());
 app.use(cors({
   credentials: true,
 }));
-var HomeRoutes=require('./routes/home')
+const HomeRoutes=require('./routes/home')
 app.use(HomeRoutes)
-var SliderRoutes=require('./routes/slider')
+const SliderRoutes=require('./routes/slider')
 app.use(SliderRoutes)
+const LoginRoutes=require('./routes/login')
+app.use(LoginRoutes)
 
 app.use(function(req, res, next) {
   next(createError(404));
