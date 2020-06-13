@@ -21,7 +21,8 @@ app.use(cors({
 }));
 var HomeRoutes=require('./routes/home')
 app.use(HomeRoutes)
-
+var SliderRoutes=require('./routes/slider')
+app.use(SliderRoutes)
 
 app.use(function(req, res, next) {
   next(createError(404));
