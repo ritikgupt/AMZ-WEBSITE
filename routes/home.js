@@ -1,19 +1,16 @@
 var express = require('express');
 var router = express.Router();
-const db = require('../db/db');
+const slider = require('../db/image');
 
 router.get('/',async(req,res)=>{
-    console.log(req.body.img_url)
+    let a = await slider.show()
     try{
-        let a = await db.add_slider(req)
+        console.log(a)
         res.render('home');
     }catch(e){
         res.json({"message":e})
     }
 })
-
-
-
 
 
 module.exports = router;
