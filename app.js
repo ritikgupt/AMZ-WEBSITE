@@ -29,6 +29,8 @@ const NewsRoutes=require('./routes/news')
 app.use(NewsRoutes)
 const PartnerRoutes=require('./routes/partner')
 app.use(PartnerRoutes)
+const TrustedRoutes=require('./routes/trusted');
+app.use(TrustedRoutes)
 app.use(function(req, res, next) {
   next(createError(404));
 });
