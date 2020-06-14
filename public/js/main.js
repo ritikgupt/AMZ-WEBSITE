@@ -1,9 +1,4 @@
-/**
-* Template Name: Arsha - v2.0.0
-* Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
 !(function($) {
   "use strict";
 
@@ -200,6 +195,44 @@
       },
       768: {
         items: 6
+      }
+    }
+  });
+
+   // Latest Workshop (uses the Owl Carousel library)
+   $(".latest-workshop-carousel").owlCarousel({
+    autoplay: true,
+    dots: true,
+    loop: true,
+    stopOnHover: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      768: {
+        items: 1
+      },
+      900: {
+        items: 1
+      }
+    }
+  });
+
+   // Previous Workshop (uses the Owl Carousel library)
+   $(".previous-workshop-carousel").owlCarousel({
+    autoplay: true,
+    dots: true,
+    loop: true,
+    stopOnHover: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      768: {
+        items: 2
+      },
+      900: {
+        items: 3
       }
     }
   });
