@@ -27,7 +27,8 @@ const LoginRoutes=require('./routes/login')
 app.use(LoginRoutes)
 const NewsRoutes=require('./routes/news')
 app.use(NewsRoutes)
-
+const PartnerRoutes=require('./routes/partner')
+app.use(PartnerRoutes)
 app.use(function(req, res, next) {
   next(createError(404));
 });
