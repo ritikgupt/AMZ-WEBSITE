@@ -2322,6 +2322,108 @@ label{
   }
 }
 
+/*--------------------------------------------------------------
+# Courses Section
+--------------------------------------------------------------*/
+.card-container {
+  background: #f9f9f9;
+  width: 100%;
+  padding-top: 30px;
+  font-family: "montserrat-300", sans-serif;
+}
+.card-img {
+  min-width: 363px !important;
+  height: 400px !important;
+  opacity: 50%;
+}
+.custom-margin-1 {
+  padding-right: 10%;
+  padding-left: 10%;
+}
+.card-img-overlay {
+  background-color: rgba(#000, 0.4);
+}
+.cg-home-background {
+  background-color: #482080;
+}
+.card-title {
+  padding-bottom: 2px;
+  font-size: 18px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: 1.25px;
+  text-align: left;
+  font-family: "montserrat-300", sans-serif;
+}
+.card-subtitle {
+  font-size: 27px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+   line-height: 1.48;
+  letter-spacing: 1.50px;
+  text-align: left;
+  color: #ffffff;
+  font-family: "montserrat-300", sans-serif;
+}
+
+.online-btn{
+  padding: 1rem 4rem;
+  background-color: #1f09e0;
+  border-color: #1f09e0;
+  letter-spacing: 1.8px;
+}
+.online-btn:hover, .online-btn:active{
+  background-color: #1f09e092;
+  border-color: #1f09e0;
+}
+
+.offline-btn{
+  padding: 1rem 4rem;
+  background-color: #cf072f;
+  border-color: #cf072f;
+  letter-spacing: 1.8px;
+}
+.offline-btn:hover, .offline-btn:active{
+  background-color: #8b0621b6;
+  border-color: #cf072f;
+}
+.card-text {
+  padding-top: 72px;
+  font-size: 16px;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.56;
+  letter-spacing: normal;
+  text-align: left;
+}
+
+
+.amz-courses-1 {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1"><path fill="rgba(0,0,0,0.4)" d="M0 0h1v1H0z"/></svg>'),
+      url("../img/courses/Mask\ Group\ 1@3x.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  height: 100%;
+  
+}
+
+.amz-courses-2 {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1"><path fill="rgba(0,0,0,0.4)" d="M0 0h1v1H0z"/></svg>'),
+      url("../img/courses/Mask\ Group\ 2@3x.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  height: 100%;
+}
+
+
 
 
 
@@ -2435,11 +2537,6 @@ label{
   background-color: #dd4b38;
   border-color: #dd4b38 !important;
 }
-
-
-
-
-
 
 
 /*--------------------------------------------------------------
@@ -2708,5 +2805,5 @@ label{
   .events-item .events-wrap .events-info p {
     font-size: 18px;
   }
-
 }
+
