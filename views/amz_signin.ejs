@@ -10,23 +10,23 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="/img/favicon.png" rel="icon">
-  <link href="/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="../../public/img/favicon.png" rel="icon">
+  <link href="../../public/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="/vendor/icofont/icofont.min.css" rel="stylesheet">
-  <link href="/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="/vendor/venobox/venobox.css" rel="stylesheet">
-  <link href="/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../../public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../public/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="../../public/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../../public/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="../../public/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="../../public/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="../../public/vendor/aos/aos.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="/css/style.css" rel="stylesheet">
+  <link href="../../public/css/style.css" rel="stylesheet">
 
 </head>
 
@@ -106,22 +106,30 @@
             </div>
            <div class="col-lg-4 col-md-4 col-sm-12 order-1 order-lg-2">
                 <div class="form-title text-left mb-5">
-                    <h2>Amz Login</h2>
-                    <p>Don't have an account <span><a href="./amz_signin.html"> Create your account,</a></span>
-                    <br>it takes less than a minute</p>
+                    <h2>Amz Signin</h2>
+                    <p>You have an account <span><a href="./amz_login.html"> Login into your account,</a></span>
                 </div>
                 <div class="d-flex flex-column text-center">
-                <form class="login-form" action="">
+                <form class="signin-form" action="">
+                  <div class="form-group">
+                      <input type="text" class="form-control" name="user_name" id="user_name" placeholder="Name" autocomplete="off">
+                  </div>
+
                   <div class="form-group">
                     <input type="email" class="form-control" name="email" id="email" placeholder="Email ID" autocomplete="off">
                   </div>
+
+                  <div class="form-group">
+                      <input type="number" class="form-control" name="phone_no" id="phone_no" placeholder="Phone No." autocomplete="off">
+                  </div>
+                  
                   <div class="form-group">
                     <input type="password" class="form-control" name="password" id="password" placeholder="PASSWORD" autocomplete="off">
                   </div>
                   
                   <div class="row">
                     <div class="col-md-6 col-sm-12 offset-md-6 mr-auto">
-                      <button type="button" class="btn btn-info btn-block btn-round">Login</button>
+                      <button type="button" class="btn btn-info btn-block btn-round">Signin</button>
                     </div>
                   </div>
 
@@ -177,19 +185,17 @@
   
 
   <!-- Vendor JS Files -->
-  <script src="/vendor/jquery/jquery.min.js"></script>
-  <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="/vendor/waypoints/jquery.waypoints.min.js"></script>
-  <script src="/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="/vendor/counterup/counterup.min.js"></script>
-  <script src="/vendor/venobox/venobox.min.js"></script>
-  <script src="/vendor/owl.carousel/owl.carousel.min.js"></script>
-  <script src="/vendor/aos/aos.js"></script>
+  <script src="../../public/vendor/jquery/jquery.min.js"></script>
+  <script src="../../public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../../public/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="../../public/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="../../public/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../../public/vendor/counterup/counterup.min.js"></script>
+  <script src="../../public/vendor/venobox/venobox.min.js"></script>
+  <script src="../../public/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="../../public/vendor/aos/aos.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="/js/main.js"></script>
+  <script src="../../public/js/main.js"></script>
 
 </body>
-
-</html>
