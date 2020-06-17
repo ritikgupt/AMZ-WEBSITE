@@ -246,17 +246,19 @@
     offset: '80%'
   });
 
-  // Porfolio isotope and filter
+  // Courses isotope and filter
   $(window).on('load', function() {
-    var portfolioIsotope = $('.portfolio-container').isotope({
-      itemSelector: '.portfolio-item'
+    
+    var courseIsotope = $('.course-container').isotope({
+      itemSelector: '.course-item',
+      filter: '.filter-civil'
     });
-
-    $('#portfolio-flters li').on('click', function() {
-      $("#portfolio-flters li").removeClass('filter-active');
+    
+    $('#course-flters li').on('click', function() {
+      $("#course-flters li").removeClass('filter-active');
       $(this).addClass('filter-active');
 
-      portfolioIsotope.isotope({
+      courseIsotope.isotope({
         filter: $(this).data('filter')
       });
       aos_init();
@@ -270,7 +272,7 @@
     });
   });
 
-  // Portfolio details carousel
+  //  details carousel
   $(".portfolio-details-carousel").owlCarousel({
     autoplay: true,
     dots: true,
@@ -293,25 +295,6 @@
   $(function () {
     $('[data-toggle="tooltip"]').tooltip()
   })
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
+}); 
 
 })(jQuery);
