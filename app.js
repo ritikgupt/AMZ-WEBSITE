@@ -33,9 +33,11 @@ const TrustedRoutes=require('./routes/trusted');
 app.use(TrustedRoutes)
 const AdvisoryRoutes=require('./routes/advisory')
 app.use(AdvisoryRoutes)
+const VideoRoutes=require('./routes/video')
+app.use(VideoRoutes)
 app.use(function(req, res, next) {
   next(createError(404));
-});
+})
 
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
