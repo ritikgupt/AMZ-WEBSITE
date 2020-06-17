@@ -31,9 +31,12 @@ const PartnerRoutes=require('./routes/partner')
 app.use(PartnerRoutes)
 const TrustedRoutes=require('./routes/trusted');
 app.use(TrustedRoutes)
+const AdvisoryRoutes=require('./routes/advisory')
+app.use(AdvisoryRoutes)
 app.use(function(req, res, next) {
   next(createError(404));
 });
+
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
