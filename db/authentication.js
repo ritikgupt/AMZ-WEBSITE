@@ -53,6 +53,18 @@ auth.edit = (req,request) =>{
         });
     });
 }
+auth.update = (password,username) =>{
+    
+    return new Promise((resolve, reject) => {
+        pool.query('update auth set password=? where username=?', 
+        [password,username]
+        , (err,results) =>{
+            if(err)
+            return reject(err);
+            return resolve(results);
+        });
+    });
+}
 auth.login = (req) =>{
     return new Promise((resolve, reject) => {
         pool.query('Select * from auth where username=?',[req.username],

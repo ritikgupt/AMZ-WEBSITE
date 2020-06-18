@@ -63,7 +63,6 @@ router.post('/login',async(req,res)=>{
         let a = await auth.login(req.body)
         console.log(a[0].username)
         const match = await bcrypt.compare(req.body.password,a[0].password)
-        console.log(match)
 if(a[0].username==req.body.username && match)
 res.json({message:"User successfully logged In"})
 else
