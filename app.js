@@ -35,6 +35,8 @@ const AdvisoryRoutes=require('./routes/advisory')
 app.use(AdvisoryRoutes)
 const VideoRoutes=require('./routes/video')
 app.use(VideoRoutes)
+const ForgotRoutes=require('./routes/forgot-password')
+app.use(ForgotRoutes)
 app.use(function(req, res, next) {
   next(createError(404));
 })
