@@ -58,13 +58,19 @@ router.get('/login',async(req,res)=>{
     }
 })
 
-// router.post('/login',async(req,res)=>{
-//     try{
-// if(req.body.email==)
-//     }catch(e){
-//         res.json({message:e})
-//     }
-
-// })
+router.post('/login',async(req,res)=>{
+    try{
+        let a = await auth.login(req.body)
+        console.log(a[0].username)
+        const match = await bcrypt.compare(req.body.password,a[0].password)
+        console.log(match)
+if(a[0].username==req.body.username && match)
+res.json({message:"User successfully logged In"})
+else
+res.json({message:"Incorrect password entered"})
+    }catch(e){
+        res.json({message:"incorrect credentials"})
+    }
+})
 
 module.exports = router;

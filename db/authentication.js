@@ -53,6 +53,16 @@ auth.edit = (req,request) =>{
         });
     });
 }
+auth.login = (req) =>{
+    return new Promise((resolve, reject) => {
+        pool.query('Select * from auth where username=?',[req.username],
+         (err,results) =>{
+            if(err)
+            return reject(err);
+            return resolve(results);
+        });
+    });
+}
 auth.show = () =>{
     return new Promise((resolve, reject) => {
         pool.query('Select * from auth', 
