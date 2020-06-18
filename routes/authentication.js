@@ -69,8 +69,8 @@ res.json({message:"User successfully logged In"})
 else
 res.json({message:"Incorrect password entered"})
     }catch(e){
-        res.json({message:"incorrect credentials"})
-    }
+        res.json({message:"Incorrect credentials"})
+    } 
 })
 
 module.exports = router;
