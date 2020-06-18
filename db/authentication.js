@@ -20,47 +20,47 @@ auth.add = (req,password) =>{
         });
     });
 }
-// auth.deleteAll = () =>{
+auth.deleteAll = () =>{
     
-//     return new Promise((resolve, reject) => {
-//         pool.query('delete from auth', (err,results) =>{
-//             if(err)
-//             return reject(err);
-//             return resolve(results);
-//         });
-//     });
-// }
-// auth.deleteOne = (req) =>{
+    return new Promise((resolve, reject) => {
+        pool.query('delete from auth', (err,results) =>{
+            if(err)
+            return reject(err);
+            return resolve(results);
+        });
+    });
+}
+auth.deleteOne = (req) =>{
     
-//     return new Promise((resolve, reject) => {
-//         pool.query('Delete from auth where (username)=(?)', 
-//         [username], (err,results) =>{
-//             if(err)
-//             return reject(err);
-//             return resolve(results);
-//         });
-//     });
-// }
-// auth.edit = (req,request) =>{
+    return new Promise((resolve, reject) => {
+        pool.query('Delete from auth where (username)=(?)', 
+        [req.username], (err,results) =>{
+            if(err)
+            return reject(err);
+            return resolve(results);
+        });
+    });
+}
+auth.edit = (req,request) =>{
     
-//     return new Promise((resolve, reject) => {
-//         pool.query('update auth set img_url=?,description=?,heading=? where authid=?', 
-//         [req.img_url,req.description,req.heading,request.id]
-//         , (err,results) =>{
-//             if(err)
-//             return reject(err);
-//             return resolve(results);
-//         });
-//     });
-// }
-// auth.show = () =>{
-//     return new Promise((resolve, reject) => {
-//         pool.query('Select * from auth', 
-//          (err,results) =>{
-//             if(err)
-//             return reject(err);
-//             return resolve(results);
-//         });
-//     });
-// }
+    return new Promise((resolve, reject) => {
+        pool.query('update auth set image=?,username=?,branch=?,college=?,email=?,mobile=? where username=?', 
+        [req.image,req.username,req.branch,req.college,req.email,req.mobile,request.username]
+        , (err,results) =>{
+            if(err)
+            return reject(err);
+            return resolve(results);
+        });
+    });
+}
+auth.show = () =>{
+    return new Promise((resolve, reject) => {
+        pool.query('Select * from auth', 
+         (err,results) =>{
+            if(err)
+            return reject(err);
+            return resolve(results);
+        });
+    });
+}
 module.exports = auth
