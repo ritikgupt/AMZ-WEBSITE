@@ -2896,8 +2896,12 @@ label{
 }
 
 .course-item .card{
-  box-shadow: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 4px 1px rgba(255,255,255,0.6);
+  transition: 0.3s;
   border: none;
+}
+.course-item .card:hover{
+  box-shadow: 0 4px 8px 2px rgba(255,255,255,0.6);
 }
 
 .course_icon-img{
