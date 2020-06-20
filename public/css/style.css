@@ -2286,6 +2286,7 @@ label{
   background-color: #1f09e0;
   border-color: #1f09e0;
   letter-spacing: 1.8px;
+  color: #ffffff !important;
 }
 .online-btn:hover, .online-btn:active{
   background-color: #1f09e092;
@@ -2297,6 +2298,7 @@ label{
   background-color: #cf072f;
   border-color: #cf072f;
   letter-spacing: 1.8px;
+  color: #ffffff !important;
 }
 .offline-btn:hover, .offline-btn:active{
   background-color: #8b0621b6;
@@ -2912,4 +2914,9 @@ label{
   /* margin: -82px 0 0 -34px;
   padding: 1px 0 3px 0;
   position: absolute; */
+}
+
+.course-info a{
+  border-radius: 0px;
+  color: #ffffff !important;
 }
