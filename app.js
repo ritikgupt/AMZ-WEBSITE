@@ -37,6 +37,8 @@ const VideoRoutes=require('./routes/video')
 app.use(VideoRoutes)
 const ForgotRoutes=require('./routes/forgot-password')
 app.use(ForgotRoutes)
+const CoursesRoutes=require('./routes/courses')
+app.use(CoursesRoutes)
 app.use(function(req, res, next) {
   next(createError(404));
 })
