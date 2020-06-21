@@ -39,6 +39,8 @@ const ForgotRoutes=require('./routes/forgot-password')
 app.use(ForgotRoutes)
 const CoursesRoutes=require('./routes/courses')
 app.use(CoursesRoutes)
+const CampusCoursesRoutes=require('./routes/campus-course')
+app.use(CampusCoursesRoutes)
 app.use(function(req, res, next) {
   next(createError(404));
 })
