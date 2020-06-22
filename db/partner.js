@@ -8,11 +8,11 @@ const pool = mysql.createPool({
 });
 let partner={};
 
-partner.add = (req) =>{
+partner.add = (image) =>{
     
     return new Promise((resolve, reject) => {
         pool.query('insert into partner (img_url) values (?)', 
-        [req.img_url], (err,results) =>{
+        [image], (err,results) =>{
             if(err)
             return reject(err);
             return resolve(results);

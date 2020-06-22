@@ -9,11 +9,11 @@ const pool = mysql.createPool({
 
 let advisory={};
 
-advisory.add = (req) =>{
+advisory.add = (req,image) =>{
     
     return new Promise((resolve, reject) => {
         pool.query('insert into advisory (name,designation,img_url) values (?,?,?)', 
-        [req.name,req.designation,req.img_url], (err,results) =>{
+        [req.name,req.designation,image], (err,results) =>{
             if(err)
             return reject(err);
             return resolve(results);
@@ -41,11 +41,11 @@ advisory.deleteOne = (req) =>{
         });
     });
 }
-advisory.edit = (req,request) =>{
+advisory.edit = (req,request,image) =>{
     
     return new Promise((resolve, reject) => {
         pool.query('update advisory set img_url=?,designation=?,name=? where advisoryid=?', 
-        [req.img_url,req.designation,req.name,request.id]
+        [image,req.designation,req.name,request.id]
         , (err,results) =>{
             if(err)
             return reject(err);

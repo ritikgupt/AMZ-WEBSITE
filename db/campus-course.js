@@ -9,11 +9,11 @@ const pool = mysql.createPool({
 
 let campus={};
 
-campus.add = (req) =>{
+campus.add = (req,image) =>{
     
     return new Promise((resolve, reject) => {
         pool.query('insert into campus (courseid,priority,image,description,title,domain,date) values (?,?,?,?,?,?,CURDATE())', 
-        [req.courseid,req.priority,req.image,req.description,req.title,req.domain], (err,results) =>{
+        [req.courseid,req.priority,image,req.description,req.title,req.domain], (err,results) =>{
             if(err)
             return reject(err);
             return resolve(results);
