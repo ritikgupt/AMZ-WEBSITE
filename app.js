@@ -1,20 +1,20 @@
 const compression = require('compression');
 const createError = require('http-errors');
-const a = require('express');
+const express = require('express');
 const morgan = require('morgan');
 const port = process.env.PORT || 5000;
-const app = a();
-app.use(a.urlencoded({extended: true}));
-app.use(a.json());
+const app = express();
+app.use(express.urlencoded({extended: true}));
+app.use(express.json());
 app.set('view engine', 'ejs');
-app.use(a.static('public'));
-app.use('/uploads', a.static('uploads'));
+app.use(express.static('public'));
+app.use('/uploads', express.static('uploads'));
 app.use(compression());
 const winston = require('./config/winston');
 app.use(morgan('combined', { stream: winston.stream }));
 const g = require('express-sanitizer');
 const cors = require('cors');
-app.use(a.static('uploads'));
+app.use(express.static('uploads'));
 app.use(g());
 app.use(cors({
   credentials: true,
