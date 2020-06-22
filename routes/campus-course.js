@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 const campus = require('../db/campus-course');
+var multer = require('multer');
+var upload = multer({dest: 'uploads/'});
 
 router.get('/amz/campus',async(req,res)=>{
     try{
@@ -10,9 +12,9 @@ router.get('/amz/campus',async(req,res)=>{
         res.json({message:e})
     }
 })
-router.post('/campus',async(req,res)=>{
+router.post('/campus',upload.single('image'),async(req,res)=>{
     try{
-let a = await campus.add(req.body)
+let a = await campus.add(req.body,req.file.path)
 res.json({message:"course added"})
     }catch(e)
     {

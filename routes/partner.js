@@ -1,11 +1,13 @@
 var express = require('express');
 var router = express.Router();
 const partner = require('../db/partner');
+var multer = require('multer');
+var upload = multer({dest: 'uploads/'});
 
-router.post('/partner',async(req,res)=>{
+router.post('/partner',upload.single('image'),async(req,res)=>{
     try{
-    let a = await partner.add(req.body)
-    res.json({message:"partner added "+req.body.img_url})
+    let a = await partner.add(req.file.path)
+    res.json({message:"partner added "})
     }catch(e){
         console.log(e)
         res.json({message:e})

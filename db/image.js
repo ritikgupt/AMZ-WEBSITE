@@ -12,7 +12,7 @@ image.add = (req) =>{
     
     return new Promise((resolve, reject) => {
         pool.query('insert into home_slider (img_url) values (?)', 
-        [req.img_url], (err,results) =>{
+        [req], (err,results) =>{
             if(err)
             return reject(err);
             return resolve(results);

@@ -1,10 +1,12 @@
 var express = require('express');
 var router = express.Router();
 const slider = require('../db/image');
-
-router.post('/slider',async(req,res)=>{
+var multer = require('multer');
+var upload = multer({dest: 'uploads/'});
+router.post('/slider',upload.single('image'),async(req,res)=>{
+    console.log(req.file)
     try{
-    let a = await slider.add(req.body)
+    let a = await slider.add(req.file.path)
     res.json({message:"slider added "+req.body.img_url})
     }catch(e){
         console.log(e)
