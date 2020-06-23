@@ -19,31 +19,31 @@ app.use(g());
 app.use(cors({
   credentials: true,
 }));
-const HomeRoutes=require('./routes/home')
-app.use(HomeRoutes)
-const SliderRoutes=require('./routes/slider')
-app.use(SliderRoutes)
-const AuthenticationRoutes=require('./routes/authentication')
-app.use(AuthenticationRoutes)
-const NewsRoutes=require('./routes/news')
-app.use(NewsRoutes)
-const PartnerRoutes=require('./routes/partner')
-app.use(PartnerRoutes)
-const TrustedRoutes=require('./routes/trusted');
-app.use(TrustedRoutes)
-const AdvisoryRoutes=require('./routes/advisory')
-app.use(AdvisoryRoutes)
-const VideoRoutes=require('./routes/video')
-app.use(VideoRoutes)
-const ForgotRoutes=require('./routes/forgot-password')
-app.use(ForgotRoutes)
-const CoursesRoutes=require('./routes/courses')
-app.use(CoursesRoutes)
-const CampusCoursesRoutes=require('./routes/campus-course')
-app.use(CampusCoursesRoutes)
+const HomeRoutes = require('./routes/home');
+app.use(HomeRoutes);
+const SliderRoutes = require('./routes/slider');
+app.use(SliderRoutes);
+const AuthenticationRoutes = require('./routes/authentication');
+app.use(AuthenticationRoutes);
+const NewsRoutes = require('./routes/news');
+app.use(NewsRoutes);
+const PartnerRoutes = require('./routes/partner');
+app.use(PartnerRoutes);
+const TrustedRoutes = require('./routes/trusted');
+app.use(TrustedRoutes);
+const AdvisoryRoutes = require('./routes/advisory');
+app.use(AdvisoryRoutes);
+const VideoRoutes = require('./routes/video');
+app.use(VideoRoutes);
+const ForgotRoutes = require('./routes/forgot-password');
+app.use(ForgotRoutes);
+const CoursesRoutes = require('./routes/courses');
+app.use(CoursesRoutes);
+const CampusCoursesRoutes = require('./routes/campus-course');
+app.use(CampusCoursesRoutes);
 app.use(function(req, res, next) {
   next(createError(404));
-})
+});
 
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
@@ -57,7 +57,6 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error', {err: err});
 });
-
 
 
 app.listen(port, () => {
