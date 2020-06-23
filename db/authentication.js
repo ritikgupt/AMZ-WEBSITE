@@ -9,11 +9,11 @@ const pool = mysql.createPool({
 
 let auth = {};
 
-auth.add = (req, password) => {
+auth.add = (req, password, image) => {
 
   return new Promise((resolve, reject) => {
     pool.query('insert into auth (username,mobile,branch,college,email,image,password,date) values (?,?,?,?,?,?,?,CURDATE())',
-      [req.username, req.mobile, req.branch, req.college, req.email, req.image, password], (err, results) => {
+      [req.username, req.mobile, req.branch, req.college, req.email, image, password], (err, results) => {
         if (err)
           return reject(err);
         return resolve(results);

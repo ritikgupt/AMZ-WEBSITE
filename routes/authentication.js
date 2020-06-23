@@ -1,16 +1,32 @@
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken');
 const saltRounds = 10;
+var multer = require('multer');
+var upload = multer({dest: 'uploads/'});
 const auth = require('../db/authentication');
 
-router.post('/register', async(req, res) => {
+router.get('/register', async(req, res) => {
+  try {
+    res.render('registeruser');
+  } catch (e){
+    res.json({message: e});
+  }
+});
+router.post('/register', upload.single('image'), async(req, res) => {
+  console.log(req.body);
   try {
     await bcrypt.genSalt(saltRounds, function(err, salt) {
-      bcrypt.hash(req.body.password, salt, function(err, hash) {
-        auth.add(req.body, hash);
-      });
+      if (err)
+        res.json({message: err});
+      else {
+        bcrypt.hash(req.body.password, salt, function(err, hash) {
+          if (err)
+            res.json({message: err});
+          else
+            auth.add(req.body, hash, req.file.path);
+        });
+      }
     });
     res.json({message: 'user added'});
   } catch (e){
