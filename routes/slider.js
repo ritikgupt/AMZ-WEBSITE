@@ -4,9 +4,9 @@ const slider = require('../db/image');
 var multer = require('multer');
 var upload = multer({dest: 'uploads/'});
 
-router.get('/slider',async(req,res)=>{
-  res.render('slider')
-})
+router.get('/slider', async(req, res) => {
+  res.render('slider');
+});
 router.post('/slider', upload.single('img_url'), async(req, res) => {
   console.log(req.file);
   try {
