@@ -291,10 +291,28 @@
     aos_init();
   });
 
-  $(document).ready(function() { $('#loginModal').modal('show');
+  $('#modal-onCampusCourse').on('click', function() { $('#loginModal').modal('show');
   $(function () {
     $('[data-toggle="tooltip"]').tooltip()
   })
-}); 
+});
+
+$(window).on('load', function() {
+
+  $('#countDownTimer').countdown('2020/12/31').on('update.countdown', function(event) {
+    var $this = $(this).html(event.strftime(''
+      + '<span class="h1 font-weight-bold">%D</span> Day%!d'
+      + '<span class="h1 font-weight-bold">%H</span> Hr'
+      + '<span class="h1 font-weight-bold">%M</span> Min'
+      + '<span class="h1 font-weight-bold">%S</span> Sec'));
+  });
+
+  $('#timerModal').modal('show');
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  });
+
+});
+
 
 })(jQuery);
