@@ -6,13 +6,13 @@ const pool = mysql.createPool({
   host: 'localhost',
   port: '3306',
 });
-let trusted = {};
+let video = {};
 
-trusted.add = (image) => {
+video.add = (req) => {
 
   return new Promise((resolve, reject) => {
-    pool.query('insert into trusted (img_url) values (?)',
-      [image], (err, results) => {
+    pool.query('insert into video (img_url) values (?)',
+      [req.img_url], (err, results) => {
         if (err)
           return reject(err);
         return resolve(results);
@@ -20,10 +20,10 @@ trusted.add = (image) => {
   });
 };
 
-trusted.deleteAll = (req) => {
+video.deleteAll = (req) => {
 
   return new Promise((resolve, reject) => {
-    pool.query('Delete from trusted',
+    pool.query('Delete from video',
       (err, results) => {
         if (err)
           return reject(err);
@@ -31,11 +31,11 @@ trusted.deleteAll = (req) => {
       });
   });
 };
-trusted.deleteOne = (req) => {
+video.deleteOne = (req) => {
 
   return new Promise((resolve, reject) => {
     console.log(req.url);
-    pool.query('Delete from trusted where (img_url)=(?)',
+    pool.query('Delete from video where (img_url)=(?)',
       [req.url], (err, results) => {
         if (err)
           return reject(err);
@@ -43,9 +43,9 @@ trusted.deleteOne = (req) => {
       });
   });
 };
-trusted.show = () => {
+video.show = () => {
   return new Promise((resolve, reject) => {
-    pool.query('Select * from trusted',
+    pool.query('Select * from video',
       (err, results) => {
         if (err)
           return reject(err);
@@ -54,4 +54,4 @@ trusted.show = () => {
   });
 };
 
-module.exports = trusted;
+module.exports = video;

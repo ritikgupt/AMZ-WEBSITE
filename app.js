@@ -1,39 +1,54 @@
 const compression = require('compression');
 const createError = require('http-errors');
-const a = require('express');
+const express = require('express');
 const morgan = require('morgan');
 const port = process.env.PORT || 5000;
-const app = a();
-app.use(a.urlencoded({extended: true}));
-app.use(a.json());
+const app = express();
+app.use(express.urlencoded({extended: true}));
+app.use(express.json());
 app.set('view engine', 'ejs');
-app.use(a.static('public'));
-app.use('/uploads', a.static('uploads'));
+app.use(express.static('public'));
+app.use('/uploads', express.static('uploads'));
 app.use(compression());
 const winston = require('./config/winston');
 app.use(morgan('combined', { stream: winston.stream }));
 const g = require('express-sanitizer');
 const cors = require('cors');
-app.use(a.static('uploads'));
+app.use(express.static('uploads'));
 app.use(g());
 app.use(cors({
   credentials: true,
 }));
-const HomeRoutes=require('./routes/home')
-app.use(HomeRoutes)
-const SliderRoutes=require('./routes/slider')
-app.use(SliderRoutes)
-const LoginRoutes=require('./routes/login')
-app.use(LoginRoutes)
-const NewsRoutes=require('./routes/news')
-app.use(NewsRoutes)
-const PartnerRoutes=require('./routes/partner')
-app.use(PartnerRoutes)
-const TrustedRoutes=require('./routes/trusted');
-app.use(TrustedRoutes)
+const HomeRoutes = require('./routes/home');
+app.use(HomeRoutes);
+const SliderRoutes = require('./routes/slider');
+app.use(SliderRoutes);
+const AuthenticationRoutes = require('./routes/authentication');
+app.use(AuthenticationRoutes);
+const NewsRoutes = require('./routes/news');
+app.use(NewsRoutes);
+const PartnerRoutes = require('./routes/partner');
+app.use(PartnerRoutes);
+const TrustedRoutes = require('./routes/trusted');
+app.use(TrustedRoutes);
+const AdvisoryRoutes = require('./routes/advisory');
+app.use(AdvisoryRoutes);
+const VideoRoutes = require('./routes/video');
+app.use(VideoRoutes);
+const ForgotRoutes = require('./routes/forgot-password');
+app.use(ForgotRoutes);
+const CoursesRoutes = require('./routes/courses');
+app.use(CoursesRoutes);
+const CampusCoursesRoutes = require('./routes/campus-course');
+app.use(CampusCoursesRoutes);
+const adminhomeRoutes = require('./routes/adminhome');
+app.use(adminhomeRoutes);
+
 app.use(function(req, res, next) {
   next(createError(404));
 });
+
+
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
@@ -46,7 +61,6 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error', {err: err});
 });
-
 
 
 app.listen(port, () => {

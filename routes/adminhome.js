@@ -6,7 +6,7 @@ const partner = require('../db/partner');
 const trusted = require('../db/trusted');
 const advisory = require('../db/advisory');
 const video = require('../db/video');
-router.get('/', async(req, res) => {
+router.get('/adminhome', async(req, res) => {
   try {
     let a = await slider.show();
     let b = await news.show();
@@ -14,7 +14,7 @@ router.get('/', async(req, res) => {
     let d = await trusted.show();
     let e = await advisory.show();
     let f = await video.show();
-    res.render('home', {slider: a, news: b, partner: c, trusted: d, advisory: e, video: f});
+    res.render('adminhome', {slider: a, news: b, partner: c, trusted: d, advisory: e, video: f});
   } catch (e){
     res.json({message: e});
   }

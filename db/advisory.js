@@ -7,33 +7,33 @@ const pool = mysql.createPool({
   port: '3306',
 });
 
-let news = {};
+let advisory = {};
 
-news.add = (req, image) => {
+advisory.add = (req, image) => {
 
   return new Promise((resolve, reject) => {
-    pool.query('insert into news (img_url,description,heading,date) values (?,?,?,CURDATE())',
-      [image, req.description, req.heading], (err, results) => {
+    pool.query('insert into advisory (name,designation,img_url) values (?,?,?)',
+      [req.name, req.designation, image], (err, results) => {
         if (err)
           return reject(err);
         return resolve(results);
       });
   });
 };
-news.deleteAll = () => {
+advisory.deleteAll = () => {
 
   return new Promise((resolve, reject) => {
-    pool.query('delete from news', (err, results) => {
+    pool.query('delete from advisory', (err, results) => {
       if (err)
         return reject(err);
       return resolve(results);
     });
   });
 };
-news.deleteOne = (req) => {
+advisory.deleteOne = (req) => {
 
   return new Promise((resolve, reject) => {
-    pool.query('Delete from news where (newsid)=(?)',
+    pool.query('Delete from advisory where (advisoryid)=(?)',
       [req.id], (err, results) => {
         if (err)
           return reject(err);
@@ -41,11 +41,11 @@ news.deleteOne = (req) => {
       });
   });
 };
-news.edit = (req, request) => {
+advisory.edit = (req, request, image) => {
 
   return new Promise((resolve, reject) => {
-    pool.query('update news set img_url=?,description=?,heading=? where newsid=?',
-      [req.img_url, req.description, req.heading, request.id]
+    pool.query('update advisory set img_url=?,designation=?,name=? where advisoryid=?',
+      [image, req.designation, req.name, request.id]
       , (err, results) => {
         if (err)
           return reject(err);
@@ -53,9 +53,9 @@ news.edit = (req, request) => {
       });
   });
 };
-news.show = () => {
+advisory.show = () => {
   return new Promise((resolve, reject) => {
-    pool.query('Select * from news',
+    pool.query('Select * from advisory',
       (err, results) => {
         if (err)
           return reject(err);
@@ -63,4 +63,4 @@ news.show = () => {
       });
   });
 };
-module.exports = news;
+module.exports = advisory;

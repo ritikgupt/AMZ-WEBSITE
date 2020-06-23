@@ -7,45 +7,45 @@ const pool = mysql.createPool({
   port: '3306',
 });
 
-let news = {};
+let campus = {};
 
-news.add = (req, image) => {
+campus.add = (req, image) => {
 
   return new Promise((resolve, reject) => {
-    pool.query('insert into news (img_url,description,heading,date) values (?,?,?,CURDATE())',
-      [image, req.description, req.heading], (err, results) => {
+    pool.query('insert into campus (courseid,priority,image,description,title,domain,date) values (?,?,?,?,?,?,CURDATE())',
+      [req.courseid, req.priority, image, req.description, req.title, req.domain], (err, results) => {
         if (err)
           return reject(err);
         return resolve(results);
       });
   });
 };
-news.deleteAll = () => {
+campus.deleteAll = () => {
 
   return new Promise((resolve, reject) => {
-    pool.query('delete from news', (err, results) => {
+    pool.query('delete from campus', (err, results) => {
       if (err)
         return reject(err);
       return resolve(results);
     });
   });
 };
-news.deleteOne = (req) => {
+campus.deleteOne = (req) => {
 
   return new Promise((resolve, reject) => {
-    pool.query('Delete from news where (newsid)=(?)',
-      [req.id], (err, results) => {
+    pool.query('Delete from campus where (courseid)=(?)',
+      [req.courseid], (err, results) => {
         if (err)
           return reject(err);
         return resolve(results);
       });
   });
 };
-news.edit = (req, request) => {
+campus.edit = (req, request) => {
 
   return new Promise((resolve, reject) => {
-    pool.query('update news set img_url=?,description=?,heading=? where newsid=?',
-      [req.img_url, req.description, req.heading, request.id]
+    pool.query('update campus set image=?,description=?,title=?,domain=?,priority=? where courseid=?',
+      [req.image, req.description, req.title, req.domain, req.priority, request.courseid]
       , (err, results) => {
         if (err)
           return reject(err);
@@ -53,9 +53,9 @@ news.edit = (req, request) => {
       });
   });
 };
-news.show = () => {
+campus.show = () => {
   return new Promise((resolve, reject) => {
-    pool.query('Select * from news',
+    pool.query('Select * from campus',
       (err, results) => {
         if (err)
           return reject(err);
@@ -63,4 +63,4 @@ news.show = () => {
       });
   });
 };
-module.exports = news;
+module.exports = campus;
