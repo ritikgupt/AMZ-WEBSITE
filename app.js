@@ -41,9 +41,13 @@ const CoursesRoutes = require('./routes/courses');
 app.use(CoursesRoutes);
 const CampusCoursesRoutes = require('./routes/campus-course');
 app.use(CampusCoursesRoutes);
+const adminhomeRoutes = require('./routes/adminhome');
+app.use(adminhomeRoutes);
+
 app.use(function(req, res, next) {
   next(createError(404));
 });
+
 
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
