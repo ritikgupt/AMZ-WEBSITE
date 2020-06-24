@@ -4,10 +4,14 @@ const trusted = require('../db/trusted');
 var multer = require('multer');
 var upload = multer({dest: 'uploads/'});
 
+router.get('/trusted', async(req, res) => {
+  res.render('trusted');
+});
+
 router.post('/trusted', upload.single('image'), async(req, res) => {
   try {
     let a = await trusted.add(req.file.path);
-    res.json({message: 'trusted added '});
+    res.json({message: 'trusted section image added '});
   } catch (e){
     console.log(e);
     res.json({message: e});

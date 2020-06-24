@@ -4,6 +4,9 @@ const partner = require('../db/partner');
 var multer = require('multer');
 var upload = multer({dest: 'uploads/'});
 
+router.get('/partner', async(req, res) => {
+  res.render('partner');
+});
 router.post('/partner', upload.single('image'), async(req, res) => {
   try {
     let a = await partner.add(req.file.path);
