@@ -13,7 +13,7 @@ router.get('/amz/internship', async(req, res) => {
   }
 });
 
-router.get('/internship',async(req,res)=>{
+router.get('/internship', async(req, res) => {
   res.render('addinternship');
 });
 

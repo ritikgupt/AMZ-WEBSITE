@@ -12,8 +12,8 @@ router.get('/amz/campus', async(req, res) => {
     res.json({message: e});
   }
 });
-router.get('/campus',async(req,res)=>{
-  res.render('addcampuscourses')
+router.get('/campus', async(req, res) => {
+  res.render('addcampuscourses');
 });
 
 router.post('/campus', upload.single('image'), async(req, res) => {

@@ -13,7 +13,7 @@ router.get('/amz/courses', async(req, res) => {
   }
 });
 
-router.get('/courses',async(req,res)=>{
+router.get('/courses', async(req, res) => {
   res.render('addcourses');
 });
 
