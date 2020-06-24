@@ -307,7 +307,7 @@ $(window).on('load', function() {
 
 });
 
-//On Document Load Discount Modal & Timer
+
 $(window).on('load', function() {
 
   // On Campus Login Modal
@@ -318,7 +318,9 @@ $(window).on('load', function() {
     });
   });
 
-  // On Document Load Discount Modal & Timer
+});
+
+  // On Document Load Discount Modal & Timer Home Page
   $(window).on('load', function() {
 
     $('#countDownTimer').countdown('2020/12/31').on('update.countdown', function(event) {
@@ -329,17 +331,10 @@ $(window).on('load', function() {
       + '<span class="h1 font-weight-bold">%S</span> Sec'));
     });
 
-  $('#timerModal').modal('show');
-  $(function () {
-    $('[data-toggle="tooltip"]').tooltip()
-  });
-});
-
     $('#timerModal').modal('show');
-    $(function() {
-      $('[data-toggle="tooltip"]').tooltip();
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
     });
-
   });
 
 
