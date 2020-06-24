@@ -3,6 +3,9 @@ var router = express.Router();
 const news = require('../db/news');
 var multer = require('multer');
 var upload = multer({dest: 'uploads/'});
+router.get('/news', async(req, res) => {
+  res.render('news');
+});
 router.post('/news', upload.single('image'), async(req, res) => {
   try {
     let a = await news.add(req.body, req.file.path);
