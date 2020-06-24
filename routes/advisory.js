@@ -4,6 +4,9 @@ var multer = require('multer');
 var upload = multer({dest: 'uploads/'});
 const advisory = require('../db/advisory');
 
+router.get('/advisory', async(req, res) => {
+  res.render('advisory');
+});
 router.post('/advisory', upload.single('image'), async(req, res) => {
   console.log(req.body);
   try {
