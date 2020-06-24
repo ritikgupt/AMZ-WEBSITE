@@ -20,9 +20,12 @@ router.post('/slider', upload.single('img_url'), async(req, res) => {
 });
 
 router.get('/editslider', async(req, res) => {
-  let a = await slider.show();
-  console.log(a);
-  res.render('editslider', {sliders: a});
+  try {
+    let a = await slider.show();
+    res.render('editslider', {sliders: a});
+  } catch (e){
+    res.json({message: e});
+  }
 });
 
 router.post('/delete/slider', async(req, res) => {

@@ -10,8 +10,8 @@ router.get('/trusted', async(req, res) => {
 
 router.post('/trusted', upload.single('image'), async(req, res) => {
   try {
-    let a = await trusted.add(req.file.path);
-    res.json({message: 'trusted section image added '});
+    await trusted.add(req.file.path);
+    res.redirect('/trusted');
   } catch (e){
     console.log(e);
     res.json({message: e});
@@ -19,21 +19,30 @@ router.post('/trusted', upload.single('image'), async(req, res) => {
 
 });
 
+router.get('/edittrusted', async(req, res) => {
+  try {
+    let a = await trusted.show();
+    res.render('edittrusted', {trusted: a});
+  } catch (e){
+    res.json({message: e});
+  }
+});
+
 router.post('/delete/trusted', async(req, res) => {
   try {
-    let a = await trusted.deleteAll(req);
-    res.json({message: 'deleted all trusted'});
+    await trusted.deleteAll(req);
+    res.redirect('/edittrusted');
   } catch (e){
     console.log(e);
     res.json({message: 'error deleting all trusted'});
   }
 });
 
-router.post('/:url/trusted', async(req, res) => {
+router.post('/:id/edittrusted', async(req, res) => {
   console.log(req.params);
   try {
-    let a = await trusted.deleteOne(req.params);
-    res.json({message: 'deleted particular trusted'});
+    await trusted.deleteOne(req.params);
+    res.redirect('/edittrusted');
   } catch (e){
     console.log(e);
     res.json({message: 'error deleting particular trusted'});

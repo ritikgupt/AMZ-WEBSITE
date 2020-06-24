@@ -34,9 +34,8 @@ trusted.deleteAll = (req) => {
 trusted.deleteOne = (req) => {
 
   return new Promise((resolve, reject) => {
-    console.log(req.url);
-    pool.query('Delete from trusted where (img_url)=(?)',
-      [req.url], (err, results) => {
+    pool.query('Delete from trusted where (id)=(?)',
+      [req.id], (err, results) => {
         if (err)
           return reject(err);
         return resolve(results);

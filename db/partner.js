@@ -9,7 +9,7 @@ const pool = mysql.createPool({
 let partner = {};
 
 partner.add = (image) => {
-
+  console.log(image);
   return new Promise((resolve, reject) => {
     pool.query('insert into partner (img_url) values (?)',
       [image], (err, results) => {
@@ -20,7 +20,7 @@ partner.add = (image) => {
   });
 };
 
-partner.deleteAll = (req) => {
+partner.deleteAll = () => {
 
   return new Promise((resolve, reject) => {
     pool.query('Delete from partner',
@@ -34,9 +34,8 @@ partner.deleteAll = (req) => {
 partner.deleteOne = (req) => {
 
   return new Promise((resolve, reject) => {
-    console.log(req.url);
-    pool.query('Delete from partner where (img_url)=(?)',
-      [req.url], (err, results) => {
+    pool.query('Delete from partner where (id)=(?)',
+      [req.id], (err, results) => {
         if (err)
           return reject(err);
         return resolve(results);
