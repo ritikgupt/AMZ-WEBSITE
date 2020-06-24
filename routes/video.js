@@ -9,7 +9,7 @@ router.get('/video', async(req, res) => {
 router.post('/video', async(req, res) => {
   try {
     let a = await video.add(req.body);
-    res.json({message: 'video added ' + req.body.img_url});
+    res.json({message: 'video added '});
   } catch (e){
     console.log(e);
     res.json({message: e});
