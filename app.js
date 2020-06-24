@@ -43,6 +43,8 @@ const CampusCoursesRoutes = require('./routes/campus-course');
 app.use(CampusCoursesRoutes);
 const adminhomeRoutes = require('./routes/adminhome');
 app.use(adminhomeRoutes);
+const InternshipRoutes = require('./routes/internship');
+app.use(InternshipRoutes);
 
 app.use(function(req, res, next) {
   next(createError(404));
