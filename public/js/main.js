@@ -291,11 +291,20 @@
     aos_init();
   });
 
-  //On Campus Login Modal 
+  //On Campus Request Detail Modal 
   $('#modal-onCampusCourse').on('click', function() { $('#loginModal').modal('show');
   $(function () {
     $('[data-toggle="tooltip"]').tooltip()
   })
+});
+
+//Internship Course Pop Up Modal
+$(window).on('load', function() {
+  $('#internshipPopUpModal').modal('show');
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  });
+
 });
 
 //On Document Load Discount Modal & Timer
@@ -313,7 +322,6 @@ $(window).on('load', function() {
   $(function () {
     $('[data-toggle="tooltip"]').tooltip()
   });
-
 });
 
 
