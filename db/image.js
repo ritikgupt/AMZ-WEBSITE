@@ -34,9 +34,9 @@ image.deleteAll = (req) => {
 image.deleteOne = (req) => {
 
   return new Promise((resolve, reject) => {
-    console.log(req.url);
-    pool.query('Delete from home_slider where (img_url)=(?)',
-      [req.url], (err, results) => {
+    console.log(req.id);
+    pool.query('Delete from home_slider where (id)=(?)',
+      [req.id], (err, results) => {
         if (err)
           return reject(err);
         return resolve(results);

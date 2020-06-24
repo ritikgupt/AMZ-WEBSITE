@@ -10,8 +10,8 @@ router.get('/slider', async(req, res) => {
 router.post('/slider', upload.single('img_url'), async(req, res) => {
   console.log(req.file);
   try {
-    let a = await slider.add(req.file.path);
-    res.json({message: 'Image added '});
+    await slider.add(req.file.path);
+    res.redirect('/slider');
   } catch (e){
     console.log(e);
     res.json({message: e});
@@ -19,21 +19,30 @@ router.post('/slider', upload.single('img_url'), async(req, res) => {
 
 });
 
+router.get('/editslider', async(req, res) => {
+  try {
+    let a = await slider.show();
+    res.render('editslider', {sliders: a});
+  } catch (e){
+    res.json({message: e});
+  }
+});
+
 router.post('/delete/slider', async(req, res) => {
   try {
-    let a = await slider.deleteAll(req);
-    res.json({message: 'deleted all slider'});
+    await slider.deleteAll(req);
+    res.redirect('/editslider');
   } catch (e){
     console.log(e);
     res.json({message: 'error deleting all slider'});
   }
 });
 
-router.post('/:url/slider', async(req, res) => {
+router.post('/:id/editslider', async(req, res) => {
   console.log(req.params);
   try {
-    let a = await slider.deleteOne(req.params);
-    res.json({message: 'deleted particular slider'});
+    await slider.deleteOne(req.params);
+    res.redirect('/editslider');
   } catch (e){
     console.log(e);
     res.json({message: 'error deleting particular slider'});

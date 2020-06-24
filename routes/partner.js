@@ -7,10 +7,11 @@ var upload = multer({dest: 'uploads/'});
 router.get('/partner', async(req, res) => {
   res.render('partner');
 });
+
 router.post('/partner', upload.single('image'), async(req, res) => {
   try {
-    let a = await partner.add(req.file.path);
-    res.json({message: 'partner added '});
+    await partner.add(req.file.path);
+    res.redirect('/partner');
   } catch (e){
     console.log(e);
     res.json({message: e});
@@ -18,21 +19,31 @@ router.post('/partner', upload.single('image'), async(req, res) => {
 
 });
 
+router.get('/editpartner', async(req, res) => {
+  try {
+    let a = await partner.show();
+    res.render('editpartner', {partner: a});
+  } catch (e) {
+    res.json({message: e});
+  }
+
+});
+
 router.post('/delete/partner', async(req, res) => {
   try {
-    let a = await partner.deleteAll(req);
-    res.json({message: 'deleted all partner'});
+    await partner.deleteAll(req);
+    res.redirect('/editpartner');
   } catch (e){
     console.log(e);
     res.json({message: 'error deleting all partner'});
   }
 });
 
-router.post('/:url/partner', async(req, res) => {
+router.post('/:id/editpartner', async(req, res) => {
   console.log(req.params);
   try {
-    let a = await partner.deleteOne(req.params);
-    res.json({message: 'deleted particular partner'});
+    await partner.deleteOne(req.params);
+    res.redirect('/editpartner');
   } catch (e){
     console.log(e);
     res.json({message: 'error deleting particular partner'});
