@@ -2,6 +2,10 @@ var express = require('express');
 var router = express.Router();
 const video = require('../db/video');
 
+router.get('/video', async(req, res) => {
+  res.render('video');
+});
+
 router.post('/video', async(req, res) => {
   try {
     let a = await video.add(req.body);
