@@ -290,6 +290,25 @@
     aos_init();
   });
 
+  //On Campus Request Detail Modal 
+  $('#modal-onCampusCourse').on('click', function() { $('#loginModal').modal('show');
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+});
+
+//Internship Course Pop Up Modal
+$(window).on('load', function() {
+  $('#internshipPopUpModal').modal('show');
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  });
+
+});
+
+//On Document Load Discount Modal & Timer
+$(window).on('load', function() {
+
   // On Campus Login Modal
   $('#modal-onCampusCourse').on('click', function() {
     $('#loginModal').modal('show');
@@ -308,6 +327,12 @@
       + '<span class="h1 font-weight-bold">%M</span> Min'
       + '<span class="h1 font-weight-bold">%S</span> Sec'));
     });
+
+  $('#timerModal').modal('show');
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  });
+});
 
     $('#timerModal').modal('show');
     $(function() {

@@ -3014,3 +3014,27 @@ label{
   color: white;
   opacity: 1;
 }
+
+/* Internship Coming Pop Up Modal */
+
+#internshipPopUpModal .modal-content{
+  background: #91eae4;
+  background: -webkit-linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5);
+  background: linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5);
+}
+
+#internshipPopUpModal .modal-content .modal-header h5{
+  font-size: 18px;
+  letter-spacing: 1.2px;
+  font-weight: 500;
+}
+
+#internshipPopUpModal .rounded {
+    border-radius: 50px !important;
+}
+
+#internshipPopUpModal .modal-header .close {
+  font-size: 32px;
+  color: white;
+  opacity: 1;
+}
