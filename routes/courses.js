@@ -7,11 +7,16 @@ var upload = multer({dest: 'uploads/'});
 router.get('/amz/courses', async(req, res) => {
   try {
     let a = await courses.show();
-    res.json(a);
+    res.render('courses');
   } catch (e){
     res.json({message: e});
   }
 });
+
+router.get('/courses',async(req,res)=>{
+  res.render('addcourses');
+});
+
 router.post('/courses', upload.single('image'), async(req, res) => {
   try {
     let a = await courses.add(req.body, req.file.path);
@@ -31,6 +36,7 @@ router.post('/delete/courses', async(req, res) => {
     res.json({message: e});
   }
 });
+
 router.post('/delete/:courseid/courses', async(req, res) => {
   try {
     let a = await courses.deleteOne(req.params);
@@ -40,6 +46,7 @@ router.post('/delete/:courseid/courses', async(req, res) => {
     res.json({message: e});
   }
 });
+
 router.post('/edit/:courseid/courses', async(req, res) => {
   try {
     let a = await courses.edit(req.body, req.params);

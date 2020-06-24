@@ -2,10 +2,14 @@ var express = require('express');
 var router = express.Router();
 const video = require('../db/video');
 
+router.get('/video', async(req, res) => {
+  res.render('video');
+});
+
 router.post('/video', async(req, res) => {
   try {
     let a = await video.add(req.body);
-    res.json({message: 'video added ' + req.body.img_url});
+    res.json({message: 'video added '});
   } catch (e){
     console.log(e);
     res.json({message: e});
