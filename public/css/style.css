@@ -3039,6 +3039,14 @@ label{
   opacity: 1;
 }
 
+/* About Us Header */
+
+#aboutUs img{
+  width: 100%;
+  height: auto;
+  background-image: ;
+  background-position: center;
+}
 
 /*--------------------------------------------------------------
 # Testimonials
@@ -3203,8 +3211,6 @@ label{
   font-weight: 400;
   color: #aaaaaa;
 }
-
-
 .team .member:hover .socialTeam {
   opacity: 1;
 }
