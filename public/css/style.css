@@ -1038,9 +1038,9 @@ section {
 
 
 /*--------------------------------------------------------------
-# Team
+# Advisory Committee section
 --------------------------------------------------------------*/
-.team .member {
+.advisory .member {
   position: relative;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   padding: 30px;
@@ -1049,25 +1049,25 @@ section {
   transition: 0.5s;
 }
 
-.team .member .pic {
+.advisory .member .pic {
   overflow: hidden;
   width: 180px;
   border-radius: 50%;
 }
 
-.team .member .pic img {
+.advisory .member .pic img {
   transition: ease-in-out 0.3s;
 }
 
-.team .member:hover {
+.advisory .member:hover {
   transform: translateY(-10px);
 }
 
-.team .member .member-info {
+.advisory .member .member-info {
   padding-left: 30px;
 }
 
-.team .member h4 {
+.advisory .member h4 {
   font-weight: 700;
   margin-bottom: 5px;
   font-size: 18px;
@@ -1075,7 +1075,7 @@ section {
   letter-spacing: 1.5px;
 }
 
-.team .member span {
+.advisory .member span {
   display: block;
   font-size: 15px;
   padding-bottom: 10px;
@@ -1083,7 +1083,7 @@ section {
   font-weight: 500;
 }
 
-.team .member span::after {
+.advisory .member span::after {
   content: '';
   position: absolute;
   display: block;
@@ -1094,19 +1094,19 @@ section {
   left: 0;
 }
 
-.team .member p {
+.advisory .member p {
   margin: 10px 0 0 0;
   font-size: 14px;
 }
 
-.team .member .social {
+.advisory .member .social {
   margin-top: 12px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
 
-.team .member .social a {
+.advisory .member .social a {
   transition: ease-in-out 0.3s;
   display: flex;
   align-items: center;
@@ -1117,21 +1117,21 @@ section {
   background: #eff2f8;
 }
 
-.team .member .social a i {
+.advisory .member .social a i {
   color: #37517e;
   font-size: 16px;
   margin: 0 2px;
 }
 
-.team .member .social a:hover {
+.advisory .member .social a:hover {
   background: #47b2e4;
 }
 
-.team .member .social a:hover i {
+.advisory .member .social a:hover i {
   color: #fff;
 }
 
-.team .member .social a + a {
+.advisory .member .social a + a {
   margin-left: 8px;
 }
 
