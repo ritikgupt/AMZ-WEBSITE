@@ -3,6 +3,15 @@ var router = express.Router();
 const news = require('../db/news');
 var multer = require('multer');
 var upload = multer({dest: 'uploads/'});
+
+router.get('/shownews',async(req,res)=>{
+  try{
+    const a = await news.show()
+    res.render('shownews',{news:a})
+  }catch(e){
+    res.json({message:e})
+  }
+})
 router.get('/news', async(req, res) => {
   res.render('news');
 });
