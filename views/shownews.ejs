@@ -56,11 +56,13 @@
                         <p><%=news[i].date%></p>
                     </div>
                     <div class="extra">
-                        <a class="ui floated basic violet button b" href="/<%=news[i]._id%>/editnews">Delete
-                            <i class="right chevron icon"></i></a>
+                        <form action="delete/<%=news[i].newsid%>/news" method="POST">
+                            
+                            <button type="Submit" class="ui red basic button">Delete</button>
+                        </form>  
                     </div>
                     <div class="extra">
-                        <a class="ui floated basic violet button b" href="/<%=news[i]._id%>/editnews">Edit
+                        <a class="ui floated basic red button b" href="/edit/news[i].newsid/news">Edit
                             <i class="right chevron icon"></i></a>
                     </div>
                 </div>
@@ -68,16 +70,15 @@
             <%}%> 
         </div>
     </div>
-    <a class="ui floated basic violet button b" href="/editnews">Delete All
-        <i class="right chevron icon"></i></a>
+    <form action="delete/news" method="POST">
+                            
+        <button type="Submit" class="ui red basic button">Delete ALL</button>
+    </form>  
 </div>
 <style>
  
 .a{
     margin-top:10%;
 }
-/* a{
-    font-size:5rem;
-} */
 
 </style>
