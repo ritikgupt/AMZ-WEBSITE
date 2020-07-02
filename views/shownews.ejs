@@ -56,7 +56,11 @@
                         <p><%=news[i].date%></p>
                     </div>
                     <div class="extra">
-                        <a class="ui floated basic violet button b" href="/<%=news[i]._id%>/editnews">Read More
+                        <a class="ui floated basic violet button b" href="/<%=news[i]._id%>/editnews">Delete
+                            <i class="right chevron icon"></i></a>
+                    </div>
+                    <div class="extra">
+                        <a class="ui floated basic violet button b" href="/<%=news[i]._id%>/editnews">Edit
                             <i class="right chevron icon"></i></a>
                     </div>
                 </div>
@@ -64,23 +68,16 @@
             <%}%> 
         </div>
     </div>
+    <a class="ui floated basic violet button b" href="/editnews">Delete All
+        <i class="right chevron icon"></i></a>
 </div>
 <style>
- body  {
-  background-image: url(https://img.freepik.com/free-photo/black-white-bamboo-surface-merge-background_7182-2053.jpg?size=626&ext=jpg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size:cover
-}
+ 
 .a{
     margin-top:10%;
 }
 /* a{
     font-size:5rem;
 } */
-.b{
-    width:33%;
-    height:4rem;
-    font-size:33ch;
-}
+
 </style>

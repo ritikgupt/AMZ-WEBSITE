@@ -12,6 +12,7 @@ router.get('/shownews',async(req,res)=>{
     res.json({message:e})
   }
 })
+
 router.get('/news', async(req, res) => {
   res.render('news');
 });
