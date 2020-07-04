@@ -53,6 +53,9 @@
                 <div class="content">
                     <a class="header" href="/<%=news[i]._id %>"><%=news[i].heading%></a>
                     <div class="description">
+                        <p><%=news[i].description%></p>
+                    </div>
+                    <div class="description">
                         <p><%=news[i].date%></p>
                     </div>
                     <div class="extra">
@@ -62,7 +65,7 @@
                         </form>  
                     </div>
                     <div class="extra">
-                        <a class="ui floated basic red button b" href="/edit/news[i].newsid/news">Edit
+                        <a class="ui floated basic blue button b" href="/edit/<%=news[i].newsid%>/news">Edit
                             <i class="right chevron icon"></i></a>
                     </div>
                 </div>

@@ -2,20 +2,20 @@
 
 <div class="ui main text container segment" id="a">
         <div class="ui huge header">Edit news</div>
-        <form class="ui form" action="/<%=news.id%>/editnewsform" method="POST">
+        <form class="ui form" action="/edit/<%=news[0].newsid%>/news" method="POST">
             <div class="field">
-                <label>Name</label>
-                <input type="text" name="news[title]" value="<%=news.title%>">
+                <label>Heading</label>
+                <input type="text" name="heading" value="<%=news[0].heading%>">
             </div>
                
                 
                 <div class="field">
                     <label>Description</label>
-                    <textarea name="news[desc]" value="<%=news.desc%>"></textarea>
+                    <textarea  name="description"><%=news[0].description%></textarea>
                 </div>
-                <div class="field">
+                <div class="field" b>
                     <label>Time</label>
-                    <input type="text" name="news[time]" value="<%=news.time%>">
+                    <input type="text" name="date" value="<%=news[0].date%>">
                 </div>
             
             <button class="ui button" type="submit">Submit</button>
@@ -27,5 +27,8 @@
   
 #a{
     margin-top:3%;
+}
+.b{
+    visibility: hidden;
 }
     </style>

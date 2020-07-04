@@ -46,20 +46,20 @@ router.post('/delete/:id/news', async(req, res) => {
   }
 });
 
-// router.get('/edit/:id/news',async(req,res)=>{
-//   try{
-//   let a = await news.edit(req.body, req.params);
-//   res.render('editnews',{news:a});
-//   }
-//   catch (e) {
-//     console.log(e);
-//     res.json({message: e});
-//   }
-// })
+router.get('/edit/:id/news',async(req,res)=>{
+  try{
+  let a = await news.showone(req.params);
+  res.render('editnews',{news:a});
+  }
+  catch (e) {
+    console.log(e);
+    res.json({message: e});
+  }
+})
 router.post('/edit/:id/news', async(req, res) => {
   try {
     let a = await news.edit(req.body, req.params);
-    res.json({message: 'edited the particular news'});
+    res.redirect('/shownews')
   } catch (e) {
     console.log(e);
     res.json({message: e});
