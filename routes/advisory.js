@@ -49,6 +49,7 @@ router.post('/delete/:id/advisory', async(req, res) => {
 router.get('/edit/:id/advisory', async(req, res) => {
   try {
     let a = await advisory.showone(req.params);
+    console.log(a);
     res.render('editadvisory', {advisory: a});
   } catch (e) {
     console.log(e);

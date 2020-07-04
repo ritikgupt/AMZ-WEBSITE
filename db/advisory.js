@@ -41,11 +41,11 @@ advisory.deleteOne = (req) => {
       });
   });
 };
-advisory.edit = (req, request, image) => {
+advisory.edit = (req, request) => {
 
   return new Promise((resolve, reject) => {
-    pool.query('update advisory set img_url=?,designation=?,name=? where advisoryid=?',
-      [image, req.designation, req.name, request.id]
+    pool.query('update advisory set name=?,designation=? where advisoryid=?',
+      [ req.name, req.designation, request.id]
       , (err, results) => {
         if (err)
           return reject(err);
