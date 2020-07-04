@@ -54,16 +54,16 @@ news.edit = (req, request) => {
   });
 };
 
-news.showone= (req)=>{
-  return new Promise((resolve,reject)=>{
+news.showone = (req) => {
+  return new Promise((resolve, reject) => {
     pool.query('Select * from news where (newsid) = (?)',
-    [req.id],(err,result)=>{
-      if(err)
-      return reject(err)
-      return resolve(result)
-    })
-  })
-}
+      [req.id], (err, result) => {
+        if (err)
+          return reject(err);
+        return resolve(result);
+      });
+  });
+};
 news.show = () => {
   return new Promise((resolve, reject) => {
     pool.query('Select * from news',

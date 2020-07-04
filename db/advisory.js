@@ -53,6 +53,17 @@ advisory.edit = (req, request, image) => {
       });
   });
 };
+
+advisory.showone = (req) => {
+  return new Promise((resolve, reject) => {
+    pool.query('Select * from advisory where (advisoryid) = (?)',
+      [req.id], (err, result) => {
+        if (err)
+          return reject(err);
+        return resolve(result);
+      });
+  });
+};
 advisory.show = () => {
   return new Promise((resolve, reject) => {
     pool.query('Select * from advisory',
