@@ -255,6 +255,8 @@
     }
   });
 
+  
+
   // Skills section
   $('.skills-content').waypoint(function() {
     $('.progress .progress-bar').each(function() {

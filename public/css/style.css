@@ -174,10 +174,10 @@ p{
   position: relative;
   color: #fff;
   transition: 0.3s;
-  font-size: 15px;
+  font-size: 14px;
   letter-spacing: 0.5px;
   font-weight: 600;
-  font-family: "montserrat-500";
+  font-family: "montserrat-300";
   text-transform: uppercase;
 }
 
