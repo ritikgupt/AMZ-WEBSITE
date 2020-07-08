@@ -350,10 +350,10 @@ $(window).on('load', function() {
       + '<span class="h1 font-weight-bold">%S</span> Sec'));
     });
 
-    // $('#timerModal').modal('show');
-    // $(function () {
-    //   $('[data-toggle="tooltip"]').tooltip()
-    // });
+    $('#timerModal').modal('show');
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    });
   });
 
 
