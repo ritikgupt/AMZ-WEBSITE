@@ -2,7 +2,7 @@
 
 <div class="ui main text container segment" id="a">
         <div class="ui huge header">Edit news</div>
-        <form class="ui form" action="/edit/<%=news[0].newsid%>/news" method="POST">
+        <form class="ui form" action="/edit/<%=news[0].newsid%>/news" method="POST" enctype="multipart/form-data">
             <div class="field">
                 <label>Heading</label>
                 <input type="text" name="heading" value="<%=news[0].heading%>">
@@ -13,11 +13,11 @@
                     <label>Description</label>
                     <textarea  name="description"><%=news[0].description%></textarea>
                 </div>
-                <div class="field" b>
+                <div class="field b">
                     <label>Time</label>
                     <input type="text" name="date" value="<%=news[0].date%>">
                 </div>
-            
+            <input type="file" name="img_url">
             <button class="ui button" type="submit">Submit</button>
             </div>
         </form>
