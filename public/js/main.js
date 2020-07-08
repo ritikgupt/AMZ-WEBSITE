@@ -162,7 +162,7 @@
         items: 2
       },
       900: {
-        items: 3
+        items: 2
       }
     }
   });
@@ -324,7 +324,6 @@ $(window).on('load', function() {
   $(function () {
     $('[data-toggle="tooltip"]').tooltip()
   });
-
 });
 
 
@@ -351,10 +350,10 @@ $(window).on('load', function() {
       + '<span class="h1 font-weight-bold">%S</span> Sec'));
     });
 
-    $('#timerModal').modal('show');
-    $(function () {
-      $('[data-toggle="tooltip"]').tooltip()
-    });
+    // $('#timerModal').modal('show');
+    // $(function () {
+    //   $('[data-toggle="tooltip"]').tooltip()
+    // });
   });
 
 
