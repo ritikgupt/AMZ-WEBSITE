@@ -158,10 +158,7 @@
       0: {
         items: 1
       },
-      768: {
-        items: 2
-      },
-      900: {
+      1080: {
         items: 2
       }
     }
@@ -271,7 +268,7 @@
     
     var courseIsotope = $('.course-container').isotope({
       itemSelector: '.course-item',
-      filter: '.filter-civil'
+      filter: '.filter-mechanical'
     });
     
     $('#course-flters li').on('click', function() {
