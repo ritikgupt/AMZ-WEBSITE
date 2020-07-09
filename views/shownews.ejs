@@ -40,86 +40,32 @@
 
 </style>
 <body>
-<header id="header">
-    <div class="container">
-        <nav class="nav">
-            <div class="menu menu-toggle">
-               <i class="fas fa-bars"></i>
-<i class="fas fa-times"></i>
-            </div>
-            <!-- <a href="amz.html" class="logo"><img src="images/logo-rosa.png" alt=""></a> -->
-            <ul class="nav-list">
-                <li class="nav-item">
-                    <a href="/adminhome" class="nav-link active">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <div class="dropdown1">
-                            <a class="nav-link">Add New Items
-                              
-                            </a>
-                            <div class="dropdown1-content">
-                                <a href="/newslider">New Slide</a>
-                                <a href="/newnews">New News</a>
-                                <a href="/newsponsor">New Sponsor</a>
-                                <a href="/image">New Image</a>
-                                <a href="/newmember">New Team Member</a>
-                                <a href="/newuser">New Student</a>
-                                <a href="/newuser">New Employee</a>
-                                <a href="/newworkshop">New Workshop</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                    <div class="dropdown1">
-                        <a class="nav-link"> Student Requests
-                            </a>
-                        <div class="dropdown1-content">
-                            <a href="/mechanical">Patent Request</a>
-                            <a href="/civil">Research Paper</a>
-                            <a href="/computer">Startup Idea</a>
-                            <a href="/electrical">Innovative Idea</a>
-                            <a href="/electrical">Complaints</a>
-                        </div>
-                    </div>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/students" class="nav-link">Enrolled Students</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/employee" class="nav-link">Employees</a>
-                    </li>
-                    <li class="nav-item">
-                    <div class="dropdown1">
-                        <a class="nav-link">Message
-                          </a>
-                        <div class="dropdown1-content">
-                            <a href="#">Message to students</a>
-                            <a href="#">Message to Employee</a>
-                        </div>
-                    </div>
-                    </li>
-                
-            </ul>
-        </nav>
-        </div>
-</header>
 <div class="ui main text container a">
     <div class=" ui huge header">News</div>
     <div class="ui top attached segment">
         <div class="ui divided items">
-            <%for(var i=0;i<newss.length;i++){%>
+            <%for(var i=0;i<news.length;i++){%>
              
             <div class="item">
                 <div class="image">
-                    <img src="<%=newss[i].file%>">
+                    <img src="<%=news[i].img_url%>">
                 </div>
                 <div class="content">
-                    <a class="header" href="/<%=newss[i]._id %>"><%=newss[i].title%></a>
+                    <a class="header" href="/<%=news[i]._id %>"><%=news[i].heading%></a>
                     <div class="description">
-                        <p><%=newss[i].time%></p>
+                        <p><%=news[i].description%></p>
+                    </div>
+                    <div class="description">
+                        <p><%=news[i].date%></p>
                     </div>
                     <div class="extra">
-                        <a class="ui floated basic violet button b" href="/<%=newss[i]._id%>/editnews">Read More
+                        <form action="delete/<%=news[i].newsid%>/news" method="POST">
+                            
+                            <button type="Submit" class="ui red basic button">Delete</button>
+                        </form>  
+                    </div>
+                    <div class="extra">
+                        <a class="ui floated basic blue button b" href="/edit/<%=news[i].newsid%>/news">Edit
                             <i class="right chevron icon"></i></a>
                     </div>
                 </div>
@@ -127,23 +73,15 @@
             <%}%> 
         </div>
     </div>
+    <form action="delete/news" method="POST">
+                            
+        <button type="Submit" class="ui red basic button">Delete ALL</button>
+    </form>  
 </div>
 <style>
- body  {
-  background-image: url(https://img.freepik.com/free-photo/black-white-bamboo-surface-merge-background_7182-2053.jpg?size=626&ext=jpg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size:cover
-}
+ 
 .a{
     margin-top:10%;
 }
-/* a{
-    font-size:5rem;
-} */
-.b{
-    width:33%;
-    height:4rem;
-    font-size:33ch;
-}
+
 </style>

@@ -1,0 +1,30 @@
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+
+<div class="ui main text container segment" id="a">
+        <div class="ui huge header">Edit advisory</div>
+        <form class="ui form" action="/edit/<%=advisory[0].advisoryid%>/advisory" method="POST">
+            <div class="field">
+                <label>Name</label>
+                <input type="text" name="name" value="<%=advisory[0].name%>">
+            </div>
+     
+            <div class="field">
+                <label>Designation</label>
+                <input type="text" name="designation" value="<%=advisory[0].designation%>">
+            </div>
+                
+            
+            <button class="ui button" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    </div>
+    <style>
+  
+#a{
+    margin-top:3%;
+}
+.b{
+    visibility: hidden;
+}
+    </style>

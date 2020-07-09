@@ -109,15 +109,10 @@
         </div>
 
         <div class="owl-carousel trustedBy-carousel" data-aos="zoom-in">
-
-          <img src="/img/PARTNERS/dune adventure.jpg" class="img-fluid" alt="">
-          <img src="/img/PARTNERS/india baja.png" class="img-fluid" alt="">
-          <img src="/img/PARTNERS/indian motor cycle.jpg" class="img-fluid" alt="">
-          <img src="/img/PARTNERS/k raheja crop.jpg" class="img-fluid" alt="">
-          <img src="/img/PARTNERS/multix logo.jpg" class="img-fluid" alt="">
-          <img src="/img/PARTNERS/polaris.png" class="img-fluid" alt="">
-          <img src="/img/PARTNERS/steel bird logo.jpg" class="img-fluid" alt="">
-
+          <%for(var i=0;i<trusted.length;i++){%>
+<%console.log(trusted[i].img_url)%>
+          <img src="<%=trusted[i].img_url%>" class="img-fluid" alt="">
+<%}%>
         </div>
 
       </div>
