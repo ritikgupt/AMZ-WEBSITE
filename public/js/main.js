@@ -158,11 +158,8 @@
       0: {
         items: 1
       },
-      768: {
+      1080: {
         items: 2
-      },
-      900: {
-        items: 3
       }
     }
   });
@@ -271,7 +268,7 @@
     
     var courseIsotope = $('.course-container').isotope({
       itemSelector: '.course-item',
-      filter: '.filter-civil'
+      filter: '.filter-mechanical'
     });
     
     $('#course-flters li').on('click', function() {
@@ -324,7 +321,6 @@ $(window).on('load', function() {
   $(function () {
     $('[data-toggle="tooltip"]').tooltip()
   });
-
 });
 
 
