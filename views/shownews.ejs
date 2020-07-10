@@ -3,8 +3,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="/CSS/amz.css" rel="stylesheet" type="text/css">
-    <!-- <script src="/amz.js"></script> -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -51,7 +49,7 @@
                     <img src="<%=news[i].img_url%>">
                 </div>
                 <div class="content">
-                    <a class="header" href="/<%=news[i]._id %>"><%=news[i].heading%></a>
+                    <a class="header" href="/<%=news[i]._newsid %>"><%=news[i].heading%></a>
                     <div class="description">
                         <p><%=news[i].description%></p>
                     </div>
