@@ -92,7 +92,7 @@
                     <p class="card-text">Price : 2000</p>
                     </div>
                     <div class="course-info">
-                      <a href="" type="submit" class="btn btn-info mb-3">Enroll Now</a>
+                      <a  type="submit" class="btn btn-info mb-3" onclick="branchCourse()">Enroll Now</a>
                       <a href="" type="submit" class="btn btn-danger"><i class="bx bx-plus pr-1"></i>Download Pdf</a>
                     </div>
                   </div>
@@ -836,6 +836,15 @@
  
    <!-- Template Main JS File -->
    <script src="../public/js/main.js"></script>
+
+   <script>
+    function branchCourse(){
+      var course = "Mechanical Enginnering Course";
+      var branch = "Mechanical";
+      var queryString = "?"+branch+"&"+course;
+      window.location.href = "onCampusDetails.html"+queryString;
+    }
+  </script>
 
 </body>
 
