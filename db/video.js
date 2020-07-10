@@ -34,9 +34,8 @@ video.deleteAll = (req) => {
 video.deleteOne = (req) => {
 
   return new Promise((resolve, reject) => {
-    console.log(req.url);
-    pool.query('Delete from video where (img_url)=(?)',
-      [req.url], (err, results) => {
+    pool.query('Delete from video where (videoid)=(?)',
+      [req.id], (err, results) => {
         if (err)
           return reject(err);
         return resolve(results);

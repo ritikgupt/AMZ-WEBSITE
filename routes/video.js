@@ -8,8 +8,8 @@ router.get('/video', async(req, res) => {
 
 router.post('/video', async(req, res) => {
   try {
-    let a = await video.add(req.body);
-    res.json({message: 'video added '});
+    await video.add(req.body);
+    res.render('video');
   } catch (e){
     console.log(e);
     res.json({message: e});
@@ -17,20 +17,31 @@ router.post('/video', async(req, res) => {
 
 });
 
+router.get('/showvideo', async(req, res) => {
+  try {
+    const a = await video.show();
+    res.render('showVideos', {video: a});
+  } catch (e){
+    console.log(e);
+    res.json({message: e});
+  }
+});
+
 router.post('/delete/video', async(req, res) => {
   try {
-    let a = await video.deleteAll(req);
-    res.json({message: 'deleted all video'});
+    let a = await video.deleteAll();
+    res.redirect('/showvideo');
   } catch (e){
     console.log(e);
     res.json({message: 'error deleting all video'});
   }
 });
 
-router.post('/:url/video', async(req, res) => {
+
+router.post('/:id/showvideo', async(req, res) => {
   console.log(req.params);
   try {
-    let a = await video.deleteOne(req.params);
+    await video.deleteOne(req.params);
     res.json({message: 'deleted particular video'});
   } catch (e){
     console.log(e);
