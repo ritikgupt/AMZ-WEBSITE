@@ -141,52 +141,20 @@
     </div>
 
     <div class="owl-carousel news-carousel">
-
+<%for(var i=0;i<news.length;i++){%>
       <div class="news-item">
         <div class="news-wrap">
-          <img src="/img/news/news3.JPG" class="img-fluid" alt="">
+          <img src="<%=news[i].img_url%>" class="img-fluid" alt="">
           <div class="news-info">
-            <h4 class="mt-1 mb-1 p-1">Conducted Summer Training at IIIT NUZVID</h4>
-            <p class="mb-1 p-1">AMZ conducted a successful on campus internship program at IIT NUZVID To 
-              provide practical learning in the process of vehicle design & development in order to retain 
-              talent in modern science to excite the young minds of the country about innovation for inclusive 
-              growth and better future while
-              helping the society and economy to face future challenges in science & technology.
+            <h4 class="mt-1 mb-1 p-1"><%=news[i].heading%></h4>
+            <p class="mb-1 p-1"><%=news[i].description%>
               </p>
             <p class="mt-1 text-right"><i class="bx bxs-calendar-event pr-1"></i>01/01/2020</p>
           </div>
         </div>
       </div>
-
-      <div class="news-item">
-        <div class="news-wrap">
-          <img src="/img/news/news2.jpg" class="img-fluid" alt="">
-          <div class="news-info">
-            <h4 class="mt-1 mb-1 p-1">Organized a conclave on Engineering in Motorsports</h4>
-            <p class="mb-1 p-1">AMZ organized a Conclave on Engineering in Motorsports at their skill 
-              development center for young Generation. AMZ invited Managing director and general manager 
-              from Polaris and Kraheja group of company to share their 
-              knowledge and skills required by engineer in field of automobile sector.</p>
-            <p class="mt-1 text-right"><i class="bx bxs-calendar-event pr-1"></i>01/01/2020</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="news-item">
-        <div class="news-wrap">
-          <img src="/img/news/eventNews.jpg" class="img-fluid" alt="">
-          <div class="news-info">
-            <h4 class="mt-1 mb-1 p-1">AMZ was invited as technical support team in Maruti Suzuki desert storm</h4>
-            <p class="mb-1 p-1">Northern Motorsport Desert Storm is organized by country’s premier motorsport 
-              club, Northern Motorsport. The team leaves no stone unturned to make Desert Storm an unforgettable
-               experience. Desert Storm has unmatched patronage in the country and has produced some excellent rallyists
-                over the years like Sandeep Sharma, Sunny Sidhu, Suresh Rana etc. Each year it sees over 100 participants 
-                from Indian Army, Maruti Team, and many from all across the country congregate to take part in the battleground of desert.
-              </p>
-            <p class="mt-1 text-right"><i class="bx bxs-calendar-event pr-1"></i>01/01/2020</p>
-          </div>
-        </div>
-      </div>
+<%}%>
+     
 
     </div>
 
