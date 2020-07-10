@@ -57,4 +57,16 @@ router.post('/edit/:courseid/internship', async(req, res) => {
   }
 });
 
-module.exports = router;
+module.exports = router;const mongoose = require('mongoose')
+
+const Chat = mongoose.model('chats', {
+    chatId:{
+        type:String,
+        required:true
+    },
+    msgInfo:{
+        type:Array
+    }
+})
+
+module.exports=Chat
