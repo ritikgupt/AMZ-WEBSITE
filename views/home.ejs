@@ -211,69 +211,19 @@
         </div>
 
         <div class="row">
-
+<%for(var i=0;i<advisory.length;i++){%>
           <div class="col-lg-6">
             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
-              <div class="pic"><img src="/img/advisory_committe/yatindra Bhushan.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="<%=advisory[i].img_url%>" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Yatindra Bhusan</h4>
+                <h4><%=advisory[i].name%></h4>
                 <span></span>
-                <p>Senior Reservoir Engineer at ADCO UAE</p>
-                
+                <p><%=advisory[i].designation%></p>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-6 mt-4 mt-lg-0">
-            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="200">
-              <div class="pic"><img src="/img/advisory_committe/dr ratanadip r joshi.jpg" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Dr. Ratnadip R Joshi</h4>
-                <span></span>
-                <p>Associate Dean at Maharashtra Institute of Technology,Kothrud,Pune,India</p>
-                
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6 mt-4">
-            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="300">
-              <div class="pic"><img src="/img/advisory_committe/Aman Tripathi.jpg" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Aman Tripathi</h4>
-                <span></span>
-                <p>Management Committe Member at Nissan Europe
-                  <br>Chairman Office at Nissan Europe
-                </p>
-                
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6 mt-4">
-            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
-              <div class="pic"><img src="/img/advisory_committe/ARVIND BALAN.jpg" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Arvind Balan</h4>
-                <span></span>
-                <p>Founder and MD at Maxperience<br>
-                Former Senior Area Manager at Indian Oil Corporation Ltd.</p>
-                
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-lg-6 mt-4">
-            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
-              <div class="pic"><img src="/img/advisory_committe/Seshathiri Dhanasekaran.jpg" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Seshathiri Dhanasekaran</h4>
-                <span></span>
-                <p>AI/ML Researcher/Data Scientist/Corporate ML and Data Science Trainer/Helping in ML AI Projects.</p>
-                
-              </div>
-            </div>
-          </div>
+          <%}%>
 
         </div>
 
