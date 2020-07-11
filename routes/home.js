@@ -7,6 +7,7 @@ const trusted = require('../db/trusted');
 const advisory = require('../db/advisory');
 const video = require('../db/video');
 const general = require('../db/general');
+const newsletter = require('../db/newsletter');
 router.get('/', async(req, res) => {
   try {
     let a = await slider.show();
@@ -22,13 +23,31 @@ router.get('/', async(req, res) => {
 });
 
 router.post('/', async(req, res) => {
-  console.log(req.body)
+  if(req.body.name !== undefined)
+  {
   try {
     await general.add(req.body);
     res.redirect('/');
   } catch (e) {
     res.json({message: e});
   }
+}
+if(req.body.enrol_id!=undefined)
+{
+  try{
+
+  }catch (e) {
+    res.json({message: e});
+  }
+}
+else{
+  try{
+await newsletter.add(req.body)
+res.redirect('/')
+  }catch (e) {
+    res.json({message: e});
+  }
+}
 });
 
 
