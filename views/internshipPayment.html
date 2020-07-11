@@ -28,9 +28,11 @@
   <!-- Template Main CSS File -->
   <link href="../public/css/style.css" rel="stylesheet">
 
+
+ 
 </head>
 
-<body>
+<body onload="submitPayuForm()" >
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top ">
@@ -39,14 +41,14 @@
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li><a href="./home.html">Home</a></li>
-          <li class="drop-down active"><a href="">About</a>
+          <li class="drop-down"><a href="">About</a>
             <ul>
               <li><a href="./aboutUs.html">About AMZ</a></li>
               <li><a href="./gallery.html">AMZ Gallery</a></li>
               <li><a href="./award_gallery.html">AMZ Awards</a></li>
             </ul>
           </li>
-          <li><a href="./internshipCourse.html">Internship</a></li>
+          <li class="active"><a href="./internshipCourse.html">Internship</a></li>
           <li><a href="./events.html">Events</a></li>
           <li><a href="#centerLogin">Center Of Excellence</a></li>
           <li><a href="./amz_login.html">AMZ Login</a></li>
@@ -56,100 +58,55 @@
   </header>
   <!-- End Header -->
 
-     <!-- ======= Gallery Section ======= -->
-     <section id="gallery" class="gallery">
-        <div class="container-fluid">
-  
-          <div class="section-title" data-aos="fade-up">
-            <h2 class="text-white">Gallery</h2>
-            <p class="text-white text-center">"Things end but memories last forever". The photo album right below 
-              rejuvenates the sense of past went days. 
-            </p>
-          </div>
-  
-          <div class="row no-gutters" data-aos="fade-left">
-  
-            <div class="col-lg-3 col-md-4">
-              <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
-                <a href="../public/img/aboutGallery/_MG_9718.JPG" class="venobox" data-gall="gallery-item">
-                  <img src="../public/img/aboutGallery/_MG_9718.JPG" alt="" class="img-fluid">
-                </a>
-                <p>Img Title</p>
-              </div>
-            </div>
-  
-            <div class="col-lg-3 col-md-4">
-              <div class="gallery-item" data-aos="zoom-in" data-aos-delay="150">
-                <a href="../public/img/aboutGallery/LPU.jpg" class="venobox" data-gall="gallery-item">
-                  <img src="../public/img/aboutGallery/LPU.jpg" alt="" class="img-fluid">
-                </a>
-                <p>Img Title</p>
-              </div>
-            </div>
-  
-            <div class="col-lg-3 col-md-4">
-              <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
-                <a href="../public/img/aboutGallery/IMG_7826.JPG" class="venobox" data-gall="gallery-item">
-                  <img src="../public/img/aboutGallery/IMG_7826.JPG" alt="" class="img-fluid">
-                </a>
-                <p>Img Title</p>
-              </div>
-            </div>
-  
-            <div class="col-lg-3 col-md-4">
-              <div class="gallery-item" data-aos="zoom-in" data-aos-delay="250">
-                <a href="../public/img/aboutGallery/DSC_0921.JPG" class="venobox" data-gall="gallery-item">
-                  <img src="../public/img/aboutGallery/DSC_0921.JPG" alt="" class="img-fluid">
-                </a>
-                <p>Img Title</p>
-              </div>
-            </div>
-  
-            <div class="col-lg-3 col-md-4">
-              <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
-                <a href="../public/img/aboutGallery/IMG_20190920_160524.jpg" class="venobox" data-gall="gallery-item">
-                  <img src="../public/img/aboutGallery/IMG_20190920_160524.jpg" alt="" class="img-fluid">
-                </a>
-                <p>Img Title</p>
-              </div>
-            </div>
-  
-            <div class="col-lg-3 col-md-4">
-              <div class="gallery-item" data-aos="zoom-in" data-aos-delay="350">
-                <a href="../public/img/aboutGallery/IMG-20200203-WA0008.jpg" class="venobox" data-gall="gallery-item">
-                  <img src="../public/img/aboutGallery/IMG-20200203-WA0008.jpg" alt="" class="img-fluid">
-                </a>
-                <p>Img Title</p>
-              </div>
-            </div>
-  
-            <div class="col-lg-3 col-md-4">
-              <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
-                <a href="../public/img/aboutGallery/IMG20200127121349.jpg" class="venobox" data-gall="gallery-item">
-                  <img src="../public/img/aboutGallery/IMG20200127121349.jpg" alt="" class="img-fluid">
-                </a>
-                <p>Img Title</p>
-              </div>
-            </div>
-  
-            <div class="col-lg-3 col-md-4">
-              <div class="gallery-item" data-aos="zoom-in" data-aos-delay="450">
-                <a href="../public/img/aboutGallery/WhatsApp Image 2020-01-17 at 16.22.55.jpeg" class="venobox" data-gall="gallery-item">
-                  <img src="../public/img/aboutGallery/WhatsApp Image 2020-01-17 at 16.22.55.jpeg" alt="" class="img-fluid">
-                </a>
-                <p>Img Title</p>
-              </div>
-            </div>
-  
-          </div>
-  
-        </div>
-      </section>
-      <!-- End Gallery Section -->
-  
-
-
-  </main><!-- End #main -->
+ <!-- Payemnt Start -->
+ <section class="details" id="details">
+   <div class="container">
+    <div class="row">
+      <div class="col-md-6  col-details" >
+      <h2 style="text-align:center; font-size:21px; margin-bottom:18px;">Industrial Internship Program details, 2020</h2>
+      <form action="" method="post" name="payuForm">
+      
+      <table>
+      
+      <tr>
+      <td> Name: </td>
+      <td><input name="name" id="name" value="" /></td>
+      </tr>
+      
+      
+      <tr>
+      <td>Email: </td>
+      <td><input name="email" id="email" value="" /></td>
+      </tr>
+      
+      <tr>
+      <td>Phone: </td>
+      <td><input id="phone" name="phone" type="number" value="" /></td>
+      </tr>
+      
+     
+      <tr>
+      <td>Booking Fees: </td>
+      <td>(Pay Rs. 2000/- for Booking)</td>
+      </tr>
+      
+      <tr>
+      <td>Payment: </td>
+      <td><input name="amount" id="amount"  value="" type="number" /></td>
+      
+      </tr>	
+      
+      
+      <tr>
+      <td colspan="4"><input type="submit" value="Pay Now" class="btn btn-primary" /></td>
+      </tr>
+      </table>
+      </form>
+      </div>
+      </div>
+   </div>
+ </section>
+ <!-- Payment end -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
@@ -220,6 +177,7 @@
   <div id="preloader"></div>
 
 
+
  <!-- Vendor JS Files -->
  <script src="../public/vendor/jquery/jquery.min.js"></script>
  <script src="../public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -230,9 +188,80 @@
  <script src="../public/vendor/venobox/venobox.min.js"></script>
  <script src="../public/vendor/owl.carousel/owl.carousel.min.js"></script>
  <script src="../public/vendor/aos/aos.js"></script>
-
+ <script src="../public/vendor/jquery.countdown/jquery.countdown.js"></script>
+ <script src="../public/vendor/jquery.validate/jquery.validate.min.js"></script>
  <!-- Template Main JS File -->
  <script src="../public/js/main.js"></script>
+ 
+ <script>
+  var hash = '';
+  function submitPayuForm() {
+    if(hash == '') {
+      return;
+    }
+    var payuForm = document.forms.payuForm;
+    payuForm.submit();
+  }
+</script>
+<script>
+// Wait for the DOM to be ready
+$(function() {
+// Initialize form validation on the registration form.
+// It has the name attribute "registration"
+$("form[name='payuForm']").validate({
+  // Specify validation rules
+  rules: {
+    // The key name on the left side is the name attribute
+    // of an input field. Validation rules are defined
+    // on the right side
+    name: {
+          required: true,
+          // Specify that Name should be validated
+          // by the built-in "Name" rule
+          minlength: 5
+        },
+    email: {
+      required: true,
+      // Specify that email should be validated
+      // by the built-in "email" rule
+      email: true
+    },
+    
+          phone: {
+      required: true,
+      // Specify that email should be validated
+      // by the built-in "email" rule
+      minlength: 10
+    },
+    
+                amount: {
+      required: true,
+      // Specify that email should be validated
+      // by the built-in "email" rule
+      
+    },	
+
+
+
+    
+    
+  },
+  // Specify validation error messages
+  messages: {
+    name: "Please enter your Name",
+    email: "Please enter a valid Email address",
+    phone: "Phone number required 10 digit",
+    amount:"Please enter Amount"
+
+  },
+  // Make sure the form is submitted to the destination defined
+  // in the "action" attribute of the form when valid
+  submitHandler: function(form) {
+    form.submit();
+  }
+});
+});
+</script>
 
 </body>
 

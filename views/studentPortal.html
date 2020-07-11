@@ -4,11 +4,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
+  <meta name="description" content="Creative - Bootstrap 3 Responsive Student Template">
   <meta name="author" content="GeeksLabs">
   <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
   <link rel="shortcut icon" href="img/favicon.png">
 
+  <link href="../public/img/logoAMZ/AMZ Techiversity logo 2.png" rel="icon">
+  <link href="../public/img/logoAMZ/AMZ Techiversity logo 2.png" rel="apple-touch-icon">
   <title>AMZ - Student Portal</title>
 
   <!-- Bootstrap CSS -->
@@ -44,22 +46,8 @@
       </div>
 
       <!--logo start-->
-      <a href="./home.html" class="logo">A<span class="lite">MZ</span></a>
+      <a href="./home.html"><img src="../public/img/logoAMZ/AMZ Techiversity log.png" alt="" class="img-fluid logo_img"></a>
       <!--logo end-->
-
-      <!--  search form start -->
-      <!-- <div class="nav search-row" id="top_menu">
-        
-        <ul class="nav top-menu">
-          <li>
-            <form class="navbar-form">
-              <input class="form-control" placeholder="Search" type="text">
-            </form>
-          </li>
-        </ul>
-        
-      </div> -->
-      <!--  search form end -->
 
       <div class="top-nav notification-row">
         <!-- notificatoin dropdown start-->
@@ -243,7 +231,7 @@
           <li>
             <a class="" href="#faq">
                           <i class="icon_documents_alt"></i>
-                          <span>FAQ's</span>
+                          <span>Terms & Conditions</span>
                       </a>
           </li>
         </ul>
@@ -268,9 +256,9 @@
                   <h6 class="mt-3">Student</h6>
                 </div>
                 <div class="col-lg-4 col-sm-4 follow-info">
-                  <p>Hello I’m Simran Sharma, an expert in interactive and creative design.</p>
                   <p>@ Abc Institute</p>
                   <p><i class="fa fa-twitter"></i> Mechanical</p>
+                  <p><i class="icon_key_alt"></i> 7891456030</p>
                   <h6>
                                     <span><i class="icon_clock_alt"></i>11:05 AM</span>
                                     <span><i class="icon_calendar"></i>25.10.13</span>
@@ -333,9 +321,6 @@
                   <!-- profile -->
                   <div id="profile" class="tab-pane active">
                     <section class="panel">
-                      <div class="bio-graph-heading">
-                        Hello I’m Simran Sharma, a leading expert in interactive and creative design specializing in the mobile medium. My graduation from Massey University with a Bachelor of Design majoring in visual communication.
-                      </div>
                       <div class="panel-body bio-graph-info">
                         <h1>Bio Graph</h1>
                         <div class="row">
@@ -343,16 +328,13 @@
                             <p><span>Name </span>: Simran Sharma</p>
                           </div>
                           <div class="bio-row">
-                            <p><span>Birthday</span>: 27 August 1999</p>
-                          </div>
-                          <div class="bio-row">
-                            <p><span>Country </span>: India</p>
+                            <p><span>Enrollment Id </span>: 7891456030</p>
                           </div>
                           <div class="bio-row">
                             <p><span>Institute </span>: Abc Institute</p>
                           </div>
                           <div class="bio-row">
-                            <p><span>Email </span>:simran@gmail.com</p>
+                            <p><span>Email </span>: simran@gmail.com</p>
                           </div>
                           <div class="bio-row">
                             <p><span>Branch </span>: Mechanical</p>
@@ -377,49 +359,43 @@
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Name</label>
                             <div class="col-lg-6">
-                              <input type="text" class="form-control" id="name" placeholder=" ">
+                              <input type="text" class="form-control" id="name" placeholder="" value="Simran Sharma" disabled>
                             </div>
                           </div>
                           <div class="form-group">
-                            <label class="col-lg-2 control-label">About Me</label>
-                            <div class="col-lg-10">
-                              <textarea name="" id="" class="form-control" cols="30" rows="5"></textarea>
-                            </div>
-                          </div>
-                          <div class="form-group">
-                            <label class="col-lg-2 control-label">Country</label>
+                            <label class="col-lg-2 control-label">Enrollment Id</label>
                             <div class="col-lg-6">
-                              <input type="text" class="form-control" id="c-name" placeholder=" ">
-                            </div>
-                          </div>
-                          <div class="form-group">
-                            <label class="col-lg-2 control-label">Birthday</label>
-                            <div class="col-lg-6">
-                              <input id="dp1" type="date"  size="16" class="form-control" data-date-format="dd-mm-yyyy">
+                              <input type="text" class="form-control" id="E-Id" placeholder=" " value="7894561230" disabled>
                             </div>
                           </div>
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Institute</label>
                             <div class="col-lg-6">
-                              <input type="text" class="form-control" id="institute" placeholder=" ">
+                              <input type="text" class="form-control" id="institute" placeholder=" " value="Abc Institute" disabled>
                             </div>
                           </div>
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Branch</label>
                             <div class="col-lg-6">
-                              <input type="text" class="form-control" id="institute" placeholder=" ">
+                              <input type="text" class="form-control" id="institute" placeholder=" " value="Mechanical" disabled>
                             </div>
                           </div>
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Email</label>
                             <div class="col-lg-6">
-                              <input type="text" class="form-control" id="email" placeholder=" ">
+                              <input type="text" class="form-control" id="email" placeholder=" " value="abc@gmail.com" disabled>
                             </div>
                           </div>
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Mobile</label>
                             <div class="col-lg-6">
-                              <input type="number" class="form-control" id="mobile" placeholder=" ">
+                              <input type="number" class="form-control" id="mobile" placeholder=" " value="1234567890">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label">Password</label>
+                            <div class="col-lg-6">
+                              <input type="password" class="form-control" id="password" placeholder=" " value="123">
                             </div>
                           </div>
 
@@ -559,12 +535,12 @@
           <div class="panel-body">
             <form role="form">
               <div class="form-group">
-                <label for="exampleInputEmail1">Email</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" name="projectRqMail" placeholder="Enter Email">
+                <label for="exampleInputHeading1">Heading</label>
+                <input type="text" class="form-control" id="exampleInputHeading1" name="projectRqHeading" placeholder="Enter Heading">
               </div>
               <div class="form-group">
-                <label for="exampleInputMobile1">Mobile</label>
-                <input type="number" class="form-control" id="exampleInputMobile1" name="projectRqMobile" placeholder="Enter Mobile">
+                <label for="exampleInputDesc1">Description</label>
+                <textarea  class="form-control" rows="3" id="exampleInputDesc1" name="projectRqDesc" placeholder="Enter Description of the Project"></textarea>
               </div>
               <div class="form-group">
                 <label for="exampleInputFile">File input</label>
@@ -596,7 +572,7 @@
         <div class="panel-heading">
           <h4 class="panel-title">
                               <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                                  FAQ #1
+                                  Terms & Conditions #1
                               </a>
                           </h4>
         </div>
@@ -615,7 +591,7 @@
         <div class="panel-heading">
           <h4 class="panel-title">
                               <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-                                  FAQ #2
+                                  Terms & Conditions #2
                               </a>
                           </h4>
         </div>
@@ -634,7 +610,7 @@
         <div class="panel-heading">
           <h4 class="panel-title">
                               <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-                                  FAQ #3
+                                  Terms & Conditions #3
                               </a>
                           </h4>
         </div>
@@ -653,7 +629,7 @@
         <div class="panel-heading">
           <h4 class="panel-title">
                               <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
-                                  FAQ #4
+                                  Terms & Conditions #4
                               </a>
                           </h4>
         </div>
@@ -672,7 +648,7 @@
         <div class="panel-heading">
           <h4 class="panel-title">
                               <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
-                                  FAQ #5
+                                  Terms & Conditions #5
                               </a>
                           </h4>
         </div>
@@ -691,7 +667,7 @@
         <div class="panel-heading">
           <h4 class="panel-title">
                               <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseSix">
-                                  FAQ #6
+                                  Terms & Conditions #6
                               </a>
                           </h4>
         </div>
@@ -734,23 +710,18 @@
         <div class="modal-body">
           <div class="d-flex flex-column text-center">
             <form class="onCampusRequest-form" action="">
-
-              <!-- <div class="form-group" id="select">
-                <select type="text" class="form-control" id="selectLOL" >
-                  <option value="lol" selected>Select an option</option>
-                  <option value="sergre">lol</option>
-                </select>
-              </div> -->
+              
+              <div class="form-group">
+                <input type="text" class="form-control" name="userRqHeader" id="userName" placeholder="HEADING..." autocomplete="off">
+              </div>
 
               <div class="form-group">
-                <textarea name="userInfo" id="userInfo" cols="5" rows="2" class="form-control" placeholder="YOUR QUERY..." autocomplete="off"></textarea>
+                <textarea name="userRqDesc" id="userInfo" cols="5" rows="2" class="form-control" placeholder="DESCRIPTION..." autocomplete="off"></textarea>
               </div>
               
               <div class="form-group">
-                <input type="text" class="form-control" name="userName" id="userName" placeholder="YOUR NAME" autocomplete="off">
-              </div>
-              <div class="form-group">
-                <input type="number" class="form-control" name="userPhNo" id="userNo" placeholder="YOUR MOBILE" autocomplete="off">
+                <input type="file" id="exampleInputFile"  name="userRqFile">
+                <p class="help-block">Upload Your Pdf Document Here.</p>
               </div>
               
               <div class="row">
@@ -784,11 +755,6 @@
   <!--custome script for all page-->
   <script src="../public/vendor/js3.0/scripts.js"></script>
 
-<!-- <script>
-  $("#selectLOL").select2({
-    dropdownParent: $("#studentRequestModal")
-  });
-</script> -->
 
 </body>
 

@@ -1072,6 +1072,11 @@ a.logo {
 
 }
 
+.logo_img {
+    max-height: 60px;
+    min-width: 90px;
+  }
+
 
 
 a.logo:hover, a.logo:focus {
@@ -2407,7 +2412,7 @@ div[data-role="editor-toolbar"] {
     color: #ffffff;
     border-color: #20a8d8;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 500;
 
 }
 
@@ -9971,7 +9976,7 @@ span.customSelect.changed {
   }
 
 /*--------------------------------------------------------------
-# News 
+# Request Now Slider 
 --------------------------------------------------------------*/
 .stdnt-slider .stdnt-slider-item {
   box-sizing: content-box;
@@ -9997,6 +10002,53 @@ span.customSelect.changed {
   background-color: #2487ce !important;
 }
 
+.slider-portal-carousel .owl-nav .owl-prev, 
+.slider-portal-carousel .owl-nav .owl-next {
+  color: #111 !important;
+  font-size: 70px !important;
+  margin-top: -5px !important;
+  top: 50% !important;
+  text-align: center !important;
+  line-height: 45px !important;
+  width: 80px !important;
+  height: 80px !important;
+}
+.slider-portal-carousel .owl-nav .owl-prev{
+    left: 10%;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    -ms-transition: 0.4s;
+}
+.slider-portal-carousel .owl-nav .owl-next {
+    right: 10%;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    -ms-transition: 0.4s;
+}
+.slider-portal-carousel:hover .owl-nav .owl-next{
+    right: 2%;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    -ms-transition: 0.4s;
+    opacity: 1;
+}
+.slider-portal-carousel:hover .owl-nav .owl-prev{
+    left: 2%;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    -ms-transition: 0.4s;
+    opacity: 1;
+}
+.slider-portal-carousel:hover .owl-nav .owl-next:hover,
+.slider-portal-carousel:hover .owl-nav .owl-prev:hover{
+    /* color:#fff;
+    background: #0C94B8;
+    border: 1px solid #0C94B8; */
+}
 @media (max-width: 767px) {
   .stdnt-slider {
     margin: 30px 10px;
@@ -10135,6 +10187,8 @@ span.customSelect.changed {
   right: 15px;
 }
 
+
+
 /*On Campus Course Request Modal */
 #studentRequestModal .modal-content{
     width: 80%;
@@ -10214,3 +10268,16 @@ span.customSelect.changed {
   .form-horizontal .control-label {
     text-align: left;
   }
+
+ input[type="file"] {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+
+}
+.onCampusRequest-form input[type="file"] {
+    color: #ffffff;    
+}
+  .onCampusRequest-form .help-block{
+    color: #ffffff;
+   }
