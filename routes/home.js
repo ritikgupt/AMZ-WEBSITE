@@ -6,6 +6,7 @@ const partner = require('../db/partner');
 const trusted = require('../db/trusted');
 const advisory = require('../db/advisory');
 const video = require('../db/video');
+const general = require('../db/general');
 router.get('/', async(req, res) => {
   try {
     let a = await slider.show();
@@ -16,6 +17,16 @@ router.get('/', async(req, res) => {
     let f = await video.show();
     res.render('home', {slider: a, news: b, partner: c, trusted: d, advisory: e, video: f});
   } catch (e){
+    res.json({message: e});
+  }
+});
+
+router.post('/', async(req, res) => {
+  console.log(req.body)
+  try {
+    await general.add(req.body);
+    res.redirect('/');
+  } catch (e) {
     res.json({message: e});
   }
 });
