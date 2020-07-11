@@ -81,6 +81,7 @@ function initializeJS() {
     dots: true,
     loop: true,
     stopOnHover: true,
+    nav: true,
     responsive: {
       0: {
         items: 1
