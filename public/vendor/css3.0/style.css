@@ -6894,6 +6894,29 @@ ul.inbox-pagination li {
     display: inline-block;
 
 }
+.view-row{
+    width: 100%;
+
+    float: left;
+
+    margin-bottom: 10px;
+
+    padding:0 15px;
+
+    border-bottom: 1px solid #eff2f7;
+
+}
+
+.view-row img{
+    width: 150px;
+    height: 100px;
+    margin-right: 4rem;
+}
+
+.view-row h4{
+    color: #17a2b8;
+    margin: 0rem;
+}
 
 
 

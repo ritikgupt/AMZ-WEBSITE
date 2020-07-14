@@ -3,686 +3,1023 @@
 
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Creative - Bootstrap 3 Responsive Student Template">
+  <meta name="author" content="GeeksLabs">
+  <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
+  <link rel="shortcut icon" href="img/favicon.png">
 
-  <title>AMZ AUTOMATIVE</title>
-  <meta content="" name="descriptison">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
   <link href="../public/img/logoAMZ/AMZ Techiversity logo 2.png" rel="icon">
   <link href="../public/img/logoAMZ/AMZ Techiversity logo 2.png" rel="apple-touch-icon">
+  <title>AMZ - Admin Portal</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="../public/vendor/css3.0/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
-  <link href="../public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="../public/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="../public/vendor/bootstrap/css/bootstrap-grid.min.css" rel="stylesheet" >
+  <!-- bootstrap theme -->
+  <link href="../public/vendor/css3.0/bootstrap-theme.css" rel="stylesheet">
+  <!--external css-->
+  <!-- font icon -->
+  <link href="../public/vendor/css3.0/elegant-icons-style.css" rel="stylesheet" />
+  <link href="../public/vendor/css3.0/font-awesome.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../public/vendor/css3.0/line-icons.css">
+  <!-- Custom styles -->
+  
+  <link href="../public/vendor/owl.carousel/assets/owl.carousel.css" rel="stylesheet">
+  
   <link href="../public/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="../public/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="../public/vendor/venobox/venobox.css" rel="stylesheet">
-  <link href="../public/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="../public/vendor/aos/aos.css" rel="stylesheet">
 
-  <!-- Template Main CSS File -->
-  <link href="../public/css/style.css" rel="stylesheet">
+  <link href="../public/vendor/css3.0/style.css" rel="stylesheet">
+  <link href="../public/vendor/css3.0/style-responsive.css" rel="stylesheet" />
 
+  
 </head>
 
 <body>
+  <!-- container section start -->
+  <section id="container" class="">
+    <!--header start-->
+    <header class="header dark-bg">
+      <div class="toggle-nav">
+        <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"><i class="icon_menu"></i></div>
+      </div>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top ">
-    <div class="container-fluid d-flex align-items-center">
-      <a href="./home.html" class="logo mr-auto"><img src="../public/img/logoAMZ/AMZ Techiversity log.png" alt="" class="img-fluid"></a>
-      <nav class="nav-menu d-none d-lg-block">
-        <ul>
-          <li class="active"><a href="./home.html">Home</a></li>
-          <li class="drop-down"><a href="">About</a>
-            <ul>
-              <li><a href="./aboutUs.html">About AMZ</a></li>
-              <li><a href="./gallery.html">AMZ Gallery</a></li>
-              <li><a href="./award_gallery.html">AMZ Awards</a></li>
+      <!--logo start-->
+      <a href="./home.html"><img src="../public/img/logoAMZ/AMZ Techiversity log.png" alt="" class="img-fluid logo_img"></a>
+      <!--logo end-->
+
+      <div class="top-nav notification-row">
+        <!-- notificatoin dropdown start-->
+        <ul class="nav pull-left top-menu">
+
+          <!-- user login dropdown start-->
+          <li class="dropdown">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="profile-ava">
+                                <img alt="" src="../public/vendor/img/avatar1_small.jpg">
+                            </span>
+                            <span class="username">Admin Name</span>
+                            <b class="caret"></b>
+                        </a>
+            <ul class="dropdown-menu extended logout">
+              <div class="log-arrow-up"></div>
+              <li class="eborder-top">
+                <a href="./adminHome.html"><i class="icon_profile"></i>Main Page</a>
+              </li>
+              <li>
+                <a href="#"><i class="icon_mail_alt"></i> Enquiry Data</a>
+              </li>
+              <li>
+                <a href="#"><i class="icon_clock_alt"></i> Data Upload</a>
+              </li>
+              <li>
+                <a href="#"><i class="icon_pencil-edit"></i> IRC Chapter</a>
+              </li>
+              <li>
+                <a href="#"><i class="icon_laptop"></i> Courses</a>
+              </li>
+              <li>
+                <a href="./amz_login.html"><i class="icon_key_alt"></i> Log Out</a>
+              </li>
             </ul>
           </li>
-          <li><a href="./internshipCourse.html">Internship</a></li>
-          <li><a href="./events.html">Events</a></li>
-          <li><a href="#centerLogin">Center Of Excellence</a></li>
-          <li><a href="./amz_login.html">AMZ Login</a></li>
+          <!-- user login dropdown end -->
         </ul>
-      </nav>
-    </div>
-  </header>
-  <!-- End Header -->
-
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
-
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-          <p>Join us to learn Industry oriented Skills.</p>
-          <div class="section-header">
-            <h1>Amz Techversity</h1>
-          </div>
-          <h2>India’s biggest
-            Technology and Innovation
-            Based Learning Platform
-            </h2>
-        </div>
-        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-          <img src="../public/img/hero-img.png" class="img-fluid animated" alt="">
-        </div>
+        <!-- notificatoin dropdown end-->
       </div>
-    </div>
+    </header>
+    <!--header end-->
 
-  </section><!-- End Hero -->
+    <!--sidebar start-->
+    <aside>
+      <div id="sidebar" class="nav-collapse ">
+        <!-- sidebar menu start-->
+        <ul class="sidebar-menu">
+          <li class="">
+            <a class="" href="#trustedBy">
+                          <i class="icon_house_alt"></i>
+                          <span>Trusted By</span>
+                      </a>
+          </li>
+          <li>
+            <a class="" href="#news">
+                          <i class="icon_documents_alt"></i>
+                          <span>News</span>
+                      </a>
+          </li>
+          <li>
+            <a class="" href="#partner">
+                          <i class="icon_chat_alt"></i>
+                          <span>Partner</span>
+                      </a>
+          </li>
+          <li>
+            <a class="" href="#video">
+                          <i class="icon_pencil-edit"></i>
+                          <span>Video</span>
+                      </a>
+          </li>
+          <li>
+            <a class="" href="#advisory">
+                          <i class="icon_contacts_alt"></i>
+                          <span>Advisory</span>
+                      </a>
+          </li>
+          <li>
+            <a class="" href="#client">
+                          <i class="icon_globe_alt"></i>
+                          <span>Happy Client</span>
+                      </a>
+          </li>
+          <li>
+            <a class="" href="#gallery">
+                          <i class="icon_images"></i>
+                          <span>AMZ Gallery</span>
+                      </a>
+          </li>
+          <li>
+            <a class="" href="#award">
+                          <i class="icon_image"></i>
+                          <span>Award Gallery</span>
+                      </a>
+          </li>
+        </ul>
+        <!-- sidebar menu end-->
+      </div>
+    </aside>
+    <!--sidebar end-->
 
-  <main id="main">
+    <!--main content start-->
+<section id="main-content">
+      <section class="wrapper" id="accountInfo">
+        <div class="row">
+          <!-- profile-widget -->
+          <div class="col-lg-12">
+            <div class="profile-widget profile-widget-info">
+              <div class="panel-body">
+                <div class="col-lg-2 col-sm-2">
+                  <h4>Admin Name</h4>
+                  <div class="follow-ava">
+                    <img src="../public/vendor/img/profile-widget-avatar.jpg" alt="">
+                  </div>
+                  <h6 class="mt-3">Admin</h6>
+                </div>
+                <div class="col-lg-4 col-sm-4 follow-info">
+                  <p>@ AMZ Techversity</p>
+                  <p><i class="fa fa-twitter"></i> Admin</p>
+                  <p><i class="icon_key_alt"></i> 7891456030</p>
+                </div>
+                <div class="col-lg-2 col-sm-6 follow-info weather-category">
+                  <ul>
+                    <li class="active">
 
-    <!-- ======= Cliens Section ======= -->
-    <section id="cliens" class="cliens section-bg">
-      <div class="container">
+                      <i class="fa fa-comments fa-2x"> </i><br> Contrary to popular belief, Lorem Ipsum is not simply
+                    </li>
+
+                  </ul>
+                </div>
+                <div class="col-lg-2 col-sm-6 follow-info weather-category">
+                  <ul>
+                    <li class="active">
+
+                      <i class="fa fa-bell fa-2x"> </i><br> Contrary to popular belief, Lorem Ipsum is not simply
+                    </li>
+
+                  </ul>
+                </div>
+                <div class="col-lg-2 col-sm-6 follow-info weather-category">
+                  <ul>
+                    <li class="active">
+
+                      <i class="fa fa-tachometer fa-2x"> </i><br> Contrary to popular belief, Lorem Ipsum is not simply
+                    </li>
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+     
+        <div class="row">
+          <div class="col-lg-12">
+            <section class="panel">
+              <header class="panel-heading tab-bg-info">
+                <ul class="nav nav-tabs">
+                  <li class="active">
+                    <a data-toggle="tab" href="#profile">
+                                          <i class="icon-user"></i>
+                                          Profile
+                                      </a>
+                  </li>
+                  <li class="">
+                    <a data-toggle="tab" href="#edit-profile">
+                                          <i class="icon-envelope"></i>
+                                          Edit Profile
+                                      </a>
+                  </li>
+                </ul>
+              </header>
+              <div class="panel-body">
+                <div class="tab-content">
+     
+                  <div id="profile" class="tab-pane active">
+                    <section class="panel">
+                      <div class="panel-body bio-graph-info">
+                        <h1>Bio Graph</h1>
+                        <div class="row">
+                          <div class="bio-row">
+                            <p><span>Name </span>: Admin Name</p>
+                          </div>
+                          <div class="bio-row">
+                            <p><span>Company </span>: AMZ Techversity</p>
+                          </div>
+                          <div class="bio-row">
+                            <p><span>Email </span>: admin@gmail.com</p>
+                          </div>
+                          <div class="bio-row">
+                            <p><span>Mobile </span>: (+91) 7891456030</p>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                    <section>
+                      <div class="row">
+                      </div>
+                    </section>
+                  </div>
+
+                  <div id="edit-profile" class="tab-pane">
+                    <section class="panel">
+                      <div class="panel-body bio-graph-info">
+                        <h1> Profile Info</h1>
+                        <form class="form-horizontal" role="form" action="">
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label">Name</label>
+                            <div class="col-lg-6">
+                              <input type="text" class="form-control" id="name" placeholder="" value="Admin Name" disabled>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label">Company</label>
+                            <div class="col-lg-6">
+                              <input type="text" class="form-control" id="company" placeholder=" " value="AMZ Techiversity" disabled>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label">Email</label>
+                            <div class="col-lg-6">
+                              <input type="text" class="form-control" id="email" placeholder=" " value="admin@gmail.com" disabled>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label">Mobile</label>
+                            <div class="col-lg-6">
+                              <input type="number" class="form-control" id="mobile" placeholder=" " value="7891456030">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label">Password</label>
+                            <div class="col-lg-6">
+                              <input type="password" class="form-control" id="password" placeholder=" " value="123">
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <div class="col-lg-offset-2 col-lg-10">
+                              <button type="submit" class="btn btn-primary">Save</button>
+                              <button type="button" class="btn btn-danger">Cancel</button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </section>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+
+      </section>
+
+<!-- Trusted By -->
+      <section class="container" id="trustedBy">
         <div class="section-title">
           <h2>Trusted By</h2>
         </div>
-
-        <div class="owl-carousel trustedBy-carousel" data-aos="zoom-in">
-
-          <img src="../public/img/PARTNERS/dune adventure.jpg" class="img-fluid" alt="">
-          <img src="../public/img/PARTNERS/india baja.png" class="img-fluid" alt="">
-          <img src="../public/img/PARTNERS/indian motor cycle.jpg" class="img-fluid" alt="">
-          <img src="../public/img/PARTNERS/k raheja crop.jpg" class="img-fluid" alt="">
-          <img src="../public/img/PARTNERS/multix logo.jpg" class="img-fluid" alt="">
-          <img src="../public/img/PARTNERS/polaris.png" class="img-fluid" alt="">
-          <img src="../public/img/PARTNERS/steel bird logo.jpg" class="img-fluid" alt="">
-
-        </div>
-
-      </div>
-    </section><!-- End Cliens Section -->
-
-    <!-- Start Course Section -->
-    <div class="card-container pb-5">
-      <div class="container-fluid custom-margin-1">
+        <!-- page start-->
         <div class="row">
-          <div class="col-lg-6 col-md-6 col-sm-12  pl-0 pr-0 pb-2" data-aos="zoom-in" data-delay="100">
-            <div class="card amz-courses-1 mx-3">
-              <div class="card-body">
-                <h6 class="card-subtitle mb-5 text-white">Online Courses</h6>
-                <div class="text-center mb-5"><a href="./courses.html" class="btn btn-lg btn-primary btn-round online-btn" type="submit">Join Now</a></div>
-                <p class="card-text text-white pb-4">The online courses provide the way to surf long and deep
-                  into knowledge. You are out to flexibility, time efficient, accessibility, global knowledge
-                  and better opportunities.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-6 col-sm-12 pr-0 pb-2 pl-0" data-aos="zoom-in" data-delay="200">
-            <div class="card amz-courses-2 mx-3">
-              <div class="card-body">
-                <h6 class="card-subtitle mb-5 text-white">On Campus Courses</h6>
-                <div class="text-center mb-5"><a href="./campusCourse.html" class="btn btn-lg btn-primary btn-round offline-btn" type="submit">Join Now</a></div>
-                <p class="card-text text-white pb-4">One can experience real time participation and can judge
-                  themselves. We build community, envolve students in structured time and instant solving of
-                  doubts.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  <!-- End Course Section -->
-
-
-    <!-- ======= News Section ======= -->
-<section id="news" class="news">
-  <div class="container" data-aos="fade-up">
-
-    <div class="section-title">
-      <h2>News</h2>
-      <p>Aim to make India a self dependent country in terms of research and development.</p>
-    </div>
-
-    <div class="owl-carousel news-carousel">
-
-      <div class="news-item">
-        <div class="news-wrap">
-          <img src="../public/img/news/news3.JPG" class="img-fluid" alt="">
-          <div class="news-info">
-            <h4 class="mt-1 mb-1 p-1">Conducted Summer Training at IIIT NUZVID</h4>
-            <p class="mb-1 p-1">AMZ conducted a successful on campus internship program at IIT NUZVID To 
-              provide practical learning in the process of vehicle design & development in order to retain 
-              talent in modern science to excite the young minds of the country about innovation for inclusive 
-              growth and better future while
-              helping the society and economy to face future challenges in science & technology.
-              </p>
-            <p class="mt-1 text-right"><i class="bx bxs-calendar-event pr-1"></i>01/01/2020</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="news-item">
-        <div class="news-wrap">
-          <img src="../public/img/news/news2.jpg" class="img-fluid" alt="">
-          <div class="news-info">
-            <h4 class="mt-1 mb-1 p-1">Organized a conclave on Engineering in Motorsports</h4>
-            <p class="mb-1 p-1">AMZ organized a Conclave on Engineering in Motorsports at their skill 
-              development center for young Generation. AMZ invited Managing director and general manager 
-              from Polaris and Kraheja group of company to share their 
-              knowledge and skills required by engineer in field of automobile sector.</p>
-            <p class="mt-1 text-right"><i class="bx bxs-calendar-event pr-1"></i>01/01/2020</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="news-item">
-        <div class="news-wrap">
-          <img src="../public/img/news/eventNews.jpg" class="img-fluid" alt="">
-          <div class="news-info">
-            <h4 class="mt-1 mb-1 p-1">AMZ was invited as technical support team in Maruti Suzuki desert storm</h4>
-            <p class="mb-1 p-1">Northern Motorsport Desert Storm is organized by country’s premier motorsport 
-              club, Northern Motorsport. The team leaves no stone unturned to make Desert Storm an unforgettable
-               experience. Desert Storm has unmatched patronage in the country and has produced some excellent rallyists
-                over the years like Sandeep Sharma, Sunny Sidhu, Suresh Rana etc. Each year it sees over 100 participants 
-                from Indian Army, Maruti Team, and many from all across the country congregate to take part in the battleground of desert.
-              </p>
-            <p class="mt-1 text-right"><i class="bx bxs-calendar-event pr-1"></i>01/01/2020</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-</section><!-- End News Section -->
-
-    <!-- ======= Cliens Section ======= -->
-    <section id="cliens" class="cliens section-bg">
-      <div class="container">
-        <div class="section-title">
-          <h2>Partners</h2>
-        </div>
-        <div class="row partners" data-aos="zoom-in">
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="../public/img/PARTNERS/dune adventure.jpg" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="../public/img/PARTNERS/india baja.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="../public/img/PARTNERS/indian motor cycle.jpg" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="../public/img/PARTNERS/k raheja crop.jpg" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="../public/img/PARTNERS/multix logo.jpg" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="../public/img/PARTNERS/polaris.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="../public/img/PARTNERS/steel bird logo.jpg" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="../public/img/PARTNERS/dune adventure.jpg" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="../public/img/PARTNERS/india baja.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="../public/img/PARTNERS/indian motor cycle.jpg" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="../public/img/PARTNERS/k raheja crop.jpg" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="../public/img/PARTNERS/multix logo.jpg" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="../public/img/PARTNERS/polaris.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="../public/img/PARTNERS/steel bird logo.jpg" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="../public/img/PARTNERS/dune adventure.jpg" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="../public/img/PARTNERS/india baja.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="../public/img/PARTNERS/indian motor cycle.jpg" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="../public/img/PARTNERS/k raheja crop.jpg" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="../public/img/PARTNERS/multix logo.jpg" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="../public/img/PARTNERS/polaris.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="../public/img/PARTNERS/steel bird logo.jpg" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="../public/img/PARTNERS/dune adventure.jpg" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="../public/img/PARTNERS/india baja.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="../public/img/PARTNERS/indian motor cycle.jpg" class="img-fluid" alt="">
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Cliens Section -->
-
-       <!-- ======= About Video Section ======= -->
-       <section id="news" class="news">
-        <div class="container-fluid" data-aos="fade-up">
-  
-          <div class="section-title">
-            <h2>Videos</h2>
-          </div>
-  
-          <div class="owl-carousel video-carousel">
-  
-            <div class="news-item">
-              <div class="video-box align-self-baseline" data-aos="fade-right" data-aos-delay="100">
-                <img src="../public/img/youTubeVideo/V1.JPG" class="img-fluid" alt="">
-                <a href="https://www.youtube.com/watch?v=MNvNNSvn7fI&t=7s" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
-              </div>
-            </div>
-      
-            <div class="news-item">
-              <div class="video-box align-self-baseline" data-aos="fade-right" data-aos-delay="100">
-                <img src="../public/img/youTubeVideo/v2.JPG" class="img-fluid" alt="">
-                <a href="https://www.youtube.com/watch?v=KDGa6zQSyno&t=8s" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
-              </div>
-            </div>     
-      
-          </div>
-  
-        </div>
-      </section>
-      <!-- End About Video Section -->
-
-    <!-- ======= Advisory Committee Section ======= -->
-    <section id="advisory" class="advisory section-bg">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Advisory Committe</h2>
-          <p>Advisory committee provides guidance to the core team and suggests well structured concepts to formulate different courses and integrate all the schemes to provide effective practicality in education sector.</p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-6">
-            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
-              <div class="pic"><img src="../public/img/advisory_committe/yatindra Bhushan.jpg" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Yatindra Bhusan</h4>
-                <span></span>
-                <p>Senior Reservoir Engineer at ADCO UAE</p>
-                
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6 mt-4 mt-lg-0">
-            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="200">
-              <div class="pic"><img src="../public/img/advisory_committe/dr ratanadip r joshi.jpg" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Dr. Ratnadip R Joshi</h4>
-                <span></span>
-                <p>Associate Dean at Maharashtra Institute of Technology,Kothrud,Pune,India</p>
-                
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6 mt-4">
-            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="300">
-              <div class="pic"><img src="../public/img/advisory_committe/Aman Tripathi.jpg" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Aman Tripathi</h4>
-                <span></span>
-                <p>Management Committe Member at Nissan Europe
-                  <br>Chairman Office at Nissan Europe
-                </p>
-                
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6 mt-4">
-            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
-              <div class="pic"><img src="../public/img/advisory_committe/ARVIND BALAN.JPG" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Arvind Balan</h4>
-                <span></span>
-                <p>Founder and MD at Maxperience<br>
-                Former Senior Area Manager at Indian Oil Corporation Ltd.</p>
-                
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-lg-6 mt-4">
-            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
-              <div class="pic"><img src="../public/img/advisory_committe/Seshathiri Dhanasekaran.jpg" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Seshathiri Dhanasekaran</h4>
-                <span></span>
-                <p>AI/ML Researcher/Data Scientist/Corporate ML and Data Science Trainer/Helping in ML AI Projects.</p>
-                
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-    <!-- ======= Advisory Committee Section ======= -->
-    
-   <!-- ======= Counts Section ======= -->
-   <section id="counts" class="counts section-bg">
-    <div class="container">
-
-      <div class="row justify-content-end">
-
-        <div class="col d-md-flex align-items-md-stretch">
-          <div class="count-box">
-            <span data-toggle="counter-up">200</span>
-            <p>Campus Reached</p>
-          </div>
-        </div>
-
-        <div class="col d-md-flex align-items-md-stretch">
-          <div class="count-box">
-            <span data-toggle="counter-up">40</span>
-            <p>Courses</p>
-          </div>
-        </div>
-
-        <div class="col d-md-flex align-items-md-stretch">
-          <div class="count-box">
-            <span data-toggle="counter-up">1,044</span>
-            <p>Workshop</p>
-          </div>
-        </div>
-
-        <div class="col d-md-flex align-items-md-stretch">
-          <div class="count-box">
-            <span data-toggle="counter-up">87</span>
-            <p>On Campus Program</p>
-          </div>
-        </div>
-
-        <div class="col d-md-flex align-items-md-stretch">
-          <div class="count-box">
-            <span data-toggle="counter-up">60,000</span>
-            <p>Student Attended</p>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section><!-- End Counts Section -->
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Get in touch now</h2>
-          <p>Go for it, don't hesitate to contact our members.<br>
-              We are here to get your queries.</p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-5 d-flex align-items-stretch">
-            <div class="info">
-              <div class="address">
-                <i class="icofont-google-map"></i>
-                <h4>Location:</h4>
-                <p>AM Tower, 3rd floor, 07 Teachers colony, Ajmer Rd, DCM, Jaipur, Rajasthan 302021</p>
-              </div>
-
-              <div class="email">
-                <i class="icofont-envelope"></i>
-                <h4>Email:</h4>
-                <p>mail@amzindia.com</p>
-              </div>
-
-              <div class="phone">
-                <i class="icofont-phone"></i>
-                <h4>Call:</h4>
-                <p>+91 9361897519</p>
-              </div>
-              <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d28463.829964760418!2d75.75156024244828!3d26.904169641195992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sAM%20Tower%2C%203rd%20floor%2C%2007%20Teachers%20colony%2C%20Ajmer%20Rd%2C%20DCM%2C%20Jaipur%2C%20Rajasthan%20302021!5e0!3m2!1sen!2sin!4v1594234097773!5m2!1sen!2sin" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
-            </div>
-
-          </div>
-
-          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="" method="post" role="form" class="php-email-form">
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label for="name">Your Name*</label>
-                  <input type="text" name="name" class="form-control" id="name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                  <div class="validate"></div>
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="name">Your Email*</label>
-                  <input type="email" class="form-control" name="email" id="email" data-rule="email" data-msg="Please enter a valid email" />
-                  <div class="validate"></div>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="name">Telephone Number*</label>
-                <input type="number" class="form-control" name="number" id="number" data-rule="minlen:10" data-msg="Please enter a valid number" />
-                <div class="validate"></div>
-              </div>
-              <div class="form-group">
-                <label for="name">Message*</label>
-                <textarea class="form-control" name="message" rows="10" data-rule="required" data-msg="Please write something for us"></textarea>
-                <div class="validate"></div>
-              </div>
-              <div class="mb-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Contact Section -->
-
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h4>About Amz</h4>
-            <p>
-              <strong>Location:</strong> AM Tower, 3rd floor, 07 Teachers colony, Ajmer Rd, DCM, Jaipur, Rajasthan 302021<br>
-              <strong>Phone:</strong> +91 9361897519<br>
-              <strong>Email:</strong>  mail@amzindia.com<br>
-            </p>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Support</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#contact">Get in touch</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Our policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Information</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Our Blog</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Newsletter</h4>
-            <p>Signup to receive our interesting news and promotions.We never send spam!</p>
-            <form action="" method="post" class="mb-3">
-              <input type="email" name="email"  placeholder="Your Email..."><input type="submit" value="Subscribe">
-            </form>
-            <h4 class="pb-0">Validate Certificate</h4>
-            <p>Validate your certificate now by Serial No</p>
-            <form action="" method="post">
-              <input type="text" name="certificateId"  placeholder="Serial Number..."><input type="submit" value="Validate">
-            </form>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="container footer-bottom clearfix">
-      <div class="copyright">
-        &copy; <strong><span>2020 AMZ.</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-
-        <div class="social-links">
-          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-          <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <!-- End Footer -->
-
-  <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
-  <div id="preloader"></div>
-
-    <!-- Modal Dicount Pop Up Start -->
-    <div class="modal fade modal-md" id="timerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-md" role="document">
-        <div class="modal-content">
-          <div class="modal-header border-bottom-0">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-          </div>
-          <div class="modal-body pt-0">
-            <div class="rounded text-white shadow p-2 text-center">
-              <p class="mb-1 font-weight-bold text-uppercase text-danger">just pay 17400 Rs before the countdown ends</p>
-              <p class="mb-0 font-weight-bold">Enroll soon before the offer ends!!</p>
-              <div id="countDownTimer" class="countdown pt-2"></div>
-            </div>
-          </div>
-      </div>
-    </div>
-    <!-- Modal Dicount Pop Up End  -->
-
-    <!-- Modal Request News-->
-    <div class="modal fade" id="newsRequestModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-md" role="document">
-        <div class="modal-content">
-          <div class="modal-header border-bottom-0">
-            <p class="text-center">News Title Header</p>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-          </div>
-          <div class="modal-body">
-            <div class="d-flex flex-column text-center">
-              <form class="newsRequest-form" action="">
-                <div class="form-group">
-                  <input type="text" class="form-control" name="userName" id="userName" placeholder="YOUR NAME" autocomplete="off">
-                </div>
-                <div class="form-group">
-                  <input type="email" class="form-control" name="userEmail" id="userEmail" placeholder="YOUR EMAIL" autocomplete="off">
-                </div>
-                <div class="form-group">
-                  <input type="number" class="form-control" name="userPhNo" id="userNo" placeholder="YOUR MOBILE" autocomplete="off">
-                </div>
-                
-                <div class="row">
-                  <div class="col-md-6 col-sm-12 offset-md-6 mr-auto">
-                    <button type="button" class="btn btn-info btn-block btn-round">Enroll Now</button>
+          <div class="col-lg-12">
+            <section class="panel">
+              <header class="panel-heading tab-bg-info">
+                <ul class="nav nav-tabs">
+                  <li class="active">
+                    <a data-toggle="tab" href="#addTrustedBy">
+                                          <i class="icon-user"></i>
+                                          Add
+                                      </a>
+                  </li>
+                  <li>
+                    <a data-toggle="tab" href="#viewTrustedBy">
+                                          <i class="icon-envelope"></i>
+                                          View
+                                      </a>
+                  </li>
+                </ul>
+              </header>
+              <div class="panel-body">
+                <div class="tab-content">
+                  <!-- edit-profile -->
+                  <div id="addTrustedBy" class="tab-pane active">
+                    <section class="panel">
+                      <div class="panel-body bio-graph-info">
+                        <h1> Trusted By Info</h1>
+                        <form class="form-horizontal" role="form" action="">
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label">Image Input</label>
+                            <div class="col-lg-6">
+                              <input type="file" id="logoFile">
+                              <p class="help-block">Upload Your Logo Image Here.</p>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <div class="col-lg-offset-2 col-lg-10">
+                              <button type="submit" class="btn btn-primary">Save</button>
+                              <button type="button" class="btn btn-danger">Cancel</button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </section>
+                  </div>
+                  <!-- profile -->
+                  <div id="viewTrustedBy" class="tab-pane">
+                    <section class="panel">
+                      <div class="panel-body bio-graph-info">
+                        <h1>Trusted By Info</h1>
+                        <div class="row">
+                          <div class="view-row">
+                            <img src="../public/img/c6.png" alt="" class="img-fluid">
+                            <button class="btn btn-danger btn-md">Remove</button>
+                          </div>
+
+                          <div class="view-row">
+                            <img src="../public/img/c7.jpg" alt="" class="img-fluid">
+                            <button class="btn btn-danger btn-md">Remove</button>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                    <section>
+                      <div class="row">
+                      </div>
+                    </section>
                   </div>
                 </div>
-  
-              </form>
-              
+              </div>
+            </section>
           </div>
         </div>
-          <div class="modal-footer d-flex justify-content-center">
-            <div class="dismiss-section text-white">Not Interested? <a data-dismiss="modal" class="text-info"> Back</a>.</div>
+
+        <!-- page end-->
+      </section>
+
+<!-- News -->
+      <section class="container" id="news">
+        <div class="section-title">
+          <h2>News</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <section class="panel">
+              <header class="panel-heading tab-bg-info">
+                <ul class="nav nav-tabs">
+                  <li class="active">
+                    <a data-toggle="tab" href="#addNews">
+                                          <i class="icon-user"></i>
+                                          Add
+                                      </a>
+                  </li>
+                  <li>
+                    <a data-toggle="tab" href="#viewNews">
+                                          <i class="icon-envelope"></i>
+                                          View
+                                      </a>
+                  </li>
+                </ul>
+              </header>
+              <div class="panel-body">
+                <div class="tab-content">
+                  <div id="addNews" class="tab-pane active">
+                    <section class="panel">
+                      <div class="panel-body bio-graph-info">
+                        <h1> News Info</h1>
+                        <form class="form-horizontal" role="form" action="">
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label">News Title</label>
+                            <div class="col-lg-6">
+                              <input type="text" class="form-control">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label">Description</label>
+                            <div class="col-lg-6">
+                              <textarea type="text" class="form-control" rows="3"></textarea>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label">Image Input</label>
+                            <div class="col-lg-6">
+                              <input type="file" id="logoFile">
+                              <p class="help-block">Upload Your News Image Here.</p>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <div class="col-lg-offset-2 col-lg-10">
+                              <button type="submit" class="btn btn-primary">Save</button>
+                              <button type="button" class="btn btn-danger">Cancel</button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </section>
+                  </div>
+
+                  <div id="viewNews" class="tab-pane">
+                    <section class="panel">
+                      <div class="panel-body bio-graph-info">
+                        <h1> News Info</h1>
+                        <div class="row">
+                          <div class="view-row">
+                            <h4>News Title</h4>
+                            <img src="../public/img/c6.png" alt="" class="img-fluid">
+                            <button class="btn btn-danger btn-md">Remove</button>
+                          </div>
+
+                          <div class="view-row">
+                            <h4>News Title</h4>
+                            <img src="../public/img/c7.jpg" alt="" class="img-fluid">
+                            <button class="btn btn-danger btn-md">Remove</button>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                    <section>
+                      <div class="row">
+                      </div>
+                    </section>
+                  </div>
+                </div>
+              </div>
+            </section>
           </div>
-      </div>
-    </div>
-    <!-- Modal Request News End  -->
+        </div>
 
- <!-- Vendor JS Files -->
- <script src="../public/vendor/jquery/jquery.min.js"></script>
- <script src="../public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
- <script src="../public/vendor/jquery.easing/jquery.easing.min.js"></script>
- <script src="../public/vendor/waypoints/jquery.waypoints.min.js"></script>
- <script src="../public/vendor/isotope-layout/isotope.pkgd.min.js"></script>
- <script src="../public/vendor/counterup/counterup.min.js"></script>
- <script src="../public/vendor/venobox/venobox.min.js"></script>
- <script src="../public/vendor/owl.carousel/owl.carousel.min.js"></script>
- <script src="../public/vendor/aos/aos.js"></script>
- <script src="../public/vendor/jquery.countdown/jquery.countdown.js"></script>
+      </section>
 
- <!-- Template Main JS File -->
- <script src="../public/js/main.js"></script>
+<!-- Partner -->
+      <section class="container" id="partner">
+        <div class="section-title">
+          <h2>Partner</h2>
+        </div>
+        
+        <div class="row">
+          <div class="col-lg-12">
+            <section class="panel">
+              <header class="panel-heading tab-bg-info">
+                <ul class="nav nav-tabs">
+                  <li class="active">
+                    <a data-toggle="tab" href="#addPartner">
+                                          <i class="icon-user"></i>
+                                          Add
+                                      </a>
+                  </li>
+                  <li>
+                    <a data-toggle="tab" href="#viewPartner">
+                                          <i class="icon-envelope"></i>
+                                          View
+                                      </a>
+                  </li>
+                </ul>
+              </header>
+              <div class="panel-body">
+                <div class="tab-content">
+                  <!-- edit-profile -->
+                  <div id="addPartner" class="tab-pane active">
+                    <section class="panel">
+                      <div class="panel-body bio-graph-info">
+                        <h1> Partner Info</h1>
+                        <form class="form-horizontal" role="form" action="">
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label">Image Input</label>
+                            <div class="col-lg-6">
+                              <input type="file" id="logoFile">
+                              <p class="help-block">Upload Your Logo Image Here.</p>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <div class="col-lg-offset-2 col-lg-10">
+                              <button type="submit" class="btn btn-primary">Save</button>
+                              <button type="button" class="btn btn-danger">Cancel</button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </section>
+                  </div>
+
+                  <div id="viewPartner" class="tab-pane">
+                    <section class="panel">
+                      <div class="panel-body bio-graph-info">
+                        <h1>Partner Info</h1>
+                        <div class="row">
+                          <div class="view-row">
+                            <img src="../public/img/c6.png" alt="" class="img-fluid">
+                            <button class="btn btn-danger btn-md">Remove</button>
+                          </div>
+
+                          <div class="view-row">
+                            <img src="../public/img/c7.jpg" alt="" class="img-fluid">
+                            <button class="btn btn-danger btn-md">Remove</button>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                    <section>
+                      <div class="row">
+                      </div>
+                    </section>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+
+      </section>
+
+<!-- Youtube Video -->
+      <section class="container" id="video">
+        <div class="section-title">
+          <h2>Video</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <section class="panel">
+              <header class="panel-heading tab-bg-info">
+                <ul class="nav nav-tabs">
+                  <li class="active">
+                    <a data-toggle="tab" href="#addVideo">
+                                          <i class="icon-user"></i>
+                                          Add
+                                      </a>
+                  </li>
+                  <li>
+                    <a data-toggle="tab" href="#viewVideo">
+                                          <i class="icon-envelope"></i>
+                                          View
+                                      </a>
+                  </li>
+                </ul>
+              </header>
+              <div class="panel-body">
+                <div class="tab-content">
+                  <div id="addVideo" class="tab-pane active">
+                    <section class="panel">
+                      <div class="panel-body bio-graph-info">
+                        <h1> Video Info</h1>
+                        <form class="form-horizontal" role="form" action="">
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label">Video URL</label>
+                            <div class="col-lg-6">
+                              <input type="text" class="form-control">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label">Image Input</label>
+                            <div class="col-lg-6">
+                              <input type="file" id="logoFile">
+                              <p class="help-block">Upload Your Video Image Here.</p>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <div class="col-lg-offset-2 col-lg-10">
+                              <button type="submit" class="btn btn-primary">Save</button>
+                              <button type="button" class="btn btn-danger">Cancel</button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </section>
+                  </div>
+
+                  <div id="viewVideo" class="tab-pane">
+                    <section class="panel">
+                      <div class="panel-body bio-graph-info">
+                        <h1> Video Info</h1>
+                        <div class="row">
+                          <div class="view-row">
+                            <h4>https://youtube.com/</h4>
+                            <img src="../public/img/c6.png" alt="" class="img-fluid">
+                            <button class="btn btn-danger btn-md">Remove</button>
+                          </div>
+
+                          <div class="view-row">
+                            <h4>https://youtube.com/</h4>
+                            <img src="../public/img/c7.jpg" alt="" class="img-fluid">
+                            <button class="btn btn-danger btn-md">Remove</button>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                    <section>
+                      <div class="row">
+                      </div>
+                    </section>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+
+      </section>
+
+<!-- Advisory -->
+      <section class="container" id="advisory">
+        <div class="section-title">
+          <h2>Advisory</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <section class="panel">
+              <header class="panel-heading tab-bg-info">
+                <ul class="nav nav-tabs">
+                  <li class="active">
+                    <a data-toggle="tab" href="#addAdvisory">
+                                          <i class="icon-user"></i>
+                                          Add
+                                      </a>
+                  </li>
+                  <li>
+                    <a data-toggle="tab" href="#viewAdvisory">
+                                          <i class="icon-envelope"></i>
+                                          View
+                                      </a>
+                  </li>
+                </ul>
+              </header>
+              <div class="panel-body">
+                <div class="tab-content">
+                  <div id="addAdvisory" class="tab-pane active">
+                    <section class="panel">
+                      <div class="panel-body bio-graph-info">
+                        <h1> Advisory Info</h1>
+                        <form class="form-horizontal" role="form" action="">
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label"> Name</label>
+                            <div class="col-lg-6">
+                              <input type="text" class="form-control">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label"> Designation</label>
+                            <div class="col-lg-6">
+                              <input type="text" class="form-control">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label">Image Input</label>
+                            <div class="col-lg-6">
+                              <input type="file" id="logoFile">
+                              <p class="help-block">Upload Your Advisory Image Here.</p>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <div class="col-lg-offset-2 col-lg-10">
+                              <button type="submit" class="btn btn-primary">Save</button>
+                              <button type="button" class="btn btn-danger">Cancel</button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </section>
+                  </div>
+
+                  <div id="viewAdvisory" class="tab-pane">
+                    <section class="panel">
+                      <div class="panel-body bio-graph-info">
+                        <h1> Advisory Info</h1>
+                        <div class="row">
+                          <div class="view-row">
+                            <h4>Advisory Name</h4>
+                            <img src="../public/img/c6.png" alt="" class="img-fluid">
+                            <button class="btn btn-danger btn-md">Remove</button>
+                          </div>
+
+                          <div class="view-row">
+                            <h4>Advisory Name</h4>
+                            <img src="../public/img/c7.jpg" alt="" class="img-fluid">
+                            <button class="btn btn-danger btn-md">Remove</button>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                    <section>
+                      <div class="row">
+                      </div>
+                    </section>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+
+      </section>
+
+<!-- Client -->
+      <section class="container" id="client">
+        <div class="section-title">
+          <h2>Happy Client</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <section class="panel">
+              <header class="panel-heading tab-bg-info">
+                <ul class="nav nav-tabs">
+                  <li class="active">
+                    <a data-toggle="tab" href="#addClient">
+                                          <i class="icon-user"></i>
+                                          Add
+                                      </a>
+                  </li>
+                  <li>
+                    <a data-toggle="tab" href="#viewClient">
+                                          <i class="icon-envelope"></i>
+                                          View
+                                      </a>
+                  </li>
+                </ul>
+              </header>
+              <div class="panel-body">
+                <div class="tab-content">
+                  <div id="addClient" class="tab-pane active">
+                    <section class="panel">
+                      <div class="panel-body bio-graph-info">
+                        <h1> Client Info</h1>
+                        <form class="form-horizontal" role="form" action="">
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label">Image Input</label>
+                            <div class="col-lg-6">
+                              <input type="file" id="logoFile">
+                              <p class="help-block">Upload Your Client Image Here.</p>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <div class="col-lg-offset-2 col-lg-10">
+                              <button type="submit" class="btn btn-primary">Save</button>
+                              <button type="button" class="btn btn-danger">Cancel</button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </section>
+                  </div>
+
+                  <div id="viewClient" class="tab-pane">
+                    <section class="panel">
+                      <div class="panel-body bio-graph-info">
+                        <h1> Client Info</h1>
+                        <div class="row">
+                          <div class="view-row">
+                            <h4>Client Name</h4>
+                            <img src="../public/img/c6.png" alt="" class="img-fluid">
+                            <button class="btn btn-danger btn-md">Remove</button>
+                          </div>
+
+                          <div class="view-row">
+                            <h4>Client Name</h4>
+                            <img src="../public/img/c7.jpg" alt="" class="img-fluid">
+                            <button class="btn btn-danger btn-md">Remove</button>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                    <section>
+                      <div class="row">
+                      </div>
+                    </section>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+
+      </section>
+
+<!-- AMZ Gallery -->
+      <section class="container" id="gallery">
+        <div class="section-title">
+          <h2>Gallery</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <section class="panel">
+              <header class="panel-heading tab-bg-info">
+                <ul class="nav nav-tabs">
+                  <li class="active">
+                    <a data-toggle="tab" href="#addGallery">
+                                          <i class="icon-user"></i>
+                                          Add
+                                      </a>
+                  </li>
+                  <li>
+                    <a data-toggle="tab" href="#viewGallery">
+                                          <i class="icon-envelope"></i>
+                                          View
+                                      </a>
+                  </li>
+                </ul>
+              </header>
+              <div class="panel-body">
+                <div class="tab-content">
+                  <div id="addGallery" class="tab-pane active">
+                    <section class="panel">
+                      <div class="panel-body bio-graph-info">
+                        <h1> Gallery Info</h1>
+                        <form class="form-horizontal" role="form" action="">
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label"> Title</label>
+                            <div class="col-lg-6">
+                              <input type="text" class="form-control">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label">Image Input</label>
+                            <div class="col-lg-6">
+                              <input type="file" id="logoFile">
+                              <p class="help-block">Upload Your Gallery Image Here.</p>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <div class="col-lg-offset-2 col-lg-10">
+                              <button type="submit" class="btn btn-primary">Save</button>
+                              <button type="button" class="btn btn-danger">Cancel</button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </section>
+                  </div>
+
+                  <div id="viewGallery" class="tab-pane">
+                    <section class="panel">
+                      <div class="panel-body bio-graph-info">
+                        <h1> Gallery Info</h1>
+                        <div class="row">
+                          <div class="view-row">
+                            <h4>Img Title</h4>
+                            <img src="../public/img/c6.png" alt="" class="img-fluid">
+                            <button class="btn btn-danger btn-md">Remove</button>
+                          </div>
+
+                          <div class="view-row">
+                            <h4>Img Title</h4>
+                            <img src="../public/img/c7.jpg" alt="" class="img-fluid">
+                            <button class="btn btn-danger btn-md">Remove</button>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                    <section>
+                      <div class="row">
+                      </div>
+                    </section>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+
+      </section>
+
+<!-- AMZ Award -->
+      <section class="container" id="award">
+        <div class="section-title">
+          <h2>Awards</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <section class="panel">
+              <header class="panel-heading tab-bg-info">
+                <ul class="nav nav-tabs">
+                  <li class="active">
+                    <a data-toggle="tab" href="#addAward">
+                                          <i class="icon-user"></i>
+                                          Add
+                                      </a>
+                  </li>
+                  <li>
+                    <a data-toggle="tab" href="#viewAward">
+                                          <i class="icon-envelope"></i>
+                                          View
+                                      </a>
+                  </li>
+                </ul>
+              </header>
+              <div class="panel-body">
+                <div class="tab-content">
+                  <div id="addAward" class="tab-pane active">
+                    <section class="panel">
+                      <div class="panel-body bio-graph-info">
+                        <h1> Award Info</h1>
+                        <form class="form-horizontal" role="form" action="">
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label">Image Input</label>
+                            <div class="col-lg-6">
+                              <input type="file" id="logoFile">
+                              <p class="help-block">Upload Your Award Image Here.</p>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <div class="col-lg-offset-2 col-lg-10">
+                              <button type="submit" class="btn btn-primary">Save</button>
+                              <button type="button" class="btn btn-danger">Cancel</button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </section>
+                  </div>
+
+                  <div id="viewAward" class="tab-pane">
+                    <section class="panel">
+                      <div class="panel-body bio-graph-info">
+                        <h1> Award Info</h1>
+                        <div class="row">
+                          <div class="view-row">
+                            <img src="../public/img/c6.png" alt="" class="img-fluid">
+                            <button class="btn btn-danger btn-md">Remove</button>
+                          </div>
+
+                          <div class="view-row">
+                            <img src="../public/img/c7.jpg" alt="" class="img-fluid">
+                            <button class="btn btn-danger btn-md">Remove</button>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                    <section>
+                      <div class="row">
+                      </div>
+                    </section>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+
+      </section>
+
+</section>
+  </section>
+
+  
+
+  <!-- container section end -->
+  <!-- javascripts -->
+
+ <script src="../public/vendor/js3.0/jquery.js"></script>
+  <script src="../public/vendor/js3.0/bootstrap.min.js"></script>
+
+  <!-- nice scroll -->
+  <script src="../public/vendor/js3.0/jquery.scrollTo.min.js"></script>
+  <script src="../public/vendor/js3.0/jquery.nicescroll.js"></script>
+  
+ <script src="../public/vendor/owl.carousel/owl.carousel.js"></script>
+  <!--custome script for all page-->
+  <script src="../public/vendor/js3.0/scripts.js"></script>
+
 
 </body>
 

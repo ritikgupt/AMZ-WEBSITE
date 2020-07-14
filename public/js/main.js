@@ -11,6 +11,10 @@
     }
   });
 
+  // custom scrollbar
+  // for html
+  //jQuery('html').niceScroll({styler: 'fb', cursorcolor: '#007AFF', cursorwidth: '6', cursorborderradius: '10px', background: '#F7F7F7', cursorborder: '', zindex: '1000'});
+
   // Smooth scroll for the navigation menu and links with .scrollto classes
   $(document).on('click', '.nav-menu a, .mobile-nav a, .scrollto', function(e) {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
