@@ -255,6 +255,24 @@
     },
   });
 
+    // Project carousel (uses the Owl Carousel library)
+    $('.project-carousel').owlCarousel({
+      autoplay: true,
+      dots: true,
+      loop: true,
+      animateOut: 'fadeOut',
+      animateIn: 'fadeIn',
+      autoplayTimeOut: 1000,
+      responsive: {
+        0: {
+          items: 1,
+        },
+        768: {
+          items: 1,
+        },
+      },
+    });
+
 
   // Skills section
   $('.skills-content').waypoint(function() {
@@ -264,6 +282,7 @@
   }, {
     offset: '80%',
   });
+
 
   // Courses isotope and filter
   $(window).on('load', function() {
