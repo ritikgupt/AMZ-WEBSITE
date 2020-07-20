@@ -194,7 +194,7 @@ table tr th { color: #688a7e;}
 
     max-width: 350px;
 
-    margin: 200px auto 0;
+    margin: 75px auto 0;
 
     background: #d5d7de;
 
@@ -6894,7 +6894,40 @@ ul.inbox-pagination li {
     display: inline-block;
 
 }
+.view-row{
+    width: 100%;
 
+    float: left;
+
+    margin-bottom: 10px;
+
+    padding:0 15px;
+
+    border-bottom: 1px solid #eff2f7;
+
+}
+
+.view-row img{
+    width: 150px;
+    height: 100px;
+    margin-right: 4rem;
+}
+
+.view-row h4{
+    color: #17a2b8;
+    margin: 0rem;
+}
+
+.view-row .btn-download
+{
+    margin-right: 5rem;
+}
+
+.view-row .btn-ircChapter
+{
+    margin-right: 5rem;
+    margin-bottom: 1rem;
+}
 
 
 .bio-chart, .bio-desk {

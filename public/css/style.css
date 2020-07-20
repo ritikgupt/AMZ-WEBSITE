@@ -3411,9 +3411,26 @@ label{
 
 #details .btn-primary {
   color: #fff;
-  background-color: #fa1744ed;
+  background-color: #a5858ced;
   border-color: #fa1744ed;
   width: 200px;
   margin: 0 auto;
   display: block !important;
 }
+
+
+/* Amz Login Project Part */
+
+.project-row .card{
+  background-color: #fff;
+  border: 2px solid #6f42c1;
+  border-radius: .50rem;
+}
+
+.project-row h3{
+  font-size: 24px;
+  font-weight: 600;
+  color: #225498;
+}
+
+

@@ -11,6 +11,10 @@
     }
   });
 
+  // custom scrollbar
+  // for html
+  jQuery('html').niceScroll({styler: 'fb', cursorcolor: '#007AFF', cursorwidth: '6', cursorborderradius: '10px', background: '#F7F7F7', cursorborder: '', zindex: '1000'});
+
   // Smooth scroll for the navigation menu and links with .scrollto classes
   $(document).on('click', '.nav-menu a, .mobile-nav a, .scrollto', function(e) {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -251,6 +255,24 @@
     },
   });
 
+    // Project carousel (uses the Owl Carousel library)
+    $('.project-carousel').owlCarousel({
+      autoplay: true,
+      dots: true,
+      loop: true,
+      animateOut: 'fadeOut',
+      animateIn: 'fadeIn',
+      autoplayTimeOut: 1000,
+      responsive: {
+        0: {
+          items: 1,
+        },
+        768: {
+          items: 1,
+        },
+      },
+    });
+
 
   // Skills section
   $('.skills-content').waypoint(function() {
@@ -260,6 +282,7 @@
   }, {
     offset: '80%',
   });
+
 
   // Courses isotope and filter
   $(window).on('load', function() {
