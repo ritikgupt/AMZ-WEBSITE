@@ -339,13 +339,14 @@
                     <section class="panel">
                       <div class="panel-body bio-graph-info">
                         <h1> Trusted By Info</h1>
-                        <form class="form-horizontal" role="form" action="">
+                        <form class="form-horizontal" role="form" method="POST" action="/adminhome" enctype="multipart/form-data">
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Image Input</label>
                             <div class="col-lg-6">
-                              <input type="file" id="logoFile">
+                              <input type="file"  name ="image" id="logoFile">
                               <p class="help-block">Upload Your Logo Image Here.</p>
                             </div>
+                            <input type="text" id="hidden" name="identifier" value="Trusted">
                           </div>
 
                           <div class="form-group">
@@ -1027,3 +1028,8 @@
 </body>
 
 </html>
+<style>
+  #hidden{
+    visibility: hidden;
+  }
+</style>

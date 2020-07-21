@@ -8,11 +8,11 @@ const pool = mysql.createPool({
 });
 let trusted = {};
 
-trusted.add = (image) => {
+trusted.add = (image,identifier) => {
 
   return new Promise((resolve, reject) => {
-    pool.query('insert into trusted (img_url) values (?)',
-      [image], (err, results) => {
+    pool.query('insert into trusted (img_url,identifier) values (?,?)',
+      [image,identifier], (err, results) => {
         if (err)
           return reject(err);
         return resolve(results);
