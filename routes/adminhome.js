@@ -6,8 +6,6 @@ const partner = require('../db/partner');
 const trusted = require('../db/trusted');
 const advisory = require('../db/advisory');
 const video = require('../db/video');
-var multer = require('multer');
-var upload = multer({dest: 'uploads/'});
 router.get('/adminhome', async(req, res) => {
   try {
     let a = await slider.show();
@@ -21,18 +19,6 @@ router.get('/adminhome', async(req, res) => {
     res.json({message: e});
   }
 });
-router.post('/adminhome', upload.single('image'), async(req, res) => {
-  if(req.body.identifier=='Trusted')
-  {
-  try {
-    const identifier=req.body.identifier
-    await trusted.add(req.file.path,identifier);
-    res.redirect('/adminhome');
-  } catch (e){
-    console.log(e);
-    res.json({message: e});
-  }
-}
-});
+
 
 module.exports = router;
