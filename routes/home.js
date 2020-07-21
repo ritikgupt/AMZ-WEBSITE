@@ -23,31 +23,28 @@ router.get('/', async(req, res) => {
 });
 
 router.post('/', async(req, res) => {
-  if(req.body.name !== undefined)
-  {
-  try {
-    await general.add(req.body);
-    res.redirect('/');
-  } catch (e) {
-    res.json({message: e});
+  if (req.body.name !== undefined) {
+    try {
+      await general.add(req.body);
+      res.redirect('/');
+    } catch (e) {
+      res.json({message: e});
+    }
   }
-}
-if(req.body.enrol_id!=undefined)
-{
-  try{
+  if (req.body.enrol_id !== undefined) {
+    try {
 
-  }catch (e) {
-    res.json({message: e});
+    } catch (e) {
+      res.json({message: e});
+    }
+  } else {
+    try {
+      await newsletter.add(req.body);
+      res.redirect('/');
+    } catch (e) {
+      res.json({message: e});
+    }
   }
-}
-else{
-  try{
-await newsletter.add(req.body)
-res.redirect('/')
-  }catch (e) {
-    res.json({message: e});
-  }
-}
 });
 
 

@@ -255,23 +255,23 @@
     },
   });
 
-    // Project carousel (uses the Owl Carousel library)
-    $('.project-carousel').owlCarousel({
-      autoplay: true,
-      dots: true,
-      loop: true,
-      animateOut: 'fadeOut',
-      animateIn: 'fadeIn',
-      autoplayTimeOut: 1000,
-      responsive: {
-        0: {
-          items: 1,
-        },
-        768: {
-          items: 1,
-        },
+  // Project carousel (uses the Owl Carousel library)
+  $('.project-carousel').owlCarousel({
+    autoplay: true,
+    dots: true,
+    loop: true,
+    animateOut: 'fadeOut',
+    animateIn: 'fadeIn',
+    autoplayTimeOut: 1000,
+    responsive: {
+      0: {
+        items: 1,
       },
-    });
+      768: {
+        items: 1,
+      },
+    },
+  });
 
 
   // Skills section
