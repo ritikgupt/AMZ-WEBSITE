@@ -366,14 +366,12 @@
                         <h1>Trusted By Info</h1>
                         <div class="row">
                           <div class="view-row">
-                            <img src="/img/c6.png" alt="" class="img-fluid">
-                            <button class="btn btn-danger btn-md">Remove</button>
-                          </div>
-
+                            <%for(var i=0;i<trusted.length;i++){%>
                           <div class="view-row">
-                            <img src="/img/c7.jpg" alt="" class="img-fluid">
+                            <img src="<%=trusted[i].img_url%>" alt="" class="img-fluid">
                             <button class="btn btn-danger btn-md">Remove</button>
                           </div>
+                          <%}%>
                         </div>
                       </div>
                     </section>
