@@ -511,11 +511,11 @@
                     <section class="panel">
                       <div class="panel-body bio-graph-info">
                         <h1> Partner Info</h1>
-                        <form class="form-horizontal" role="form" action="">
+                        <form class="form-horizontal" role="form" action="/partner" method="POST" enctype="multipart/form-data">
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Image Input</label>
                             <div class="col-lg-6">
-                              <input type="file" id="logoFile">
+                              <input type="file" id="logoFile" name="image">
                               <p class="help-block">Upload Your Logo Image Here.</p>
                             </div>
                           </div>
@@ -536,15 +536,15 @@
                       <div class="panel-body bio-graph-info">
                         <h1>Partner Info</h1>
                         <div class="row">
+                          <%for(var i=0;i<partner.length;i++){%>
                           <div class="view-row">
-                            <img src="/img/c6.png" alt="" class="img-fluid">
-                            <button class="btn btn-danger btn-md">Remove</button>
-                          </div>
-
-                          <div class="view-row">
-                            <img src="/img/c7.jpg" alt="" class="img-fluid">
-                            <button class="btn btn-danger btn-md">Remove</button>
-                          </div>
+                            <img src="<%=partner[i].img_url%>" alt="" class="img-fluid">
+                            
+                            <form action="/<%=partner[i].id%>/editpartner" class="view-row" method="POST">   
+                              <button type="Submit" class="btn btn-danger btn-md">Remove</button>
+                          </form>                
+                                    </div>
+<%}%>
                         </div>
                       </div>
                     </section>

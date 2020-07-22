@@ -11,7 +11,7 @@ router.get('/partner', async(req, res) => {
 router.post('/partner', upload.single('image'), async(req, res) => {
   try {
     await partner.add(req.file.path);
-    res.redirect('/partner');
+    res.redirect('/adminhome');
   } catch (e){
     console.log(e);
     res.json({message: e});
@@ -40,10 +40,11 @@ router.post('/delete/partner', async(req, res) => {
 });
 
 router.post('/:id/editpartner', async(req, res) => {
+  console.log('f');
   console.log(req.params);
   try {
     await partner.deleteOne(req.params);
-    res.redirect('/editpartner');
+    res.redirect('/adminhome');
   } catch (e){
     console.log(e);
     res.json({message: 'error deleting particular partner'});
