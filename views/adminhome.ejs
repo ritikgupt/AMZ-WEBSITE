@@ -377,10 +377,7 @@
                         </div>
                       </div>
                     </section>
-                    <section>
-                      <div class="row">
-                      </div>
-                    </section>
+                 
                   </div>
                 </div>
               </div>
@@ -422,23 +419,23 @@
                     <section class="panel">
                       <div class="panel-body bio-graph-info">
                         <h1> News Info</h1>
-                        <form class="form-horizontal" role="form" action="">
+                        <form class="form-horizontal" role="form" action="/news" enctype="multipart/form-data" method="POST">
                           <div class="form-group">
                             <label class="col-lg-2 control-label">News Title</label>
                             <div class="col-lg-6">
-                              <input type="text" class="form-control">
+                              <input type="text" class="form-control" name="heading">
                             </div>
                           </div>
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Description</label>
                             <div class="col-lg-6">
-                              <textarea type="text" class="form-control" rows="3"></textarea>
+                              <textarea type="text" class="form-control" rows="3" name="description"></textarea>
                             </div>
                           </div>
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Image Input</label>
                             <div class="col-lg-6">
-                              <input type="file" id="logoFile">
+                              <input type="file" id="logoFile" name="image">
                               <p class="help-block">Upload Your News Image Here.</p>
                             </div>
                           </div>
@@ -459,24 +456,20 @@
                       <div class="panel-body bio-graph-info">
                         <h1> News Info</h1>
                         <div class="row">
+                          <%for(var i=0;i<news.length;i++){%>
                           <div class="view-row">
-                            <h4>News Title</h4>
-                            <img src="/img/c6.png" alt="" class="img-fluid">
-                            <button class="btn btn-danger btn-md">Remove</button>
-                          </div>
-
-                          <div class="view-row">
-                            <h4>News Title</h4>
-                            <img src="/img/c7.jpg" alt="" class="img-fluid">
-                            <button class="btn btn-danger btn-md">Remove</button>
-                          </div>
+                            <%console.log(news[i].img_url)%>
+                            <h4><%=news[i].heading%></h4>
+                            <img src="<%=news[i].img_url%>" alt="" class="img-fluid">
+                            <form action="/delete/<%=news[i].newsid%>/news" class="view-row" method="POST">   
+                              <button type="Submit" class="btn btn-danger btn-md">Remove</button>
+                          </form>                           
+                        </div>
+<%}%>
                         </div>
                       </div>
                     </section>
-                    <section>
-                      <div class="row">
-                      </div>
-                    </section>
+                   
                   </div>
                 </div>
               </div>

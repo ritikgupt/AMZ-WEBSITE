@@ -19,7 +19,7 @@ router.get('/news', async(req, res) => {
 router.post('/news', upload.single('image'), async(req, res) => {
   try {
     await news.add(req.body, req.file.path);
-    res.redirect('/news');
+    res.redirect('/adminhome');
   } catch (e) {
     console.log(e);
     res.json({message: e});
@@ -39,7 +39,7 @@ router.post('/delete/news', async(req, res) => {
 router.post('/delete/:id/news', async(req, res) => {
   try {
     await news.deleteOne(req.params);
-    res.redirect('/shownews');
+    res.redirect('/adminhome');
   } catch (e) {
     console.log(e);
     res.json({message: e});
