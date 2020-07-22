@@ -681,23 +681,23 @@
                     <section class="panel">
                       <div class="panel-body bio-graph-info">
                         <h1> Advisory Info</h1>
-                        <form class="form-horizontal" role="form" action="">
+                        <form class="form-horizontal" role="form" action="/advisory" method="POST" enctype="multipart/form-data">
                           <div class="form-group">
                             <label class="col-lg-2 control-label"> Name</label>
                             <div class="col-lg-6">
-                              <input type="text" class="form-control">
+                              <input type="text" class="form-control" name="name">
                             </div>
                           </div>
                           <div class="form-group">
                             <label class="col-lg-2 control-label"> Designation</label>
                             <div class="col-lg-6">
-                              <input type="text" class="form-control">
+                              <input type="text" class="form-control" name="designation">
                             </div>
                           </div>
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Image Input</label>
                             <div class="col-lg-6">
-                              <input type="file" id="logoFile">
+                              <input type="file" id="logoFile" name="image">
                               <p class="help-block">Upload Your Advisory Image Here.</p>
                             </div>
                           </div>
@@ -718,17 +718,16 @@
                       <div class="panel-body bio-graph-info">
                         <h1> Advisory Info</h1>
                         <div class="row">
+                          <%for(var i=0;i<advisory.length;i++){%>
                           <div class="view-row">
                             <h4>Advisory Name</h4>
-                            <img src="/img/c6.png" alt="" class="img-fluid">
-                            <button class="btn btn-danger btn-md">Remove</button>
+                            <img src="<%=advisory[i].img_url%>" alt="" class="img-fluid">
+                            <form action="delete/<%=advisory[i].advisoryid%>/advisory" class="view-row" method="POST">   
+                              <button type="Submit" class="btn btn-danger btn-md">Remove</button>
+                          </form>  
                           </div>
-
-                          <div class="view-row">
-                            <h4>Advisory Name</h4>
-                            <img src="/img/c7.jpg" alt="" class="img-fluid">
-                            <button class="btn btn-danger btn-md">Remove</button>
-                          </div>
+<%}%>
+                      
                         </div>
                       </div>
                     </section>

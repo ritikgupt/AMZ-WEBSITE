@@ -19,47 +19,18 @@ router.get('/advisory', async(req, res) => {
 router.post('/advisory', upload.single('image'), async(req, res) => {
   try {
     await advisory.add(req.body, req.file.path);
-    res.redirect('/advisory');
+    res.redirect('/adminhome');
   } catch (e) {
     console.log(e);
     res.json({message: e});
   }
 });
 
-router.post('/delete/advisory', async(req, res) => {
-  try {
-    await advisory.deleteAll();
-    res.redirect('/showadvisory');
-  } catch (e) {
-    console.log(e);
-    res.json({message: e});
-  }
-});
 
 router.post('/delete/:id/advisory', async(req, res) => {
   try {
     await advisory.deleteOne(req.params);
-    res.redirect('/showadvisory');
-  } catch (e) {
-    console.log(e);
-    res.json({message: e});
-  }
-});
-
-router.get('/edit/:id/advisory', async(req, res) => {
-  try {
-    let a = await advisory.showone(req.params);
-    console.log(a);
-    res.render('editadvisory', {advisory: a});
-  } catch (e) {
-    console.log(e);
-    res.json({message: e});
-  }
-});
-router.post('/edit/:id/advisory', async(req, res) => {
-  try {
-    await advisory.edit(req.body, req.params);
-    res.redirect('/showadvisory');
+    res.redirect('/adminhome');
   } catch (e) {
     console.log(e);
     res.json({message: e});
