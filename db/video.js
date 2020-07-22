@@ -8,11 +8,11 @@ const pool = mysql.createPool({
 });
 let video = {};
 
-video.add = (req) => {
+video.add = (req, image) => {
 
   return new Promise((resolve, reject) => {
-    pool.query('insert into video (img_url) values (?)',
-      [req.img_url], (err, results) => {
+    pool.query('insert into video (video_url,img_url) values (?,?)',
+      [req.video_url, image], (err, results) => {
         if (err)
           return reject(err);
         return resolve(results);
