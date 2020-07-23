@@ -20,5 +20,10 @@ router.get('/adminhome', async(req, res) => {
   }
 });
 
+router.get('/admin/enquiry',(req,res)=>{
+  res.render('enquiry')
+})
+
+
 
 module.exports = router;

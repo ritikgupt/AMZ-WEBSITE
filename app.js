@@ -46,6 +46,7 @@ app.use(adminhomeRoutes);
 const InternshipRoutes = require('./routes/internship');
 app.use(InternshipRoutes);
 
+
 // app.use(function(req, res, next) {
 //   next(createError(404));
 // });
