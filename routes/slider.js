@@ -4,9 +4,7 @@ const slider = require('../db/image');
 var multer = require('multer');
 var upload = multer({dest: 'uploads/'});
 
-router.get('/slider', async(req, res) => {
-  res.render('slider');
-});
+
 router.post('/slider', upload.single('img_url'), async(req, res) => {
   console.log(req.file);
   try {
@@ -19,24 +17,6 @@ router.post('/slider', upload.single('img_url'), async(req, res) => {
 
 });
 
-router.get('/editslider', async(req, res) => {
-  try {
-    let a = await slider.show();
-    res.render('editslider', {sliders: a});
-  } catch (e){
-    res.json({message: e});
-  }
-});
-
-router.post('/delete/slider', async(req, res) => {
-  try {
-    await slider.deleteAll(req);
-    res.redirect('/editslider');
-  } catch (e){
-    console.log(e);
-    res.json({message: 'error deleting all slider'});
-  }
-});
 
 router.post('/:id/editslider', async(req, res) => {
   console.log(req.params);

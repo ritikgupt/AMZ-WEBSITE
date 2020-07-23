@@ -20,17 +20,7 @@ video.add = (req, image) => {
   });
 };
 
-video.deleteAll = (req) => {
 
-  return new Promise((resolve, reject) => {
-    pool.query('Delete from video',
-      (err, results) => {
-        if (err)
-          return reject(err);
-        return resolve(results);
-      });
-  });
-};
 video.deleteOne = (req) => {
 
   return new Promise((resolve, reject) => {
@@ -42,6 +32,7 @@ video.deleteOne = (req) => {
       });
   });
 };
+
 video.show = () => {
   return new Promise((resolve, reject) => {
     pool.query('Select * from video',

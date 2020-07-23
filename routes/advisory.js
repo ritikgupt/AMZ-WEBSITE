@@ -4,18 +4,7 @@ const advisory = require('../db/advisory');
 var multer = require('multer');
 var upload = multer({dest: 'uploads/'});
 
-router.get('/showadvisory', async(req, res) => {
-  try {
-    const a = await advisory.show();
-    res.render('showadvisory', {advisory: a});
-  } catch (e){
-    res.json({message: e});
-  }
-});
 
-router.get('/advisory', async(req, res) => {
-  res.render('advisory');
-});
 router.post('/advisory', upload.single('image'), async(req, res) => {
   try {
     await advisory.add(req.body, req.file.path);

@@ -6,7 +6,7 @@ var upload = multer({dest: 'uploads/'});
 
 router.get('/amz/internship', async(req, res) => {
   try {
-    let a = await internship.show();
+    await internship.show();
     res.render('internshipcourses');
   } catch (e){
     res.json({message: e});
@@ -19,7 +19,7 @@ router.get('/internship', async(req, res) => {
 
 router.post('/internship', upload.single('image'), async(req, res) => {
   try {
-    let a = await internship.add(req.body, req.file.path);
+    await internship.add(req.body, req.file.path);
     res.json({message: 'course added'});
   } catch (e) {
     console.log(e);
@@ -29,7 +29,7 @@ router.post('/internship', upload.single('image'), async(req, res) => {
 
 router.post('/delete/internship', async(req, res) => {
   try {
-    let a = await internship.deleteAll();
+    await internship.deleteAll();
     res.json({message: 'Deleted all internship'});
   } catch (e) {
     console.log(e);
@@ -39,7 +39,7 @@ router.post('/delete/internship', async(req, res) => {
 
 router.post('/delete/:courseid/internship', async(req, res) => {
   try {
-    let a = await internship.deleteOne(req.params);
+    await internship.deleteOne(req.params);
     res.json({message: 'Deleted the particular internship'});
   } catch (e) {
     console.log(e);
@@ -49,7 +49,7 @@ router.post('/delete/:courseid/internship', async(req, res) => {
 
 router.post('/edit/:courseid/internship', async(req, res) => {
   try {
-    let a = await internship.edit(req.body, req.params);
+    await internship.edit(req.body, req.params);
     res.json({message: 'edited the particular internship'});
   } catch (e) {
     console.log(e);

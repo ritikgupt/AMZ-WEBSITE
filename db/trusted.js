@@ -20,17 +20,7 @@ trusted.add = (image, identifier) => {
   });
 };
 
-trusted.deleteAll = (req) => {
 
-  return new Promise((resolve, reject) => {
-    pool.query('Delete from trusted',
-      (err, results) => {
-        if (err)
-          return reject(err);
-        return resolve(results);
-      });
-  });
-};
 trusted.deleteOne = (req) => {
 
   return new Promise((resolve, reject) => {

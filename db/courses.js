@@ -20,16 +20,7 @@ courses.add = (req, image) => {
       });
   });
 };
-courses.deleteAll = () => {
 
-  return new Promise((resolve, reject) => {
-    pool.query('delete from courses', (err, results) => {
-      if (err)
-        return reject(err);
-      return resolve(results);
-    });
-  });
-};
 courses.deleteOne = (req) => {
 
   return new Promise((resolve, reject) => {
@@ -41,18 +32,7 @@ courses.deleteOne = (req) => {
       });
   });
 };
-courses.edit = (req, request) => {
 
-  return new Promise((resolve, reject) => {
-    pool.query('update courses set image=?,description=?,title=?,domain=?,priority=? where courseid=?',
-      [req.image, req.description, req.title, req.domain, req.priority, request.courseid]
-      , (err, results) => {
-        if (err)
-          return reject(err);
-        return resolve(results);
-      });
-  });
-};
 courses.show = () => {
   return new Promise((resolve, reject) => {
     pool.query('Select * from courses',

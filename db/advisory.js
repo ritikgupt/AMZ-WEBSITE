@@ -20,16 +20,7 @@ advisory.add = (req, image) => {
       });
   });
 };
-advisory.deleteAll = () => {
 
-  return new Promise((resolve, reject) => {
-    pool.query('delete from advisory', (err, results) => {
-      if (err)
-        return reject(err);
-      return resolve(results);
-    });
-  });
-};
 advisory.deleteOne = (req) => {
 
   return new Promise((resolve, reject) => {
@@ -41,29 +32,7 @@ advisory.deleteOne = (req) => {
       });
   });
 };
-advisory.edit = (req, request) => {
 
-  return new Promise((resolve, reject) => {
-    pool.query('update advisory set name=?,designation=? where advisoryid=?',
-      [ req.name, req.designation, request.id]
-      , (err, results) => {
-        if (err)
-          return reject(err);
-        return resolve(results);
-      });
-  });
-};
-
-advisory.showone = (req) => {
-  return new Promise((resolve, reject) => {
-    pool.query('Select * from advisory where (advisoryid) = (?)',
-      [req.id], (err, result) => {
-        if (err)
-          return reject(err);
-        return resolve(result);
-      });
-  });
-};
 advisory.show = () => {
   return new Promise((resolve, reject) => {
     pool.query('Select * from advisory',

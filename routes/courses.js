@@ -6,7 +6,7 @@ var upload = multer({dest: 'uploads/'});
 
 router.get('/amz/courses', async(req, res) => {
   try {
-    let a = await courses.show();
+    await courses.show();
     res.render('courses');
   } catch (e){
     res.json({message: e});
@@ -19,7 +19,7 @@ router.get('/courses', async(req, res) => {
 
 router.post('/courses', upload.single('image'), async(req, res) => {
   try {
-    let a = await courses.add(req.body, req.file.path);
+    await courses.add(req.body, req.file.path);
     res.json({message: 'course added'});
   } catch (e) {
     console.log(e);
@@ -29,7 +29,7 @@ router.post('/courses', upload.single('image'), async(req, res) => {
 
 router.post('/delete/courses', async(req, res) => {
   try {
-    let a = await courses.deleteAll();
+    await courses.deleteAll();
     res.json({message: 'Deleted all courses'});
   } catch (e) {
     console.log(e);
@@ -39,7 +39,7 @@ router.post('/delete/courses', async(req, res) => {
 
 router.post('/delete/:courseid/courses', async(req, res) => {
   try {
-    let a = await courses.deleteOne(req.params);
+    await courses.deleteOne(req.params);
     res.json({message: 'Deleted the particular courses'});
   } catch (e) {
     console.log(e);
@@ -49,7 +49,7 @@ router.post('/delete/:courseid/courses', async(req, res) => {
 
 router.post('/edit/:courseid/courses', async(req, res) => {
   try {
-    let a = await courses.edit(req.body, req.params);
+    await courses.edit(req.body, req.params);
     res.json({message: 'edited the particular courses'});
   } catch (e) {
     console.log(e);

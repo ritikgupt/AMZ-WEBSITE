@@ -20,16 +20,7 @@ campus.add = (req, image) => {
       });
   });
 };
-campus.deleteAll = () => {
 
-  return new Promise((resolve, reject) => {
-    pool.query('delete from campus', (err, results) => {
-      if (err)
-        return reject(err);
-      return resolve(results);
-    });
-  });
-};
 campus.deleteOne = (req) => {
 
   return new Promise((resolve, reject) => {
@@ -41,18 +32,7 @@ campus.deleteOne = (req) => {
       });
   });
 };
-campus.edit = (req, request) => {
 
-  return new Promise((resolve, reject) => {
-    pool.query('update campus set image=?,description=?,title=?,domain=?,priority=? where courseid=?',
-      [req.image, req.description, req.title, req.domain, req.priority, request.courseid]
-      , (err, results) => {
-        if (err)
-          return reject(err);
-        return resolve(results);
-      });
-  });
-};
 campus.show = () => {
   return new Promise((resolve, reject) => {
     pool.query('Select * from campus',

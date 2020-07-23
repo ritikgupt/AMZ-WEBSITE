@@ -20,17 +20,6 @@ partner.add = (image) => {
   });
 };
 
-partner.deleteAll = () => {
-
-  return new Promise((resolve, reject) => {
-    pool.query('Delete from partner',
-      (err, results) => {
-        if (err)
-          return reject(err);
-        return resolve(results);
-      });
-  });
-};
 partner.deleteOne = (req) => {
 
   return new Promise((resolve, reject) => {

@@ -20,17 +20,7 @@ image.add = (req) => {
   });
 };
 
-image.deleteAll = (req) => {
 
-  return new Promise((resolve, reject) => {
-    pool.query('Delete from home_slider',
-      (err, results) => {
-        if (err)
-          return reject(err);
-        return resolve(results);
-      });
-  });
-};
 image.deleteOne = (req) => {
 
   return new Promise((resolve, reject) => {

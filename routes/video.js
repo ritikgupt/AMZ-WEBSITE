@@ -4,9 +4,6 @@ const video = require('../db/video');
 var multer = require('multer');
 var upload = multer({dest: 'uploads/'});
 
-router.get('/video', async(req, res) => {
-  res.render('video');
-});
 
 router.post('/video', upload.single('img_src'), async(req, res) => {
   try {
@@ -17,26 +14,6 @@ router.post('/video', upload.single('img_src'), async(req, res) => {
     res.json({message: e});
   }
 
-});
-
-router.get('/showvideo', async(req, res) => {
-  try {
-    const a = await video.show();
-    res.render('showVideos', {video: a});
-  } catch (e){
-    console.log(e);
-    res.json({message: e});
-  }
-});
-
-router.post('/delete/video', async(req, res) => {
-  try {
-    await video.deleteAll();
-    res.redirect('/showvideo');
-  } catch (e){
-    console.log(e);
-    res.json({message: 'error deleting all video'});
-  }
 });
 
 

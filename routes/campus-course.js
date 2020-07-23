@@ -6,7 +6,7 @@ var upload = multer({dest: 'uploads/'});
 
 router.get('/amz/campus', async(req, res) => {
   try {
-    let a = await campus.show();
+    await campus.show();
     res.render('campusCourse');
   } catch (e){
     res.json({message: e});
@@ -18,7 +18,7 @@ router.get('/campus', async(req, res) => {
 
 router.post('/campus', upload.single('image'), async(req, res) => {
   try {
-    let a = await campus.add(req.body, req.file.path);
+    await campus.add(req.body, req.file.path);
     res.json({message: 'course added'});
   } catch (e) {
     console.log(e);
@@ -28,7 +28,7 @@ router.post('/campus', upload.single('image'), async(req, res) => {
 
 router.post('/delete/campus', async(req, res) => {
   try {
-    let a = await campus.deleteAll();
+    await campus.deleteAll();
     res.json({message: 'Deleted all campus'});
   } catch (e) {
     console.log(e);
@@ -38,7 +38,7 @@ router.post('/delete/campus', async(req, res) => {
 
 router.post('/delete/:courseid/campus', async(req, res) => {
   try {
-    let a = await campus.deleteOne(req.params);
+    await campus.deleteOne(req.params);
     res.json({message: 'Deleted the particular campus'});
   } catch (e) {
     console.log(e);
@@ -48,7 +48,7 @@ router.post('/delete/:courseid/campus', async(req, res) => {
 
 router.post('/edit/:courseid/campus', async(req, res) => {
   try {
-    let a = await campus.edit(req.body, req.params);
+    await campus.edit(req.body, req.params);
     res.json({message: 'edited the particular campus'});
   } catch (e) {
     console.log(e);

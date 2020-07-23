@@ -20,16 +20,7 @@ internship.add = (req, image) => {
       });
   });
 };
-internship.deleteAll = () => {
 
-  return new Promise((resolve, reject) => {
-    pool.query('delete from internship', (err, results) => {
-      if (err)
-        return reject(err);
-      return resolve(results);
-    });
-  });
-};
 internship.deleteOne = (req) => {
 
   return new Promise((resolve, reject) => {
@@ -41,18 +32,7 @@ internship.deleteOne = (req) => {
       });
   });
 };
-internship.edit = (req, request) => {
 
-  return new Promise((resolve, reject) => {
-    pool.query('update internship set image=?,description=?,title=?,domain=?,priority=? where courseid=?',
-      [req.image, req.description, req.title, req.domain, req.priority, request.courseid]
-      , (err, results) => {
-        if (err)
-          return reject(err);
-        return resolve(results);
-      });
-  });
-};
 internship.show = () => {
   return new Promise((resolve, reject) => {
     pool.query('Select * from internship',
