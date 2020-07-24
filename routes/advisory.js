@@ -1,8 +1,8 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 const advisory = require('../db/advisory');
-var multer = require('multer');
-var upload = multer({dest: 'uploads/'});
+const multer = require('multer');
+const upload = multer({dest: 'uploads/'});
 
 
 router.post('/advisory', upload.single('image'), async(req, res) => {

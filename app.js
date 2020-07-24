@@ -35,6 +35,7 @@ const AdvisoryRoutes = require('./routes/advisory');
 app.use(AdvisoryRoutes);
 const VideoRoutes = require('./routes/video');
 app.use(VideoRoutes);
+
 const ForgotRoutes = require('./routes/forgot-password');
 app.use(ForgotRoutes);
 const CoursesRoutes = require('./routes/courses');
@@ -43,6 +44,8 @@ const CampusCoursesRoutes = require('./routes/campus-course');
 app.use(CampusCoursesRoutes);
 const adminhomeRoutes = require('./routes/adminhome');
 app.use(adminhomeRoutes);
+const StudentRoutes = require('./routes/student');
+app.use(StudentRoutes);
 const InternshipRoutes = require('./routes/internship');
 app.use(InternshipRoutes);
 
