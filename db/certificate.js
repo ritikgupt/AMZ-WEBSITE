@@ -7,13 +7,13 @@ const pool = mysql.createPool({
   port: '3306',
 });
 
-let student = {};
+let certificate = {};
 
-student.add = (enroll_id, name, institute, branch, mobile, email, password, img_url) => {
+certificate.add = (enroll_id, name, institute) => {
 
   return new Promise((resolve, reject) => {
-    pool.query('insert into student (enroll_id,name,institute,branch,mobile,email,password,img_url) values (?,?,?,?,?,?,?,?)',
-      [enroll_id, name, institute, branch, mobile, email, password, img_url], (err, results) => {
+    pool.query('insert into certificate (enroll_id,name,institute) values (?,?,?)',
+      [enroll_id, name, institute], (err, results) => {
         if (err)
           return reject(err);
         return resolve(results);
@@ -21,10 +21,10 @@ student.add = (enroll_id, name, institute, branch, mobile, email, password, img_
   });
 };
 
-student.deleteOne = (req) => {
+certificate.deleteOne = (req) => {
 
   return new Promise((resolve, reject) => {
-    pool.query('Delete from student where (studentid)=(?)',
+    pool.query('Delete from certificate where (certificateid)=(?)',
       [req.id], (err, results) => {
         if (err)
           return reject(err);
@@ -33,9 +33,9 @@ student.deleteOne = (req) => {
   });
 };
 
-student.show = () => {
+certificate.show = () => {
   return new Promise((resolve, reject) => {
-    pool.query('Select * from student',
+    pool.query('Select * from certificate',
       (err, results) => {
         if (err)
           return reject(err);
@@ -43,4 +43,4 @@ student.show = () => {
       });
   });
 };
-module.exports = student;
+module.exports = certificate;
