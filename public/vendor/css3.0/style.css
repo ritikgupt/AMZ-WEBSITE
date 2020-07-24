@@ -10223,18 +10223,18 @@ span.customSelect.changed {
 
 
 /*On Campus Course Request Modal */
-#studentRequestModal .modal-content{
+.FormModal .modal-content{
     width: 80%;
     height: auto;
     background: url('../../../public/img/course/course_bg.jpg');
     background-position: center;
   }
   
-  #studentRequestModal .modal-header, .modal-footer{
+  .FormModal .modal-header, .modal-footer{
       background: none;
   }
   
-  #studentRequestModal .modal-header p{
+  .FormModal .modal-header p{
     font-size: 28px;
     font-weight: 500;
     font-family: "montserrat-300", sans-serif;
@@ -10242,7 +10242,7 @@ span.customSelect.changed {
     color: #ffffff;
   }
   
-  #studentRequestModal .modal-header .close {
+  .FormModal .modal-header .close {
     padding: 1rem 1rem;
     margin: -5rem -1rem 0rem 0rem;
     font-size: 32px;
@@ -10252,18 +10252,18 @@ span.customSelect.changed {
     opacity: 1;
   }
 
-  #studentRequestModal .modal-footer .dismiss-section {
+  .FormModal .modal-footer .dismiss-section {
     font-size: 16px;
     text-shadow: none;
     color: #ffffff;
   }
   
-  #studentRequestModal .modal-footer .dismiss-section .text-info {
+  .FormModal .modal-footer .dismiss-section .text-info {
     cursor: pointer;
     color: #fa1744 !important;
   }
 
-  .onCampusRequest-form .form-control{
+  .FormModal-form .form-control{
     border: none;
     border-radius: 0rem;
     border: 1px solid #ffffff;
@@ -10272,19 +10272,19 @@ span.customSelect.changed {
     color: #ffffff;
     font-weight: 600;
   }
-  .onCampusRequest-form .form-control:focus{
+  .FormModal-form .form-control:focus{
     border: 1px solid #fa1744;
     border-radius: 5px;
   }
   
-  .onCampusRequest-form .form-group ::placeholder{
+  .FormModal-form .form-group ::placeholder{
     color: #f5f5f5;
     font-size: 14px;
     font-weight: 500;
     font-family: "montserrat-300", sans-serif;
   }
   
-  .onCampusRequest-form .btn-info{
+  .FormModal-form .btn-info{
    background-color: #fa1744;
    border: none;
    font-size: 18px;
@@ -10308,9 +10308,9 @@ span.customSelect.changed {
     font-weight: 600;
 
 }
-.onCampusRequest-form input[type="file"] {
+.modalRequest-form input[type="file"] {
     color: #ffffff;    
 }
-  .onCampusRequest-form .help-block{
+  .modalRequest-form .help-block{
     color: #ffffff;
    }
