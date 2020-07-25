@@ -44,15 +44,15 @@ router.post('/student/certificate', upload.single('csv'), async(req, res) => {
 });
 
 router.post('/student/verify', async(req, res) => {
-  console.log('heelo')
+  console.log('heelo');
   try {
     const serial = req.body.serial;
     console.log(serial);
     const a = await certificate.verify(serial);
-    if(a.length=='1')
-      res.json(a)
+    if (a.length == '1')
+      res.json(a);
     else
-    res.json('Not Enrolled with any program')
+      res.json('Not Enrolled with any program');
   } catch (e){
     throw e;
   }
