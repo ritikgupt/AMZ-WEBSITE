@@ -33,10 +33,10 @@ certificate.deleteOne = (req) => {
   });
 };
 
-certificate.show = () => {
+certificate.verify = (serial) => {
   return new Promise((resolve, reject) => {
-    pool.query('Select * from certificate',
-      (err, results) => {
+    pool.query('Select * from certificate where (enroll_id)=(?)',
+      [serial], (err, results) => {
         if (err)
           return reject(err);
         return resolve(results);

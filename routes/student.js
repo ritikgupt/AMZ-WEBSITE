@@ -43,4 +43,23 @@ router.post('/student/certificate', upload.single('csv'), async(req, res) => {
   res.send('Student Details for certificate Added');
 });
 
+router.post('/student/verify', async(req, res) => {
+  console.log('heelo')
+  try {
+    const serial = req.body.serial;
+    console.log(serial);
+    const a = await certificate.verify(serial);
+    if(a.length=='1')
+      res.json(a)
+    else
+    res.json('Not Enrolled with any program')
+  } catch (e){
+    throw e;
+  }
+});
+
+// router.post('/g/g',async(req,res)=>{
+//   res.send('fggf')
+// })
+
 module.exports = router;
