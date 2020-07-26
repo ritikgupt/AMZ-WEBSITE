@@ -10314,3 +10314,20 @@ span.customSelect.changed {
   .modalRequest-form .help-block{
     color: #ffffff;
    }
+
+/* Table */
+
+.dataTable .dark{
+    background-color: rgba(0, 0, 0, 0.767);
+    
+}
+
+.dataTable thead > tr > th {
+    color: #FFFFFF;
+}
+
+.dataTable td{
+    font-size: 14px;
+    font-weight: 600;
+    color: #6610f2;
+}

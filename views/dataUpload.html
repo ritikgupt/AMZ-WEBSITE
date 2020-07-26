@@ -99,6 +99,18 @@
       <div id="sidebar" class="nav-collapse ">
         <!-- sidebar menu start-->
         <ul class="sidebar-menu">
+          <li>
+            <a class="" href="#student">
+                          <i class="icon_chat_alt"></i>
+                          <span>Student Upload</span>
+                      </a>
+          </li>
+          <li>
+            <a class="" href="#certificate">
+                          <i class="icon_contacts_alt"></i>
+                          <span>Certificate Upload</span>
+                      </a>
+          </li>
           <li class="">
             <a class="" href="#discountPopUp">
                           <i class="icon_house_alt"></i>
@@ -112,21 +124,9 @@
                       </a>
           </li>
           <li>
-            <a class="" href="#cse">
-                          <i class="icon_chat_alt"></i>
-                          <span>Cse</span>
-                      </a>
-          </li>
-          <li>
-            <a class="" href="#eleElec">
-                          <i class="icon_pencil-edit"></i>
-                          <span>Electrical & Electronics</span>
-                      </a>
-          </li>
-          <li>
-            <a class="" href="#chemical">
-                          <i class="icon_contacts_alt"></i>
-                          <span>Chemical</span>
+            <a class="" href="#messages">
+                          <i class="icon_mail_alt"></i>
+                          <span>Messages</span>
                       </a>
           </li>
         </ul>
@@ -137,6 +137,272 @@
 
     <!--main content start-->
 <section id="main-content">
+
+<!-- Student -->
+<section class="wrapper" id="student">
+  <div class="section-title">
+    <h2>Student Upload</h2>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-12">
+      <section class="panel">
+        <header class="panel-heading tab-bg-info">
+          <ul class="nav nav-tabs">
+            <li class="active">
+              <a data-toggle="tab" href="#addStudent">
+                                    <i class="icon_plus_alt2"></i>
+                                    Add
+                                </a>
+            </li>
+            <li>
+              <a data-toggle="tab" href="#viewStudent">
+                                    <i class="icon_tools"></i>
+                                    View
+                                </a>
+            </li>
+          </ul>
+        </header>
+        <div class="panel-body">
+          <div class="tab-content">
+            <div id="addStudent" class="tab-pane active">
+              <section class="panel">
+                <div class="panel-body bio-graph-info">
+                  <h1> Student Info</h1>
+                        <form class="form-horizontal" role="form" action="">
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label">Enrollment Id</label>
+                            <div class="col-lg-6">
+                              <input type="text" class="form-control" id="E-Id">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label">Name</label>
+                            <div class="col-lg-6">
+                              <input type="text" class="form-control" id="name">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label">Institute</label>
+                            <div class="col-lg-6">
+                              <input type="text" class="form-control" id="institute">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label">Branch</label>
+                            <div class="col-lg-6">
+                              <input type="text" class="form-control" id="institute">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label">Email</label>
+                            <div class="col-lg-6">
+                              <input type="text" class="form-control" id="email">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label">Mobile</label>
+                            <div class="col-lg-6">
+                              <input type="number" class="form-control" id="mobile">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label">Password</label>
+                            <div class="col-lg-6">
+                              <input type="password" class="form-control" id="password">
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <div class="col-lg-offset-2 col-lg-10">
+                              <button type="submit" class="btn btn-primary">Save</button>
+                              <button type="button" class="btn btn-danger">Cancel</button>
+                            </div>
+                          </div>
+                        </form>
+                </div>
+              </section>
+            </div>
+
+            <div id="viewStudent" class="tab-pane">
+              <section class="panel">
+                <div class="panel-body bio-graph-info">
+                  <h1> Student Info</h1>
+                  <div class="table-responsive">
+                    <table class="table table-hover table-striped dataTable">
+                      <thead class="dark">
+                        <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">Enrollment Id</th>
+                          <th scope="col">Name</th>
+                          <th scope="col">Institute</th>
+                          <th scope="col">Action</th>
+                          <th scope="col">Delete</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>123456789</td>
+                          <td>Amit Patel</td>
+                          <td>Amz Automotive</td>
+                          <td><a href="./editUser.html" class="btn btn-info">Edit</a></td>
+                          <td><a class="btn btn-danger">Remove</a></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2</th>
+                          <td>789456123</td>
+                          <td>Ranjit Patel</td>
+                          <td>AMZ Automotive</td>
+                          <td><a href="./editUser.html"  class="btn btn-info">Edit</a></td>
+                          <td><a class="btn btn-danger">Remove</button></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </section>
+              <section>
+                <div class="row">
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+</section>
+
+<!-- Certificate -->
+<section class="wrapper" id="certificate">
+  <div class="section-title">
+    <h2>Certificate</h2>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-12">
+      <section class="panel">
+        <header class="panel-heading tab-bg-info">
+          <ul class="nav nav-tabs">
+            <li class="active">
+              <a data-toggle="tab" href="#addCertificate">
+                                    <i class="icon_plus_alt2"></i>
+                                    Add
+                                </a>
+            </li>
+            <li>
+              <a data-toggle="tab" href="#viewCertificate">
+                                    <i class="icon_tools"></i>
+                                    View
+                                </a>
+            </li>
+            <li>
+              <a data-toggle="tab" href="#orderCertificate">
+                                    <i class="icon_laptop"></i>
+                                    Order
+                                </a>
+            </li>
+          </ul>
+        </header>
+        <div class="panel-body">
+          <div class="tab-content">
+            <div id="addCertificate" class="tab-pane active">
+              <section class="panel">
+                <div class="panel-body bio-graph-info">
+                  <h1> Certificate Info</h1>
+                  <form class="form-horizontal" role="form" action="">
+                    <div class="form-group">
+                      <label class="col-lg-2 control-label">File Input</label>
+                      <div class="col-lg-6">
+                        <input type="file" id="logoFile">
+                        <p class="help-block">Upload Your Certificate File Here.</p>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="col-lg-offset-2 col-lg-10">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                        <button type="button" class="btn btn-danger">Cancel</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </section>
+            </div>
+
+            <div id="viewCertificate" class="tab-pane">
+              <section class="panel">
+                <div class="panel-body bio-graph-info">
+                  <h1> Certificate Info</h1>
+                  <div class="table-responsive">
+                    <table class="table table-hover table-striped dataTable">
+                      <thead class="dark">
+                        <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">Enrollment Id</th>
+                          <th scope="col">Name</th>
+                          <th scope="col">Institute</th>
+                          <th scope="col">Action</th>
+                          <th scope="col">Delete</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>123456789</td>
+                          <td>Amit Patel</td>
+                          <td>Amz Automotive</td>
+                          <td><button class="btn btn-info">View File</button></td>
+                          <td><button class="btn btn-danger">Remove</button></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2</th>
+                          <td>789456123</td>
+                          <td>Ranjit Patel</td>
+                          <td>AMZ Automotive</td>
+                          <td><button class="btn btn-info">View File</button></td>
+                          <td><button class="btn btn-danger">Remove</button></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </section>
+              <section>
+                <div class="row">
+                </div>
+              </section>
+            </div>
+
+            <div id="orderCertificate" class="tab-pane">
+              <section class="panel">
+                <div class="panel-body bio-graph-info">
+                  <h1> Certificate Info Order</h1>
+                  <div class="row">
+                    <div class="view-row">
+                      <h4 class="mb-3">Enrollment Id</h4>
+                      <h4 class="mb-3">Course Name</h4>
+                      <h4 class="mb-3">Student Name</h4>
+                      <h4 class="mb-3">Institute</h4>
+                      <h4 class="mb-3">Branch</h4>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section>
+                <div class="row">
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+</section>
 
 <!-- Discount Pop Up -->
 <section class="wrapper" id="discountPopUp">
@@ -302,12 +568,12 @@
         </div>
     </div>
     
-    </section>
+</section>
 
-<!-- Cse -->
-<section class="wrapper" id="cse">
+<!-- Messages -->
+<section class="wrapper" id="messages">
   <div class="section-title">
-    <h2>Message</h2>
+    <h2> Messages</h2>
   </div>
 
   <div class="row">
@@ -316,13 +582,7 @@
         <header class="panel-heading tab-bg-info">
           <ul class="nav nav-tabs">
             <li class="active">
-              <a data-toggle="tab" href="#addCse">
-                                    <i class="icon_plus_alt2"></i>
-                                    Add
-                                </a>
-            </li>
-            <li>
-              <a data-toggle="tab" href="#viewCse">
+              <a data-toggle="tab" href="#viewMessage">
                                     <i class="icon_tools"></i>
                                     View
                                 </a>
@@ -331,52 +591,39 @@
         </header>
         <div class="panel-body">
           <div class="tab-content">
-            <div id="addCse" class="tab-pane active">
+            <div id="viewMessage" class="tab-pane active">
               <section class="panel">
                 <div class="panel-body bio-graph-info">
-                  <h1> Cse Info</h1>
-                  <form class="form-horizontal" role="form" action="">
-                    <div class="form-group">
-                      <label class="col-lg-2 control-label">Course Name</label>
-                      <div class="col-lg-6">
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label class="col-lg-2 control-label">Image Input</label>
-                      <div class="col-lg-6">
-                        <input type="file" id="logoFile">
-                        <p class="help-block">Upload Your Course Image Here.</p>
-                      </div>
-                    </div>
-
-                    <div class="form-group">
-                      <div class="col-lg-offset-2 col-lg-10">
-                        <button type="submit" class="btn btn-primary">Save</button>
-                        <button type="button" class="btn btn-danger">Cancel</button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </section>
-            </div>
-
-            <div id="viewCse" class="tab-pane">
-              <section class="panel">
-                <div class="panel-body bio-graph-info">
-                  <h1> Cse Info</h1>
-                  <div class="row">
-                    <div class="view-row">
-                      <h4>Course Name</h4>
-                      <img src="../public/img/c6.png" alt="" class="img-fluid">
-                      <button class="btn btn-danger btn-md">Remove</button>
-                    </div>
-
-                    <div class="view-row">
-                      <h4>Course Name</h4>
-                      <img src="../public/img/c7.jpg" alt="" class="img-fluid">
-                      <button class="btn btn-danger btn-md">Remove</button>
-                    </div>
+                  <h1> Messages Info</h1>
+                  <div class="table-responsive">
+                    <table class="table table-hover table-striped dataTable">
+                      <thead class="dark">
+                        <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">Id</th>
+                          <th scope="col">Name</th>
+                          <th scope="col">Message</th>
+                          <th scope="col">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>122456789</td>
+                          <td>Amit Patel</td>
+                          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis totam doloremque suscipit dolorum porro eveniet saepe blanditiis tempora architecto nobis?</td>
+                          <td><button class="btn btn-danger">Clear</button></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2</th>
+                          <td>122456789</td>
+                          <td>Ranjit Patel</td>
+                          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis totam doloremque suscipit dolorum porro eveniet saepe blanditiis tempora architecto nobis?</td>
+                          <td><button class="btn btn-danger">Clear</button></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <button class="btn btn-primary text-center">Clear All</button>
                   </div>
                 </div>
               </section>
@@ -393,183 +640,6 @@
 
 </section>
 
-<!-- Electrical & Electronics -->
-<section class="wrapper" id="eleElec">
-  <div class="section-title">
-    <h2>Student Details</h2>
-  </div>
-
-  <div class="row">
-    <div class="col-lg-12">
-      <section class="panel">
-        <header class="panel-heading tab-bg-info">
-          <ul class="nav nav-tabs">
-            <li class="active">
-              <a data-toggle="tab" href="#addElectricalElectronics">
-                                    <i class="icon_plus_alt2"></i>
-                                    Add
-                                </a>
-            </li>
-            <li>
-              <a data-toggle="tab" href="#viewElectricalElectronics">
-                                    <i class="icon_tools"></i>
-                                    View
-                                </a>
-            </li>
-          </ul>
-        </header>
-        <div class="panel-body">
-          <div class="tab-content">
-            <div id="addElectricalElectronics" class="tab-pane active">
-              <section class="panel">
-                <div class="panel-body bio-graph-info">
-                  <h1> Electrical & Electronics Info</h1>
-                  <form class="form-horizontal" role="form" action="">
-                    <div class="form-group">
-                      <label class="col-lg-2 control-label">Course Name</label>
-                      <div class="col-lg-6">
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label class="col-lg-2 control-label">Image Input</label>
-                      <div class="col-lg-6">
-                        <input type="file" id="logoFile">
-                        <p class="help-block">Upload Your Course Image Here.</p>
-                      </div>
-                    </div>
-
-                    <div class="form-group">
-                      <div class="col-lg-offset-2 col-lg-10">
-                        <button type="submit" class="btn btn-primary">Save</button>
-                        <button type="button" class="btn btn-danger">Cancel</button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </section>
-            </div>
-
-            <div id="viewElectricalElectronics" class="tab-pane">
-              <section class="panel">
-                <div class="panel-body bio-graph-info">
-                  <h1> Electrical & Electronics Info</h1>
-                  <div class="row">
-                    <div class="view-row">
-                      <h4>Course Name</h4>
-                      <img src="../public/img/c6.png" alt="" class="img-fluid">
-                      <button class="btn btn-danger btn-md">Remove</button>
-                    </div>
-
-                    <div class="view-row">
-                      <h4>Course Name</h4>
-                      <img src="../public/img/c7.jpg" alt="" class="img-fluid">
-                      <button class="btn btn-danger btn-md">Remove</button>
-                    </div>
-                  </div>
-                </div>
-              </section>
-              <section>
-                <div class="row">
-                </div>
-              </section>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  </div>
-
-</section>
-
-<!-- Chemical -->
-<section class="wrapper" id="chemical">
-  <div class="section-title">
-    <h2>Chemical</h2>
-  </div>
-
-  <div class="row">
-    <div class="col-lg-12">
-      <section class="panel">
-        <header class="panel-heading tab-bg-info">
-          <ul class="nav nav-tabs">
-            <li class="active">
-              <a data-toggle="tab" href="#addChemical">
-                                    <i class="icon_plus_alt2"></i>
-                                    Add
-                                </a>
-            </li>
-            <li>
-              <a data-toggle="tab" href="#viewChemical">
-                                    <i class="icon_tools"></i>
-                                    View
-                                </a>
-            </li>
-          </ul>
-        </header>
-        <div class="panel-body">
-          <div class="tab-content">
-            <div id="addChemical" class="tab-pane active">
-              <section class="panel">
-                <div class="panel-body bio-graph-info">
-                  <h1> Chemical Info</h1>
-                  <form class="form-horizontal" role="form" action="">
-                    <div class="form-group">
-                      <label class="col-lg-2 control-label">Course Name</label>
-                      <div class="col-lg-6">
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label class="col-lg-2 control-label">Image Input</label>
-                      <div class="col-lg-6">
-                        <input type="file" id="logoFile">
-                        <p class="help-block">Upload Your Course Image Here.</p>
-                      </div>
-                    </div>
-
-                    <div class="form-group">
-                      <div class="col-lg-offset-2 col-lg-10">
-                        <button type="submit" class="btn btn-primary">Save</button>
-                        <button type="button" class="btn btn-danger">Cancel</button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </section>
-            </div>
-
-            <div id="viewChemical" class="tab-pane">
-              <section class="panel">
-                <div class="panel-body bio-graph-info">
-                  <h1> Chemical Info</h1>
-                  <div class="row">
-                    <div class="view-row">
-                      <h4>Course Name</h4>
-                      <img src="../public/img/c6.png" alt="" class="img-fluid">
-                      <button class="btn btn-danger btn-md">Remove</button>
-                    </div>
-
-                    <div class="view-row">
-                      <h4>Course Name</h4>
-                      <img src="../public/img/c7.jpg" alt="" class="img-fluid">
-                      <button class="btn btn-danger btn-md">Remove</button>
-                    </div>
-                  </div>
-                </div>
-              </section>
-              <section>
-                <div class="row">
-                </div>
-              </section>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  </div>
-
-</section>
 
 </section>
   </section>
