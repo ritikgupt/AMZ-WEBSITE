@@ -119,6 +119,15 @@ function initializeJS() {
     } // End if
   });
 
+  //Paginate Js
+  $('#easyPaginate').easyPaginate({
+    paginateElement: '.itemsPaginate',
+    elementsPerPage: 3,
+    effect: 'climb',
+    prevButtonText: 'prev',
+    nextButtonText: 'next'
+  });
+
 
 }
 
