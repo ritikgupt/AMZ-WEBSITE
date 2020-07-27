@@ -255,25 +255,6 @@
     },
   });
 
-  // Project carousel (uses the Owl Carousel library)
-  $('.project-carousel').owlCarousel({
-    autoplay: true,
-    dots: true,
-    loop: true,
-    animateOut: 'fadeOut',
-    animateIn: 'fadeIn',
-    autoplayTimeOut: 1000,
-    responsive: {
-      0: {
-        items: 1,
-      },
-      768: {
-        items: 1,
-      },
-    },
-  });
-
-
   // Skills section
   $('.skills-content').waypoint(function() {
     $('.progress .progress-bar').each(function() {
@@ -316,6 +297,15 @@
     dots: true,
     loop: true,
     items: 1,
+  });
+
+  //Paginate Js
+  $('#easyPaginate').easyPaginate({
+    paginateElement: '.itemsPaginate',
+    elementsPerPage: 3,
+    effect: 'climb',
+    prevButtonText: 'prev',
+    nextButtonText: 'next'
   });
 
   // Initi AOS

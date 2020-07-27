@@ -2383,7 +2383,7 @@ label{
   font-size: 14px;
 }
 
-#amz-login .container {
+#amz-login .container-fluid {
     margin-top: 100px;
     margin-bottom: 50px;
     background-color: #fff;
@@ -3367,15 +3367,47 @@ label{
   border-radius: .50rem;
 }
 
-.project-row h3{
-  font-size: 24px;
-  font-weight: 600;
-  color: #225498;
+.project-row .card{
+  margin-bottom: 5px;
 }
 
-.project-desc img{
-  max-height: 300px;
-  border-radius: .50rem;
+.project-row .card-body{
+  padding: 2px;
+}
+.project-row .card-title{
+  padding-bottom: 5px;
+  line-height: 1.0rem;
+  letter-spacing: 0;
+  margin-bottom: 0px;
+  color: #17a2b8;
+}
+
+.project-row .card-text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.0rem;
+  margin: 7px 0;
+}
+
+/* Pagination only */
+.easyPaginateNav{
+  margin-top: 10px;
+}
+
+.easyPaginateNav a {
+  padding:5px;
+  color: #cf072f;
+  
+}
+
+.easyPaginateNav a.current {
+  font-weight:bold;
+  text-decoration:underline;
+}
+
+.itemsPaginate{
+  display: flex !important;
+  min-width: 0px !important;
 }
 
 

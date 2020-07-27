@@ -10331,3 +10331,104 @@ span.customSelect.changed {
     font-weight: 600;
     color: #6610f2;
 }
+
+
+
+/*--------------------------------------------------------------
+# Courses Section
+--------------------------------------------------------------*/
+.course {
+    width: 100%;
+    height: auto;
+    background: url('./../img/course/course_bg.jpg');
+    opacity: 0.9;
+    background-position: center;
+    padding-top: 140px;
+    background-color: white;
+  }
+  
+  .course .card .card-body{
+    background-color: #000000;
+    color: #ffffff;
+    font-family: "montserrat-300", sans-serif;
+    padding: 0.10rem 0.5rem;
+  }
+  
+  .card-body .card-text{
+    padding-top: 0px;
+  }
+  
+  .card .course-wrap .img-fluid{
+        max-width: 100%;
+        height: auto;
+  }
+
+  /* Amz IrcChapter Project Part */
+
+.project-row .card{
+    background-color: #fff;
+    border: 2px solid #6f42c1;
+    border-radius: .50rem;
+  }
+  
+  .project-row .card{
+    margin-bottom: 5px;
+  }
+  
+  .project-row .card-body{
+    padding: 2px;
+  }
+  .project-row .card-title{
+    padding-bottom: 5px;
+    font-size: 20px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.0rem;
+    letter-spacing: 0;
+    text-align: left;
+    font-family: "montserrat-300", sans-serif;
+    color: #17a2b8;
+  }
+  
+  .project-row .card-text {
+    font-size: 14px;
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.62rem;
+    letter-spacing: normal;
+    text-align: left;
+    margin: 7px 0;
+    color: rgba(0, 0, 0, 0.678);
+  }
+
+  .project-row .card-body .link-btn{
+    font-size: 15px;
+    font-family: "montserrat-300", sans-serif;
+    color: #47b2e4;
+    margin-top: 5px;
+  }
+  
+  /* Pagination only */
+  .easyPaginateNav{
+    margin-top: 10px;
+  }
+  
+  .easyPaginateNav a {
+    padding:5px;
+    color: #cf072f;
+    
+  }
+  
+  .easyPaginateNav a.current {
+    font-weight:bold;
+    text-decoration:underline;
+  }
+  
+  .itemsPaginate{
+    display: flex !important;
+    min-width: 0px !important;
+  }
+  
+  
