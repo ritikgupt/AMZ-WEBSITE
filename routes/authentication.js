@@ -1,19 +1,29 @@
 const express = require('express');
 const router = express.Router();
-
+const jwt = require('jsonwebtoken');
+const bcrypt = require('bcrypt');
+const student = require('../db/student');
 // var multer = require('multer');
 // var upload = multer({dest: 'uploads/'});
 
-// router.get('/register', async(req, res) => {
-//   try {
-//     res.render('registeruser');
-//   } catch (e){
-//     res.json({message: e});
-//   }
-// });
-// router.post('/register', upload.single('image'), async(req, res) => {
+router.post('/student/login', async(req, res) => {
+  try {
+    const id = req.body.serial;
+    const a = await student.showOne(id);
+    if (a.length <= 0){
+      res.json({message: 'Incorrect Serial Number'});
 
-// });
+    } else {
+      const match = await bcrypt.compare(req.body.password, a[0].password);
+      if (match)
+        res.json({message: 'User successfully logged In'});
+      else
+        res.json({message: 'Incorrect Password'});
+    }
+  } catch (e){
+    res.json({message: e});
+  }
+});
 
 
 // router.post('/user/delete', async(req, res) => {

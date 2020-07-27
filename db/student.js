@@ -43,4 +43,16 @@ student.show = () => {
       });
   });
 };
+
+student.showOne = (id) => {
+
+  return new Promise((resolve, reject) => {
+    pool.query('Select * from student where (enroll_id)=(?)',
+      [id], (err, results) => {
+        if (err)
+          return reject(err);
+        return resolve(results);
+      });
+  });
+};
 module.exports = student;

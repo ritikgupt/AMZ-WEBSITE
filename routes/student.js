@@ -5,7 +5,6 @@ const bcrypt = require('bcrypt');
 const saltRounds = 10;
 const certificate = require('../db/certificate');
 const multer = require('multer');
-const auth = require('../db/authentication');
 
 const storage = multer.diskStorage({
   destination: function(req, file, cb) {
