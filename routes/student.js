@@ -1,8 +1,12 @@
 const express = require('express');
 const router = express.Router();
 const student = require('../db/student');
+const bcrypt = require('bcrypt');
+const saltRounds = 10;
 const certificate = require('../db/certificate');
 const multer = require('multer');
+const auth = require('../db/authentication');
+
 const storage = multer.diskStorage({
   destination: function(req, file, cb) {
     cb(null, 'uploads/');
@@ -25,9 +29,26 @@ router.post('/student/upload', upload.single('csv'), async(req, res) => {
     const branch = source[i].branch;
     const mobile = source[i].mobile;
     const email = source[i].email;
-    const password = source[i].password;
     const img_url = 'abc';
-    await student.add(enroll_id, name, institute, branch, mobile, email, password, img_url);
+    try {
+      await bcrypt.genSalt(saltRounds, function(err, salt) {
+        if (err)
+          res.json({message: err});
+        else {
+          bcrypt.hash(source[i].password, salt, async(err, hash) => {
+            if (err)
+              res.json({message: err});
+            else {
+              const password = hash;
+              await student.add(enroll_id, name, institute, branch, mobile, email, password, img_url);
+            }
+          });
+        }
+      });
+      res.json({message: 'user added'});
+    } catch (e){
+      res.json({message: e});
+    }
   }
   res.send('Student Details Added');
 });

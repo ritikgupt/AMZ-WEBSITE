@@ -299,13 +299,13 @@
     items: 1,
   });
 
-  //Paginate Js
+  // Paginate Js
   $('#easyPaginate').easyPaginate({
     paginateElement: '.itemsPaginate',
     elementsPerPage: 3,
     effect: 'climb',
     prevButtonText: 'prev',
-    nextButtonText: 'next'
+    nextButtonText: 'next',
   });
 
   // Initi AOS
