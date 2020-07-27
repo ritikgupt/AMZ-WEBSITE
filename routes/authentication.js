@@ -15,9 +15,15 @@ router.post('/student/login', async(req, res) => {
 
     } else {
       const match = await bcrypt.compare(req.body.password, a[0].password);
-      if (match)
-        res.json({message: 'User successfully logged In'});
-      else
+      if (match) {
+        const token = await jwt.sign({
+          email: a[0].email,
+          enroll_id: a[0].enroll_id,
+        }, 'amz_automotive', {
+          expiresIn: '1h',
+        });
+        res.json({message: 'User successfully logged In', token: token});
+      } else
         res.json({message: 'Incorrect Password'});
     }
   } catch (e){
