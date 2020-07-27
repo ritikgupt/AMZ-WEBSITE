@@ -38,6 +38,8 @@ app.use(VideoRoutes);
 
 const ForgotRoutes = require('./routes/forgot-password');
 app.use(ForgotRoutes);
+const StudentPortalRoutes=require('./routes/student_portal')
+app.use(StudentPortalRoutes)
 const CoursesRoutes = require('./routes/courses');
 app.use(CoursesRoutes);
 const CampusCoursesRoutes = require('./routes/campus-course');
