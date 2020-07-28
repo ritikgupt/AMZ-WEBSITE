@@ -1,8 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const student = require('../db/student');
+const jwtAuth = require('../middleware/auth');
 
-router.get('/studentportal', async(req, res) => {
+router.get('/studentportal', jwtAuth, async(req, res) => {
+  console.log(jwtAuth);
   const a = await student.show();
   res.render('student-portal', {students: a});
 });

@@ -3,6 +3,7 @@ const router = express.Router();
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const student = require('../db/student');
+const cookie = require('cookie');
 // var multer = require('multer');
 // var upload = multer({dest: 'uploads/'});
 
@@ -22,7 +23,8 @@ router.post('/student/login', async(req, res) => {
         }, 'amz_automotive', {
           expiresIn: '1h',
         });
-        res.json({message: 'User successfully logged In', token: token});
+        res.cookie('token', token);
+        res.json({message: 'Successful Login Done'});
       } else
         res.json({message: 'Incorrect Password'});
     }
