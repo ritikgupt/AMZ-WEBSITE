@@ -20,11 +20,13 @@ router.post('/student/login', async(req, res) => {
         const token = await jwt.sign({
           email: a[0].email,
           enroll_id: a[0].enroll_id,
+          password:a[0].password,
+          img_url:a[0].img_url
         }, 'amz_automotive', {
           expiresIn: '1h',
         });
         res.cookie('token', token);
-        res.json({message: 'Successful Login Done'});
+        res.redirect('/studentportal');
       } else
         res.json({message: 'Incorrect Password'});
     }
@@ -33,6 +35,9 @@ router.post('/student/login', async(req, res) => {
   }
 });
 
+router.get('/student/login',async(req,res)=>{
+  res.render('login');
+})
 
 // router.post('/user/delete', async(req, res) => {
 //   try {
