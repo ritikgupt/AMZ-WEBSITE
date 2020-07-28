@@ -5,10 +5,10 @@ const news = require('../db/news');
 const partner = require('../db/partner');
 const trusted = require('../db/trusted');
 const advisory = require('../db/advisory');
-const admin_auth = require('../middleware/admin_auth')
+const admin_auth = require('../middleware/admin_auth');
 const video = require('../db/video');
-router.get('/adminhome',admin_auth, async(req, res) => {
-  console.log(req.adminData)
+router.get('/adminhome', admin_auth, async(req, res) => {
+  console.log(req.adminData);
   try {
     let a = await slider.show();
     let b = await news.show();

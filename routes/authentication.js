@@ -65,7 +65,7 @@ router.get('/admin/login', (req, res) => {
 router.post('/admin/login', async(req, res) => {
   try {
     const id = req.body.id;
-    console.log(id)
+    console.log(id);
     const a = await admin.showOne(id);
     if (a.length <= 0){
       res.json({message: 'Incorrect Serial Number'});

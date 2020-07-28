@@ -88,14 +88,14 @@ admin.show = () => {
 
 admin.showOne = (id) => {
 
-    return new Promise((resolve, reject) => {
-      pool.query('Select * from admin where (id)=(?)',
-        [id], (err, results) => {
-          if (err)
-            return reject(err);
-          return resolve(results);
-        });
-    });
-  };
+  return new Promise((resolve, reject) => {
+    pool.query('Select * from admin where (id)=(?)',
+      [id], (err, results) => {
+        if (err)
+          return reject(err);
+        return resolve(results);
+      });
+  });
+};
 
 module.exports = admin;
