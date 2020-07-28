@@ -1,7 +1,7 @@
 const compression = require('compression');
 const createError = require('http-errors');
 const express = require('express');
-const cookieParser=require('cookie-parser')
+const cookieParser = require('cookie-parser');
 const morgan = require('morgan');
 const port = process.env.PORT || 5000;
 const app = express();

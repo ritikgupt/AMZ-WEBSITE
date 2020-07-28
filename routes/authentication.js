@@ -3,9 +3,28 @@ const router = express.Router();
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const student = require('../db/student');
-const cookie = require('cookie');
+const admin = require('../db/admin-auth');
+const saltRounds = 10;
 // var multer = require('multer');
 // var upload = multer({dest: 'uploads/'});
+// try {
+//   bcrypt.genSalt(saltRounds, function(err, salt) {
+//     if (err)
+//       console.log(err)
+//     else {
+//       bcrypt.hash('123', salt, async(err, hash) => {
+//         if (err)
+//           console.log(err)
+//         else {
+//           const password = hash;
+//           await admin.add('123',password);
+//         }
+//       });
+//     }
+//   });
+// } catch (e){
+//   console.log(e)
+// }
 
 router.post('/student/login', async(req, res) => {
   try {
@@ -20,8 +39,8 @@ router.post('/student/login', async(req, res) => {
         const token = await jwt.sign({
           email: a[0].email,
           enroll_id: a[0].enroll_id,
-          password:a[0].password,
-          img_url:a[0].img_url
+          password: a[0].password,
+          img_url: a[0].img_url,
         }, 'amz_automotive', {
           expiresIn: '1h',
         });
@@ -35,9 +54,40 @@ router.post('/student/login', async(req, res) => {
   }
 });
 
-router.get('/student/login',async(req,res)=>{
+router.get('/student/login', async(req, res) => {
   res.render('login');
-})
+});
+
+router.get('/admin/login', (req, res) => {
+  res.render('adminlogin');
+});
+
+router.post('/admin/login', async(req, res) => {
+  try {
+    const id = req.body.id;
+    console.log(id)
+    const a = await admin.showOne(id);
+    if (a.length <= 0){
+      res.json({message: 'Incorrect Serial Number'});
+
+    } else {
+      const match = await bcrypt.compare(req.body.password, a[0].password);
+      if (match) {
+        const token = await jwt.sign({
+          id: a[0].id,
+          password: a[0].password,
+        }, 'amz_automotive', {
+          expiresIn: '1h',
+        });
+        res.cookie('token', token);
+        res.redirect('/adminhome');
+      } else
+        res.json({message: 'Incorrect Password'});
+    }
+  } catch (e){
+    res.json({message: e});
+  }
+});
 
 // router.post('/user/delete', async(req, res) => {
 //   try {
