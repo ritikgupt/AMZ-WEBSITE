@@ -25,7 +25,7 @@ const HomeRoutes = require('./routes/home');
 app.use(HomeRoutes);
 const SliderRoutes = require('./routes/slider');
 app.use(SliderRoutes);
-const awardRoutes=require('./routes/award');
+const awardRoutes = require('./routes/award');
 app.use(awardRoutes);
 const AuthenticationRoutes = require('./routes/authentication');
 app.use(AuthenticationRoutes);
