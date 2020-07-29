@@ -743,7 +743,16 @@
   <script src="../public/vendor/js3.0/scripts.js"></script>
   <script src="../public/vendor/paginate/jquery.paginate.js"></script>
 
-
+  <script>
+    //Paginate Js
+  $('#easyPaginate').easyPaginate({
+    paginateElement: '.itemsPaginate',
+    elementsPerPage: 3,
+    effect: 'climb',
+    prevButtonText: 'prev',
+    nextButtonText: 'next'
+  });
+</script>
 </body>
 
 </html>

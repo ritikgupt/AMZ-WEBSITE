@@ -197,7 +197,7 @@
                     <h2>Amz Login</h2>
                 </div>
                 <div class="d-flex flex-column text-center">
-                <form class="login-form" action="">
+                <form class="login-form" action="" name="userLogin-Form">
                   <div class="form-group">
                     <input type="text" class="form-control" name="userId" id="userId" placeholder="USER ID" autocomplete="off">
                   </div>
@@ -303,7 +303,7 @@
           </div>
           <div class="modal-body">
             <div class="d-flex flex-column text-center">
-              <form class="FormModal-form" action="">
+              <form class="FormModal-form" action="" name="forgetPassword-Form">
                 <div class="form-group">
                   <input type="email" class="form-control" name="userEmail" id="userEmail" placeholder="YOUR EMAIL" autocomplete="off">
                 </div>
@@ -340,9 +340,67 @@
   <script src="../public/vendor/aos/aos.js"></script>
   <script src="../public/vendor/js3.0/jquery.nicescroll.js"></script>
   <script src="../public/vendor/paginate/jquery.paginate.js"></script>
+  <script src="../public/vendor/jquery.validate/jquery.validate.min.js"></script>
   
   <!-- Template Main JS File -->
   <script src="../public/js/main.js"></script>
+  <script>
+      //Paginate Js
+    $('#easyPaginate').easyPaginate({
+      paginateElement: '.itemsPaginate',
+      elementsPerPage: 3,
+      effect: 'climb',
+      prevButtonText: 'prev',
+      nextButtonText: 'next'
+    });
+  </script>
+
+<script>
+  
+  $(function() {
+    
+    $("form[name='userLogin-Form']").validate({
+      rules: {
+
+        userId: {
+          required: true,
+          minlength: 5
+        },
+        password: {
+          required: true,
+          minlength: 5
+        }
+                  
+      },
+      messages: {
+        userId:"Invalid Enrollment Id",
+        password: "Invalid Password,5 Characters required"
+      },
+      submitHandler: function(form) {
+        form.submit();
+      }
+    });
+
+    $("form[name='forgetPassword-Form']").validate({
+      rules: {
+
+        userEmail: {
+          required: true,
+          email: true
+        },
+                  
+      },
+      messages: {
+        userEmail: "Not a valid Email"
+      },
+      submitHandler: function(form) {
+        form.submit();
+      }
+    });
+
+  });
+
+</script>
 
 
 </body>

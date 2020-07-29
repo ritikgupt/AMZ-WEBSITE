@@ -501,27 +501,27 @@
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="" method="post" role="form" class="php-email-form">
+            <form action="" name="getInTouchForm" method="post" role="form" class="getInTouch-form">
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label for="name">Your Name*</label>
-                  <input type="text" name="name" class="form-control" id="name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <input type="text" name="name" class="form-control" id="name" required/>
                   <div class="validate"></div>
                 </div>
                 <div class="form-group col-md-6">
                   <label for="name">Your Email*</label>
-                  <input type="email" class="form-control" name="email" id="email" data-rule="email" data-msg="Please enter a valid email" />
+                  <input type="email" class="form-control" name="email" id="email" required/>
                   <div class="validate"></div>
                 </div>
               </div>
               <div class="form-group">
                 <label for="name">Telephone Number*</label>
-                <input type="number" class="form-control" name="number" id="number" data-rule="minlen:10" data-msg="Please enter a valid number" />
+                <input type="number" class="form-control" name="phone" id="phone" required/>
                 <div class="validate"></div>
               </div>
               <div class="form-group">
                 <label for="name">Message*</label>
-                <textarea class="form-control" name="message" rows="10" data-rule="required" data-msg="Please write something for us"></textarea>
+                <textarea class="form-control" name="message" rows="10" required></textarea>
                 <div class="validate"></div>
               </div>
               <div class="mb-3">
@@ -574,12 +574,12 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Newsletter</h4>
             <p>Signup to receive our interesting news and promotions.We never send spam!</p>
-            <form action="" method="post" class="mb-3">
+            <form action="" method="post" class="mb-3" name="newsLetter-Form">
               <input type="email" name="email"  placeholder="Your Email..."><input type="submit" value="Subscribe">
             </form>
             <h4 class="pb-0">Validate Certificate</h4>
             <p>Validate your certificate now by Serial No</p>
-            <form action="" method="post">
+            <form action="" method="post" name="certificateValidate-Form">
               <input type="text" name="certificateId"  placeholder="Serial Number..."><input type="submit" value="Validate">
             </form>
           </div>
@@ -642,9 +642,104 @@
  <script src="../public/vendor/aos/aos.js"></script>
  <script src="../public/vendor/jquery.countdown/jquery.countdown.js"></script>
  <script src="../public/vendor/js3.0/jquery.nicescroll.js"></script>
+ <script src="../public/vendor/jquery.validate/jquery.validate.min.js"></script>
 
  <!-- Template Main JS File -->
  <script src="../public/js/main.js"></script>
+
+ <script>
+  
+    $(function() {
+      // Initialize form validation on the registration form.
+      // It has the name attribute "registration"
+      
+            
+      $("form[name='getInTouchForm']").validate({
+        // Specify validation rules
+        rules: {
+          // The key name on the left side is the name attribute
+          // of an input field. Validation rules are defined
+          // on the right side
+          name: {
+            required: true,
+            // Specify that Name should be validated
+            // by the built-in "Name" rule
+            minlength: 5
+          },
+          email: {
+            required: true,
+            // Specify that email should be validated
+            // by the built-in "email" rule
+            email: true
+          },
+          
+                phone: {
+            required: true,
+            // Specify that email should be validated
+            // by the built-in "email" rule
+            minlength: 10,
+            maxlength: 10
+          },
+          
+          message: {
+            required: true,
+            // Specify that Name should be validated
+            // by the built-in "Name" rule
+            minlength: 10
+          }	
+                    
+        },
+        // Specify validation error messages
+        messages: {
+          name: "Please enter your Name",
+          email: "Please enter a valid Email address",
+          phone: "Phone number required 10 digit",
+          message:"Minimum 10 characters required"
+        },
+        // Make sure the form is submitted to the destination defined
+        // in the "action" attribute of the form when valid
+        submitHandler: function(form) {
+          form.submit();
+        }
+      });
+
+      $("form[name='certificateValidate-Form']").validate({
+        rules: {
+
+          certificateId: {
+            required: true,
+            minlength: 5
+          }
+                    
+        },
+        messages: {
+          certificateId:"Invalid Serial Number"
+        },
+        submitHandler: function(form) {
+          form.submit();
+        }
+      });
+
+      $("form[name='newsLetter-Form']").validate({
+        rules: {
+
+          email: {
+            required: true,
+            email: true
+          },
+                    
+        },
+        messages: {
+          email: "Not a valid Email"
+        },
+        submitHandler: function(form) {
+          form.submit();
+        }
+      });
+
+    });
+
+  </script>
 
 </body>
 

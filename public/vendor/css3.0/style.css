@@ -10430,5 +10430,10 @@ span.customSelect.changed {
     display: flex !important;
     min-width: 0px !important;
   }
+
+.error{
+  color:#fa1744ed;
+  font-size: 14px;
+}
   
   
