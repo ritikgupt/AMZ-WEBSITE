@@ -5,8 +5,10 @@ const news = require('../db/news');
 const partner = require('../db/partner');
 const trusted = require('../db/trusted');
 const advisory = require('../db/advisory');
+const award = require('../db/award');
+const admin_auth = require('../middleware/admin_auth');
 const video = require('../db/video');
-router.get('/adminhome', async(req, res) => {
+router.get('/adminhome', admin_auth, async(req, res) => {
   try {
     let a = await slider.show();
     let b = await news.show();
@@ -14,16 +16,16 @@ router.get('/adminhome', async(req, res) => {
     let d = await trusted.show();
     let e = await advisory.show();
     let f = await video.show();
-    res.render('adminhome', {slider: a, news: b, partner: c, trusted: d, advisory: e, video: f});
+    let g = await award.show();
+    res.render('adminhome', {slider: a, news: b, partner: c, trusted: d, advisory: e, video: f, award: g});
   } catch (e){
     res.json({message: e});
   }
 });
 
-router.get('/admin/enquiry',(req,res)=>{
-  res.render('enquiry')
-})
-
+router.get('/admin/enquiry', (req, res) => {
+  res.render('enquiry');
+});
 
 
 module.exports = router;
