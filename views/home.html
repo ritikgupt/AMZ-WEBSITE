@@ -501,7 +501,7 @@
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="" name="getInTouchForm" method="post" role="form" class="getInTouch-form">
+            <form action="" name="getInTouch-Form" method="post" role="form" class="getInTouch-form">
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label for="name">Your Name*</label>
@@ -516,7 +516,7 @@
               </div>
               <div class="form-group">
                 <label for="name">Telephone Number*</label>
-                <input type="number" class="form-control" name="phone" id="phone" required/>
+                <input type="number" class="form-control" name="number" id="phone" required/>
                 <div class="validate"></div>
               </div>
               <div class="form-group">
@@ -654,7 +654,7 @@
       // It has the name attribute "registration"
       
             
-      $("form[name='getInTouchForm']").validate({
+      $("form[name='getInTouch-Form']").validate({
         // Specify validation rules
         rules: {
           // The key name on the left side is the name attribute
@@ -673,7 +673,7 @@
             email: true
           },
           
-                phone: {
+                number: {
             required: true,
             // Specify that email should be validated
             // by the built-in "email" rule
@@ -693,7 +693,7 @@
         messages: {
           name: "Please enter your Name",
           email: "Please enter a valid Email address",
-          phone: "Phone number required 10 digit",
+          number: "Phone number required 10 digit",
           message:"Minimum 10 characters required"
         },
         // Make sure the form is submitted to the destination defined

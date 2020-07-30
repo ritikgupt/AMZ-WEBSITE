@@ -245,54 +245,54 @@
                     <section class="panel">
                       <div class="panel-body bio-graph-info">
                         <h1> Profile Info</h1>
-                        <form class="form-horizontal" role="form" action="">
-                          <div class="form-group">
-                            <label class="col-lg-2 control-label">Name</label>
-                            <div class="col-lg-6">
-                              <input type="text" class="form-control" id="name" placeholder="" value="Simran Sharma" disabled>
-                            </div>
-                          </div>
+                        <form class="form-horizontal" role="form" action="" name="editStudentprofile-Form">
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Enrollment Id</label>
                             <div class="col-lg-6">
-                              <input type="text" class="form-control" id="E-Id" placeholder=" " value="7894561230" disabled>
+                              <input type="text" class="form-control" id="E-Id" name="enroll_id" placeholder=" " value="7894561230" disabled>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label">Name</label>
+                            <div class="col-lg-6">
+                              <input type="text" class="form-control" id="name" name="name" placeholder="" value="Simran Sharma" disabled>
                             </div>
                           </div>
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Institute</label>
                             <div class="col-lg-6">
-                              <input type="text" class="form-control" id="institute" placeholder=" " value="Abc Institute" disabled>
+                              <input type="text" class="form-control" id="institute" id="institute" placeholder=" " value="Abc Institute" disabled>
                             </div>
                           </div>
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Branch</label>
                             <div class="col-lg-6">
-                              <input type="text" class="form-control" id="institute" placeholder=" " value="Mechanical" disabled>
+                              <input type="text" class="form-control" id="branch" name="branch" placeholder=" " value="Mechanical" disabled>
                             </div>
                           </div>
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Email</label>
                             <div class="col-lg-6">
-                              <input type="text" class="form-control" id="email" placeholder=" " value="abc@gmail.com" disabled>
+                              <input type="text" class="form-control" id="email" name="email" placeholder=" " value="abc@gmail.com" disabled>
                             </div>
                           </div>
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Mobile</label>
                             <div class="col-lg-6">
-                              <input type="number" class="form-control" id="mobile" placeholder=" " value="1234567890">
+                              <input type="number" class="form-control" id="mobile" name="mobile" placeholder=" " value="1234567890">
                             </div>
                           </div>
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Image Input</label>
                             <div class="col-lg-6">
-                              <input type="file" id="logoFile" accept=".jpg, .jpeg, .png">
+                              <input type="file" id="logoFile" name="img_url" accept=".jpg, .jpeg, .png">
                               <p class="help-block">Upload Your Image Here.</p>
                             </div>
                           </div>
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Password</label>
                             <div class="col-lg-6">
-                              <input type="password" class="form-control" id="password" placeholder=" " value="123">
+                              <input type="password" class="form-control" id="password" name="password" placeholder=" " value="123456">
                             </div>
                           </div>
 
@@ -416,7 +416,6 @@
 
     <div class="section-title">
       <h2>ADD Project</h2>
-      <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
     </div>
 
     <!-- Basic Forms & Horizontal Forms-->
@@ -428,7 +427,7 @@
             Add Your Project
           </header>
           <div class="panel-body">
-            <form role="form">
+            <form role="form" action="" name="studentAddProject-Form">
               <div class="form-group">
                 <label for="exampleInputHeading1">Heading</label>
                 <input type="text" class="form-control" id="exampleInputHeading1" name="projectRqHeading" placeholder="Enter Heading">
@@ -439,7 +438,7 @@
               </div>
               <div class="form-group">
                 <label for="exampleInputFile">File input</label>
-                <input type="file" id="exampleInputFile" accept=".jpg, .jpeg, .png" required>
+                <input type="file" id="exampleInputFile" name="projectRqImage" accept=".jpg, .jpeg, .png" required>
                 <p class="help-block">Upload Your Project Image Here.</p>
               </div>
               <button type="submit" class="btn btn-primary">Submit Now</button>
@@ -633,7 +632,7 @@
         </div>
         <div class="modal-body">
           <div class="d-flex flex-column text-center">
-            <form class="FormModal-form" action="">
+            <form class="FormModal-form" action="" name="studentRequest-Form">
               
               <div class="form-group">
                 <input type="text" class="form-control" name="userRqHeader" id="userName" placeholder="HEADING..." autocomplete="off">
@@ -644,13 +643,13 @@
               </div>
               
               <div class="form-group">
-                <input type="file" id="exampleInputFile"  name="userRqFile">
-                <p class="help-block">Upload Your Pdf Document Here.</p>
+                <input type="file" id="exampleInputFile"  name="userRqFile" accept=".jpg, .jpeg, .png, .pdf, .doc, .docx">
+                <p class="help-block">Upload Your Document Here.</p>
               </div>
               
               <div class="row">
                 <div class="col-md-6 col-sm-12 offset-md-6 mr-auto">
-                  <button type="button" class="btn btn-info btn-block btn-round">Request Now</button>
+                  <button type="submit" class="btn btn-info btn-block btn-round">Request Now</button>
                 </div>
               </div>
 
@@ -678,6 +677,86 @@
  <script src="../public/vendor/owl.carousel/owl.carousel.js"></script>
   <!--custome script for all page-->
   <script src="../public/vendor/js3.0/scripts.js"></script>
+  <script src="../public/vendor/jquery.validate/jquery.validate.min.js"></script>
+
+   <script>
+  
+    $(function() {
+
+      $("form[name='editStudentprofile-Form']").validate({
+        rules: {
+  
+          mobile: {
+            minlength: 10,
+            maxlength: 10
+          },
+          password: {
+            required: true,
+            minlength: 5
+          }
+                   
+        },
+        messages: {
+          mobile: "Phone number required 10 digit",
+          password: "Invalid Password,5 Characters required"
+        },
+        submitHandler: function(form) {
+          form.submit();
+        }
+      });
+
+      
+      $("form[name='studentRequest-Form']").validate({
+        rules: {
+  
+          userRqHeader: {
+            required: true,
+            minlength: 10
+          },
+          userRqDesc: {
+            required: true,
+            minlength: 20
+          }
+                   
+        },
+        messages: {
+          userRqHeader: "Atleast 10Characters Required",
+          userRqDesc: "Atleast 20Characters Required"
+        },
+        submitHandler: function(form) {
+          form.submit();
+        }
+      });
+
+      $("form[name='studentAddProject-Form']").validate({
+        rules: {
+  
+          projectRqHeading: {
+            required: true,
+            minlength: 10
+          },
+          projectRqDesc: {
+            required: true,
+            minlength: 20
+          },
+          projectRqFile: {
+            required: true
+          }
+                   
+        },
+        messages: {
+          projectRqHeading: "Atleast 10Characters Required",
+          projectRqDesc: "Atleast 20Characters Required",
+          projectRqFile: "Upload your Project Image"
+        },
+        submitHandler: function(form) {
+          form.submit();
+        }
+      });
+  
+    });
+  
+  </script>
   
 
 </body>
