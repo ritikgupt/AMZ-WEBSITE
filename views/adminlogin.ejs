@@ -11,7 +11,7 @@
 
   <link href="/img/logoAMZ/AMZ Techiversity logo 2.png" rel="icon">
   <link href="/img/logoAMZ/AMZ Techiversity logo 2.png" rel="apple-touch-icon">
-  <title>AMZ - Admin Portal</title>
+  <title>AMZ AUTOMATIVE</title>
 
  <!-- Bootstrap CSS -->
  <link href="/vendor/css3.0/bootstrap.min.css" rel="stylesheet">
@@ -106,6 +106,37 @@
 <script src="/vendor/owl.carousel/owl.carousel.js"></script>
  <!--custome script for all page-->
  <script src="/vendor/js3.0/scripts.js"></script>
+ <script src="../public/vendor/jquery.validate/jquery.validate.min.js"></script>
+
+ <script>
+
+  $(function() {
+
+    $("form[name='validatePassword-Form']").validate({
+      rules: {
+
+        password: {
+          required: true,
+          minlength: 5
+        },
+        cpassword: {
+          required: true,
+          minlength: 5
+        }
+
+      },
+      messages: {
+        password: "Invalid Password,5 Characters required",
+        cpassword: "Invalid Confirm Password,5 Characters required"
+      },
+      submitHandler: function(form) {
+        form.submit();
+      }
+    });
+
+  });
+
+</script>
 
 </body>
 
