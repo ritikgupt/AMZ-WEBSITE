@@ -349,7 +349,7 @@
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Image Input</label>
                             <div class="col-lg-6">
-                              <input type="file" id="logoFile">
+                              <input type="file" id="logoFile" accept=".png, .jpg, .jpeg" required>
                               <p class="help-block">Upload Your Logo Image Here.</p>
                             </div>
                           </div>
@@ -443,7 +443,7 @@
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Image Input</label>
                             <div class="col-lg-6">
-                              <input type="file" id="logoFile">
+                              <input type="file" id="logoFile" accept=".png, .jpg, .jpeg" required>
                               <p class="help-block">Upload Your News Image Here.</p>
                             </div>
                           </div>
@@ -527,7 +527,7 @@
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Image Input</label>
                             <div class="col-lg-6">
-                              <input type="file" id="logoFile">
+                              <input type="file" id="logoFile" accept=".png, .jpg, .jpeg" required>
                               <p class="help-block">Upload Your Logo Image Here.</p>
                             </div>
                           </div>
@@ -614,7 +614,7 @@
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Image Input</label>
                             <div class="col-lg-6">
-                              <input type="file" id="logoFile">
+                              <input type="file" id="logoFile" accept=".png, .jpg, .jpeg" required>
                               <p class="help-block">Upload Your Video Image Here.</p>
                             </div>
                           </div>
@@ -643,6 +643,101 @@
 
                           <div class="view-row">
                             <h4>https://youtube.com/</h4>
+                            <img src="../public/img/c7.jpg" alt="" class="img-fluid">
+                            <button class="btn btn-danger btn-md">Remove</button>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                    <section>
+                      <div class="row">
+                      </div>
+                    </section>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+
+      </section>
+
+<!-- Advisory -->
+      <section class="wrapper" id="advisory">
+        <div class="section-title">
+          <h2>Advisory</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <section class="panel">
+              <header class="panel-heading tab-bg-info">
+                <ul class="nav nav-tabs">
+                  <li class="active">
+                    <a data-toggle="tab" href="#addAdvisory">
+                                          <i class="icon_plus_alt2"></i>
+                                          Add
+                                      </a>
+                  </li>
+                  <li>
+                    <a data-toggle="tab" href="#viewAdvisory">
+                                          <i class="icon_tools"></i>
+                                          View
+                                      </a>
+                  </li>
+                </ul>
+              </header>
+              <div class="panel-body">
+                <div class="tab-content">
+                  <div id="addAdvisory" class="tab-pane active">
+                    <section class="panel">
+                      <div class="panel-body bio-graph-info">
+                        <h1> Advisory Info</h1>
+                        <form class="form-horizontal" role="form" action="">
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label"> Name</label>
+                            <div class="col-lg-6">
+                              <input type="text" class="form-control">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label"> Designation</label>
+                            <div class="col-lg-6">
+                              <input type="text" class="form-control">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label">Image Input</label>
+                            <div class="col-lg-6">
+                              <input type="file" id="logoFile" accept=".jpg, .jpeg, .png" required>
+                              <p class="help-block">Upload Your Advisory Image Here.</p>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <div class="col-lg-offset-2 col-lg-10">
+                              <button type="submit" class="btn btn-primary">Save</button>
+                              <button type="button" class="btn btn-danger">Cancel</button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </section>
+                  </div>
+
+                  <div id="viewAdvisory" class="tab-pane">
+                    <section class="panel">
+                      <div class="panel-body bio-graph-info">
+                        <h1> Advisory Info</h1>
+                        <div class="row">
+                          <div class="view-row">
+                            <h4>Advisory Name</h4>
+                            <img src="../public/img/c6.png" alt="" class="img-fluid">
+                            <button class="btn btn-danger btn-md">Remove</button>
+                          </div>
+
+                          <div class="view-row">
+                            <h4>Advisory Name</h4>
                             <img src="../public/img/c7.jpg" alt="" class="img-fluid">
                             <button class="btn btn-danger btn-md">Remove</button>
                           </div>
@@ -715,7 +810,7 @@
                     <div class="form-group">
                       <label class="col-lg-2 control-label">Image Input</label>
                       <div class="col-lg-6">
-                        <input type="file" id="logoFile">
+                        <input type="file" id="logoFile" accept=".png, .jpg, .jpeg" required>
                         <p class="help-block">Upload Your Events Image Here.</p>
                       </div>
                     </div>
@@ -767,100 +862,6 @@
 
 </section>
 
-<!-- Advisory -->
-      <section class="wrapper" id="advisory">
-        <div class="section-title">
-          <h2>Advisory</h2>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-12">
-            <section class="panel">
-              <header class="panel-heading tab-bg-info">
-                <ul class="nav nav-tabs">
-                  <li class="active">
-                    <a data-toggle="tab" href="#addAdvisory">
-                                          <i class="icon_plus_alt2"></i>
-                                          Add
-                                      </a>
-                  </li>
-                  <li>
-                    <a data-toggle="tab" href="#viewAdvisory">
-                                          <i class="icon_tools"></i>
-                                          View
-                                      </a>
-                  </li>
-                </ul>
-              </header>
-              <div class="panel-body">
-                <div class="tab-content">
-                  <div id="addAdvisory" class="tab-pane active">
-                    <section class="panel">
-                      <div class="panel-body bio-graph-info">
-                        <h1> Advisory Info</h1>
-                        <form class="form-horizontal" role="form" action="">
-                          <div class="form-group">
-                            <label class="col-lg-2 control-label"> Name</label>
-                            <div class="col-lg-6">
-                              <input type="text" class="form-control">
-                            </div>
-                          </div>
-                          <div class="form-group">
-                            <label class="col-lg-2 control-label"> Designation</label>
-                            <div class="col-lg-6">
-                              <input type="text" class="form-control">
-                            </div>
-                          </div>
-                          <div class="form-group">
-                            <label class="col-lg-2 control-label">Image Input</label>
-                            <div class="col-lg-6">
-                              <input type="file" id="logoFile">
-                              <p class="help-block">Upload Your Advisory Image Here.</p>
-                            </div>
-                          </div>
-
-                          <div class="form-group">
-                            <div class="col-lg-offset-2 col-lg-10">
-                              <button type="submit" class="btn btn-primary">Save</button>
-                              <button type="button" class="btn btn-danger">Cancel</button>
-                            </div>
-                          </div>
-                        </form>
-                      </div>
-                    </section>
-                  </div>
-
-                  <div id="viewAdvisory" class="tab-pane">
-                    <section class="panel">
-                      <div class="panel-body bio-graph-info">
-                        <h1> Advisory Info</h1>
-                        <div class="row">
-                          <div class="view-row">
-                            <h4>Advisory Name</h4>
-                            <img src="../public/img/c6.png" alt="" class="img-fluid">
-                            <button class="btn btn-danger btn-md">Remove</button>
-                          </div>
-
-                          <div class="view-row">
-                            <h4>Advisory Name</h4>
-                            <img src="../public/img/c7.jpg" alt="" class="img-fluid">
-                            <button class="btn btn-danger btn-md">Remove</button>
-                          </div>
-                        </div>
-                      </div>
-                    </section>
-                    <section>
-                      <div class="row">
-                      </div>
-                    </section>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </div>
-        </div>
-
-      </section>
 
 <!-- Client -->
       <section class="wrapper" id="client">
@@ -897,7 +898,7 @@
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Image Input</label>
                             <div class="col-lg-6">
-                              <input type="file" id="logoFile">
+                              <input type="file" id="logoFile" accept=".jpg, .jpeg, .png" required>
                               <p class="help-block">Upload Your Client Image Here.</p>
                             </div>
                           </div>
@@ -986,7 +987,7 @@
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Image Input</label>
                             <div class="col-lg-6">
-                              <input type="file" id="logoFile">
+                              <input type="file" id="logoFile"  accept=".jpg, .jpeg, .png" required>
                               <p class="help-block">Upload Your Gallery Image Here.</p>
                             </div>
                           </div>
@@ -1069,7 +1070,7 @@
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Image Input</label>
                             <div class="col-lg-6">
-                              <input type="file" id="logoFile">
+                              <input type="file" id="logoFile"  accept=".jpg, .jpeg, .png" required>
                               <p class="help-block">Upload Your Award Image Here.</p>
                             </div>
                           </div>
