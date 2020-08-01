@@ -299,8 +299,6 @@
     items: 1,
   });
 
-
-
   // Initi AOS
   function aos_init() {
     AOS.init({
