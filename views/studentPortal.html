@@ -333,7 +333,7 @@
                 <h3 class="mb-3">Research Paper</h3>
                 <h4 class="mb-5">For Registration or Query Click Below</h4>
                 <div class="stdnt-slider-links">
-                  <a href="" data-toggle="modal" data-target="#studentRequestModal"><i class="bx bx-plus"></i>Request Now</a>
+                  <a id="Research Paper" onclick="CheckHeading(this.id)"><i class="bx bx-plus"></i>Request Now</a>
                 </div>
               </div>
             </div>
@@ -343,10 +343,10 @@
             <div class="stdnt-slider-wrap">
               <img src="../public/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
               <div class="stdnt-slider-info">
-                <h3 class="mb-3">Patent filling</h3>
+                <h3 class="mb-3">Patent Filling</h3>
                 <h4 class="mb-5">For Registration or Query Click Below</h4>
                 <div class="stdnt-slider-links">
-                  <a href=""  data-toggle="modal" data-target="#studentRequestModal"><i class="bx bx-plus"></i>Request Now</a>
+                  <a id="Patent Filling" onclick="CheckHeading(this.id)"><i class="bx bx-plus"></i>Request Now</a>
                 </div>
               </div>
             </div>
@@ -359,7 +359,7 @@
                 <h3 class="mb-3">StartUp</h3>
                 <h4 class="mb-5">For Registration or Query Click Below</h4>
                 <div class="stdnt-slider-links">
-                  <a href=""  data-toggle="modal" data-target="#studentRequestModal"><i class="bx bx-plus"></i>Request Now</a>
+                  <a id="Start Up" onclick="CheckHeading(this.id)"><i class="bx bx-plus"></i>Request Now</a>
                 </div>
               </div>
             </div>
@@ -372,7 +372,7 @@
                 <h3 class="mb-3">Complain</h3>
                 <h4 class="mb-5">For Registration or Query Click Below</h4>
                 <div class="stdnt-slider-links">
-                  <a href=""  data-toggle="modal" data-target="#studentRequestModal"><i class="bx bx-plus"></i>Request Now</a>
+                  <a id="Complain" onclick="CheckHeading(this.id)"><i class="bx bx-plus"></i>Request Now</a>
                 </div>
               </div>
             </div>
@@ -385,7 +385,7 @@
                 <h3 class="mb-3">Innovation</h3>
                 <h4 class="mb-5">For Registration or Query Click Below</h4>
                 <div class="stdnt-slider-links">
-                  <a href=""  data-toggle="modal" data-target="#studentRequestModal"><i class="bx bx-plus"></i>Request Now</a>
+                  <a id="Innovation" onclick="CheckHeading(this.id)"><i class="bx bx-plus"></i>Request Now</a>
                 </div>
               </div>
             </div>
@@ -398,7 +398,7 @@
                 <h3 class="mb-3">Tech Support</h3>
                 <h4 class="mb-5">For Registration or Query Click Below</h4>
                 <div class="stdnt-slider-links">
-                  <a href=""  data-toggle="modal" data-target="#studentRequestModal"><i class="bx bx-plus"></i>Request Now</a>
+                  <a id="Tech Support" onclick="CheckHeading(this.id)"><i class="bx bx-plus"></i>Request Now</a>
                 </div>
               </div>
             </div>
@@ -635,7 +635,11 @@
             <form class="FormModal-form" action="" name="studentRequest-Form">
               
               <div class="form-group">
-                <input type="text" class="form-control" name="userRqHeader" id="userName" placeholder="HEADING..." autocomplete="off">
+                <input type="text" class="form-control" name="userRqType" id="userRequestType" value="" placeholder="Request Type..." autocomplete="off" disabled>
+              </div>
+
+              <div class="form-group">
+                <input type="text" class="form-control" name="userRqHeader" id="userName"  placeholder="HEADING..." autocomplete="off">
               </div>
 
               <div class="form-group">
@@ -709,6 +713,9 @@
       $("form[name='studentRequest-Form']").validate({
         rules: {
   
+          userRqType: {
+            required: true
+          },
           userRqHeader: {
             required: true,
             minlength: 10
@@ -720,6 +727,7 @@
                    
         },
         messages: {
+          userRqType: "Choose a Request",
           userRqHeader: "Atleast 10Characters Required",
           userRqDesc: "Atleast 20Characters Required"
         },
@@ -756,6 +764,15 @@
   
     });
   
+  </script>
+
+  <script>
+    function CheckHeading(RequestType){
+
+     document.getElementById("userRequestType").value = RequestType;
+      $('#studentRequestModal').modal('show');
+
+    }
   </script>
   
 
