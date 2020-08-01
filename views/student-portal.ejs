@@ -59,7 +59,7 @@
                             <span class="profile-ava">
                                 <img alt="" src="/vendor/img/avatar1_small.jpg">
                             </span>
-                            <span class="username">Simran Sharma</span>
+                            <span class="username"><%=student[0].name%></span>
                             <b class="caret"></b>
                         </a>
             <ul class="dropdown-menu extended logout">
@@ -139,7 +139,7 @@
             <div class="profile-widget profile-widget-info">
               <div class="panel-body">
                 <div class="col-lg-2 col-sm-2">
-                  <h4>Simran Sharma</h4>
+                  <h4><%=student[0].name%></h4>
                   <div class="follow-ava">
                     <img src="/vendor/img/profile-widget-avatar.jpg" alt="">
                   </div>
@@ -147,11 +147,10 @@
                 </div>
                 <div class="col-lg-4 col-sm-4 follow-info">
                   <p></p>
-                  <p><i class="fa fa-twitter"></i> Mechanical</p>
-                  <p><i class="icon_key_alt"></i> 7891456030</p>
+                  <p><i class="fa fa-twitter"></i> <%=student[0].branch%></p>
+                  <p><i class="icon_key_alt"></i> <%=student[0].mobile%></p>
                   <h6>
-                                    <span><i class="icon_clock_alt"></i>11:05 AM</span>
-                                    <span><i class="icon_calendar"></i>25.10.13</span>
+                                    
                                     <span><i class="icon_pin_alt"></i>India</span>
                                 </h6>
                 </div>
@@ -215,22 +214,22 @@
                         <h1>Bio Graph</h1>
                         <div class="row">
                           <div class="bio-row">
-                            <p><span>Name </span>: Simran Sharma</p>
+                            <p><span>Name </span>: <%=student[0].name%></p>
                           </div>
                           <div class="bio-row">
-                            <p><span>Enrollment Id </span>: 7891456030</p>
+                            <p><span>Enrollment Id </span>: <%=student[0].enroll_id%></p>
                           </div>
                           <div class="bio-row">
-                            <p><span>Institute </span>: Abc Institute</p>
+                            <p><span>Institute </span>: <%=student[0].institute%></p>
                           </div>
                           <div class="bio-row">
-                            <p><span>Email </span>: simran@gmail.com</p>
+                            <p><span>Email </span>: <%=student[0].email%></p>
                           </div>
                           <div class="bio-row">
-                            <p><span>Branch </span>: Mechanical</p>
+                            <p><span>Branch </span>:<%=student[0].branch%></p>
                           </div>
                           <div class="bio-row">
-                            <p><span>Mobile </span>: (+91) 45621 02789</p>
+                            <p><span>Mobile </span>: <%=student[0].mobile%></p>
                           </div>
                         </div>
                       </div>
@@ -333,7 +332,7 @@
                 <h3 class="mb-3">Research Paper</h3>
                 <h4 class="mb-5">For Registration or Query Click Below</h4>
                 <div class="stdnt-slider-links">
-                  <a href="" data-toggle="modal" data-target="#studentRequestModal"><i class="bx bx-plus"></i>Request Now</a>
+                  <a href="" data-toggle="modal" data-target="#studentRequestModal" data-whatever="Research"><i class="bx bx-plus"></i>Request Now</a>
                 </div>
               </div>
             </div>
@@ -346,7 +345,7 @@
                 <h3 class="mb-3">Patent filling</h3>
                 <h4 class="mb-5">For Registration or Query Click Below</h4>
                 <div class="stdnt-slider-links">
-                  <a href=""  data-toggle="modal" data-target="#studentRequestModal"><i class="bx bx-plus"></i>Request Now</a>
+                  <a href=""  data-toggle="modal" data-target="#studentRequestModal" data-whatever="Patent"><i class="bx bx-plus"></i>Request Now</a>
                 </div>
               </div>
             </div>
@@ -359,7 +358,7 @@
                 <h3 class="mb-3">StartUp</h3>
                 <h4 class="mb-5">For Registration or Query Click Below</h4>
                 <div class="stdnt-slider-links">
-                  <a href=""  data-toggle="modal" data-target="#studentRequestModal"><i class="bx bx-plus"></i>Request Now</a>
+                  <a href=""  data-toggle="modal" data-target="#studentRequestModal" data-whatever="StartUp"><i class="bx bx-plus"></i>Request Now</a>
                 </div>
               </div>
             </div>
@@ -372,7 +371,7 @@
                 <h3 class="mb-3">Complain</h3>
                 <h4 class="mb-5">For Registration or Query Click Below</h4>
                 <div class="stdnt-slider-links">
-                  <a href=""  data-toggle="modal" data-target="#studentRequestModal"><i class="bx bx-plus"></i>Request Now</a>
+                  <a href=""  data-toggle="modal" data-target="#studentRequestModal" data-whatever="Complain"><i class="bx bx-plus"></i>Request Now</a>
                 </div>
               </div>
             </div>
@@ -385,7 +384,7 @@
                 <h3 class="mb-3">Innovation</h3>
                 <h4 class="mb-5">For Registration or Query Click Below</h4>
                 <div class="stdnt-slider-links">
-                  <a href=""  data-toggle="modal" data-target="#studentRequestModal"><i class="bx bx-plus"></i>Request Now</a>
+                  <a href=""  data-toggle="modal" data-target="#studentRequestModal" data-whatever="Innovation"><i class="bx bx-plus"></i>Request Now</a>
                 </div>
               </div>
             </div>
@@ -398,7 +397,7 @@
                 <h3 class="mb-3">Tech Support</h3>
                 <h4 class="mb-5">For Registration or Query Click Below</h4>
                 <div class="stdnt-slider-links">
-                  <a href=""  data-toggle="modal" data-target="#studentRequestModal"><i class="bx bx-plus"></i>Request Now</a>
+                  <a href=""  data-toggle="modal" data-target="#studentRequestModal" data-whatever="Support"><i class="bx bx-plus"></i>Request Now</a>
                 </div>
               </div>
             </div>
@@ -622,7 +621,7 @@
   </section>
 
    <!-- Modal Request -->
-   <div class="modal fade FormModal" id="studentRequestModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+   <div class="modal fade FormModal" id="studentRequestModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
     <div class="modal-dialog modal-dialog-centered modal-md" role="document">
       <div class="modal-content">
         <div class="modal-header border-bottom-0">
@@ -634,6 +633,9 @@
         <div class="modal-body">
           <div class="d-flex flex-column text-center">
             <form class="FormModal-form" action="">
+              <div class="form-group">
+                <input type="text" class="form-control" name="type" id="userName" placeholder="" autocomplete="off">
+              </div>
               
               <div class="form-group">
                 <input type="text" class="form-control" name="userRqHeader" id="userName" placeholder="HEADING..." autocomplete="off">
