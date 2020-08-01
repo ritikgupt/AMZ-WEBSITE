@@ -684,29 +684,29 @@
               <section class="panel">
                 <div class="panel-body bio-graph-info">
                   <h1> Events Info</h1>
-                  <form class="form-horizontal" role="form" action="">
+                  <form class="form-horizontal" role="form" action="/events" method="POST" enctype="multipart/form-data">
                     <div class="form-group">
                       <label class="col-lg-2 control-label">University Name</label>
                       <div class="col-lg-6">
-                        <input type="text" class="form-control">
+                        <input type="text" name="university" class="form-control">
                       </div>
                     </div>
                     <div class="form-group">
                       <label class="col-lg-2 control-label">Workshop Title</label>
                       <div class="col-lg-6">
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" name="title">
                       </div>
                     </div>
                     <div class="form-group">
                       <label class="col-lg-2 control-label">Workshop Date</label>
                       <div class="col-lg-6">
-                        <input type="text" class="form-control" placeholder="DD/MM/YYYYY">
+                        <input type="date" class="form-control" name="date" placeholder="DD/MM/YYYYY">
                       </div>
                     </div>
                     <div class="form-group">
                       <label class="col-lg-2 control-label">Image Input</label>
                       <div class="col-lg-6">
-                        <input type="file" id="logoFile">
+                        <input type="file" id="logoFile" name="img_url">
                         <p class="help-block">Upload Your Events Image Here.</p>
                       </div>
                     </div>
@@ -727,21 +727,17 @@
                 <div class="panel-body bio-graph-info">
                   <h1> Events Info</h1>
                   <div class="row">
+                    <%for(var i=0;i<events.length;i++){%>
                     <div class="view-row">
-                      <h4 class="mb-3">University Name</h4>
-                      <h4 class="mb-3">Workshop Title</h4>
-                      <h4>Date : 01/01/2020</h4>
-                      <img src="../public/img/c6.png" alt="" class="img-fluid">
-                      <button class="btn btn-danger btn-md">Remove</button>
+                      <h4 class="mb-3"><%=events[i].university%></h4>
+                      <h4 class="mb-3"><%=events[i].title%></h4>
+      
+                      <img src="/<%=events[i].img_url%>" alt="" class="img-fluid">
+                      <form action="delete/<%=events[i].id%>/events" class="view-row" method="POST">   
+                        <button type="Submit" class="btn btn-danger btn-md">Remove</button>
+                    </form>                      
                     </div>
-
-                    <div class="view-row">
-                      <h4 class="mb-3">University Name</h4>
-                      <h4 class="mb-3">Workshop Title</h4>
-                      <h4>Date : 01/01/2020</h4>
-                      <img src="../public/img/c7.jpg" alt="" class="img-fluid">
-                      <button class="btn btn-danger btn-md">Remove</button>
-                    </div>
+                    <%}%>
                   </div>
                 </div>
               </section>
