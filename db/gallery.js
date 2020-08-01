@@ -8,10 +8,10 @@ const pool = mysql.createPool({
 });
 let gallery = {};
 
-gallery.add = (image,title) => {
+gallery.add = (image, title) => {
   return new Promise((resolve, reject) => {
     pool.query('insert into gallery (img_url,title) values (?,?)',
-      [image,title], (err, results) => {
+      [image, title], (err, results) => {
         if (err)
           return reject(err);
         return resolve(results);

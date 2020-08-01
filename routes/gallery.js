@@ -18,8 +18,8 @@ router.get('/amz/gallery', async(req, res) => {
 
 router.post('/gallery', upload.single('img_url'), admin_auth, async(req, res) => {
   try {
-      const title=req.body.title;
-    await gallery.add(req.file.path,title);
+    const title = req.body.title;
+    await gallery.add(req.file.path, title);
     res.redirect('/adminhome');
   } catch (e){
     console.log(e);

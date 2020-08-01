@@ -8,7 +8,7 @@ const advisory = require('../db/advisory');
 const award = require('../db/award');
 const admin_auth = require('../middleware/admin_auth');
 const video = require('../db/video');
-const gallery=require('../db/gallery')
+const gallery = require('../db/gallery');
 router.get('/adminhome', admin_auth, async(req, res) => {
   try {
     let a = await slider.show();
@@ -18,8 +18,8 @@ router.get('/adminhome', admin_auth, async(req, res) => {
     let e = await advisory.show();
     let f = await video.show();
     let g = await award.show();
-    let h=await gallery.show()
-    res.render('adminhome', {slider: a, news: b, partner: c, trusted: d, advisory: e, video: f, award: g,gallery:h,});
+    let h = await gallery.show();
+    res.render('adminhome', {slider: a, news: b, partner: c, trusted: d, advisory: e, video: f, award: g, gallery: h});
   } catch (e){
     res.json({message: e});
   }
