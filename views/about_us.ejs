@@ -56,37 +56,33 @@
   </header>
   <!-- End Header -->
 
-     <!-- ======= Gallery Section ======= -->
-     <section id="gallery" class="gallery">
-        <div class="container-fluid">
+  <!-- ======= AboutUs Section ======= -->
+  <div id="aboutUs">
+    <img src="/img/aboutUs/ABOUTUS-bg.png" alt="HeaderAboutUs">
+  </div>
+  <!-- End AboutUs -->
+
+  <main id="main">
+
   
-          <div class="section-title" data-aos="fade-up">
-            <h2 class="text-white">Gallery</h2>
-            <p class="text-white text-center">"Things end but memories last forever". The photo album right below 
-              rejuvenates the sense of past went days. 
-            </p>
-          </div>
-  
-          <div class="row no-gutters" data-aos="fade-left">
-  <%for(var i=0;i<gallery.length;i++){%>
-      <%console.log(gallery[i].img_url)%>
-            <div class="col-lg-3 col-md-4">
-              <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
-                <a href="/<%=gallery[i].img_url%>" class="venobox" data-gall="gallery-item">
-                  <img src="/<%=gallery[i].img_url%>" alt="" class="img-fluid">
-                </a>
-                <p><%=gallery[i].title%></p>
-              </div>
-            </div>
-  <%}%>
-            
-  
-          </div>
-  
+
+    <!-- ======= Cliens Section ======= -->
+    <section id="cliens" class="cliens section-bg">
+      <div class="container">
+        <div class="section-title">
+          <h2>Our Happy Clients</h2>
+          <p></p>
         </div>
-      </section>
-      <!-- End Gallery Section -->
-  
+
+        <div class="owl-carousel trustedBy-carousel" data-aos="zoom-in">
+<%for(var i=0;i<client.length;i++){%>
+          <img src="<%=client[i].img_url%>" class="img-fluid" alt="">
+<%}%>
+
+        </div>
+
+      </div>
+    </section><!-- End Cliens Section -->
 
 
   </main><!-- End #main -->

@@ -6,9 +6,10 @@ var upload = multer({dest: 'uploads/'});
 const admin_auth = require('../middleware/admin_auth');
 
 
-router.get('/amz/gallery', async(req, res) => {
+router.get('/amz/gallery/display', async(req, res) => {
   try {
     const a = await gallery.show();
+    console.log(a)
     res.render('gallery', {gallery: a});
   } catch (e){
     console.log(e);

@@ -29,6 +29,8 @@ const awardRoutes = require('./routes/award');
 app.use(awardRoutes);
 const galleryRoutes = require('./routes/gallery');
 app.use(galleryRoutes);
+const aboutRoutes=require('./routes/about_us')
+app.use(aboutRoutes);
 const AuthenticationRoutes = require('./routes/authentication');
 app.use(AuthenticationRoutes);
 const NewsRoutes = require('./routes/news');
