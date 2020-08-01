@@ -827,7 +827,7 @@
                         <div class="row">
                           <%for(var i=0;i<advisory.length;i++){%>
                           <div class="view-row">
-                            <h4>Advisory Name</h4>
+                            <h4><%=advisory[i].name%></h4>
                             <img src="<%=advisory[i].img_url%>" alt="" class="img-fluid">
                             <form action="delete/<%=advisory[i].advisoryid%>/advisory" class="view-row" method="POST">   
                               <button type="Submit" class="btn btn-danger btn-md">Remove</button>
@@ -965,17 +965,17 @@
                     <section class="panel">
                       <div class="panel-body bio-graph-info">
                         <h1> Gallery Info</h1>
-                        <form class="form-horizontal" role="form" action="">
+                        <form class="form-horizontal" role="form" action="/gallery" method="POST" enctype="multipart/form-data">
                           <div class="form-group">
                             <label class="col-lg-2 control-label"> Title</label>
                             <div class="col-lg-6">
-                              <input type="text" class="form-control">
+                              <input type="text" name="title" class="form-control">
                             </div>
                           </div>
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Image Input</label>
                             <div class="col-lg-6">
-                              <input type="file" id="logoFile">
+                              <input type="file" id="logoFile" name="img_url">
                               <p class="help-block">Upload Your Gallery Image Here.</p>
                             </div>
                           </div>
@@ -996,23 +996,20 @@
                       <div class="panel-body bio-graph-info">
                         <h1> Gallery Info</h1>
                         <div class="row">
+                          <%for(var i=0;i<gallery.length;i++){%>
                           <div class="view-row">
-                            <h4>Img Title</h4>
-                            <img src="/img/c6.png" alt="" class="img-fluid">
-                            <button class="btn btn-danger btn-md">Remove</button>
+                            <h4><%=gallery[i].title%></h4>
+                            <img src="<%=gallery[i].img_url%>" alt="" class="img-fluid">
+                            <form action="/<%=gallery[i].id%>/gallery" class="view-row" method="POST">   
+                              <button type="Submit" class="btn btn-danger btn-md">Remove</button>
+                          </form>
                           </div>
-
-                          <div class="view-row">
-                            <h4>Img Title</h4>
-                            <img src="/img/c7.jpg" alt="" class="img-fluid">
-                            <button class="btn btn-danger btn-md">Remove</button>
-                          </div>
+<%}%>
                         </div>
                       </div>
                     </section>
                     <section>
-                      <div class="row">
-                      </div>
+                     
                     </section>
                   </div>
                 </div>
