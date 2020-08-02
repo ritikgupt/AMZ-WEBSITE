@@ -263,7 +263,7 @@
                     <section class="panel">
                       <div class="panel-body bio-graph-info">
                         <h1> Profile Info</h1>
-                        <form class="form-horizontal" role="form" action="">
+                        <form class="form-horizontal" role="form" action="" name="editAdminprofile-Form">
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Name</label>
                             <div class="col-lg-6">
@@ -285,13 +285,20 @@
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Mobile</label>
                             <div class="col-lg-6">
-                              <input type="number" class="form-control" id="mobile" placeholder=" " value="7891456030">
+                              <input type="number" class="form-control" id="mobile" name="mobile" placeholder=" " value="7891456030">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label">Image Input</label>
+                            <div class="col-lg-6">
+                              <input type="file" id="logoFile" name="img_url" accept=".jpg, .jpeg, .png">
+                              <p class="help-block">Upload Your Image Here.</p>
                             </div>
                           </div>
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Password</label>
                             <div class="col-lg-6">
-                              <input type="password" class="form-control" id="password" placeholder=" " value="123">
+                              <input type="password" class="form-control" id="password" name="password" value="123456">
                             </div>
                           </div>
 
@@ -345,11 +352,11 @@
                     <section class="panel">
                       <div class="panel-body bio-graph-info">
                         <h1> Trusted By Info</h1>
-                        <form class="form-horizontal" role="form" action="">
+                        <form class="form-horizontal" role="form" action="" name="trustedBy-Form">
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Image Input</label>
                             <div class="col-lg-6">
-                              <input type="file" id="logoFile" accept=".png, .jpg, .jpeg" required>
+                              <input type="file" id="logoFile" name="img_url" accept=".png, .jpg, .jpeg" required>
                               <p class="help-block">Upload Your Logo Image Here.</p>
                             </div>
                           </div>
@@ -427,24 +434,30 @@
                     <section class="panel">
                       <div class="panel-body bio-graph-info">
                         <h1> News Info</h1>
-                        <form class="form-horizontal" role="form" action="">
+                        <form class="form-horizontal" role="form" action="" name="news-Form">
                           <div class="form-group">
                             <label class="col-lg-2 control-label">News Title</label>
                             <div class="col-lg-6">
-                              <input type="text" class="form-control">
+                              <input type="text" class="form-control" name="heading">
                             </div>
                           </div>
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Description</label>
                             <div class="col-lg-6">
-                              <textarea type="text" class="form-control" rows="3"></textarea>
+                              <textarea type="text" class="form-control" rows="3" name="description"></textarea>
                             </div>
                           </div>
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Image Input</label>
                             <div class="col-lg-6">
-                              <input type="file" id="logoFile" accept=".png, .jpg, .jpeg" required>
+                              <input type="file" id="logoFileNews" name="img_url" accept=".png, .jpg, .jpeg" required>
                               <p class="help-block">Upload Your News Image Here.</p>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label">Date</label>
+                            <div class="col-lg-6">
+                              <input type="text" class="form-control" placeholder="DD/MM/YYYY" name="date">
                             </div>
                           </div>
 
@@ -466,12 +479,14 @@
                         <div class="row">
                           <div class="view-row">
                             <h4>News Title</h4>
+                            <h4 class="mt-3">01/01/2000</h4>
                             <img src="../public/img/c6.png" alt="" class="img-fluid">
                             <button class="btn btn-danger btn-md">Remove</button>
                           </div>
 
                           <div class="view-row">
                             <h4>News Title</h4>
+                            <h4 class="mt-3">01/01/2000</h4>
                             <img src="../public/img/c7.jpg" alt="" class="img-fluid">
                             <button class="btn btn-danger btn-md">Remove</button>
                           </div>
@@ -523,11 +538,11 @@
                     <section class="panel">
                       <div class="panel-body bio-graph-info">
                         <h1> Partner Info</h1>
-                        <form class="form-horizontal" role="form" action="">
+                        <form class="form-horizontal" role="form" action="" name="partner-Form">
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Image Input</label>
                             <div class="col-lg-6">
-                              <input type="file" id="logoFile" accept=".png, .jpg, .jpeg" required>
+                              <input type="file" id="logoFilePartner" name="img_url" accept=".png, .jpg, .jpeg" required>
                               <p class="help-block">Upload Your Logo Image Here.</p>
                             </div>
                           </div>
@@ -604,18 +619,18 @@
                     <section class="panel">
                       <div class="panel-body bio-graph-info">
                         <h1> Video Info</h1>
-                        <form class="form-horizontal" role="form" action="">
+                        <form class="form-horizontal" role="form" action="" name="video-Form">
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Video URL</label>
                             <div class="col-lg-6">
-                              <input type="text" class="form-control">
+                              <input type="text" class="form-control" name="video_url">
                             </div>
                           </div>
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Image Input</label>
                             <div class="col-lg-6">
-                              <input type="file" id="logoFile" accept=".png, .jpg, .jpeg" required>
-                              <p class="help-block">Upload Your Video Image Here.</p>
+                              <input type="file" id="logoFileVideo" name="img_url" accept=".png, .jpg, .jpeg" required>
+                              <p class="help-block">Upload a Video Thumbnail Here.</p>
                             </div>
                           </div>
 
@@ -693,24 +708,24 @@
                     <section class="panel">
                       <div class="panel-body bio-graph-info">
                         <h1> Advisory Info</h1>
-                        <form class="form-horizontal" role="form" action="">
+                        <form class="form-horizontal" role="form" action="" name="advisory-Form">
                           <div class="form-group">
                             <label class="col-lg-2 control-label"> Name</label>
                             <div class="col-lg-6">
-                              <input type="text" class="form-control">
+                              <input type="text" class="form-control" name="name">
                             </div>
                           </div>
                           <div class="form-group">
                             <label class="col-lg-2 control-label"> Designation</label>
                             <div class="col-lg-6">
-                              <input type="text" class="form-control">
+                              <input type="text" class="form-control" name="designation">
                             </div>
                           </div>
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Image Input</label>
                             <div class="col-lg-6">
-                              <input type="file" id="logoFile" accept=".jpg, .jpeg, .png" required>
-                              <p class="help-block">Upload Your Advisory Image Here.</p>
+                              <input type="file" id="logoFileAdvisory" name="img_url" accept=".jpg, .jpeg, .png" required>
+                              <p class="help-block">Upload an Advisory Image Here.</p>
                             </div>
                           </div>
 
@@ -788,30 +803,30 @@
               <section class="panel">
                 <div class="panel-body bio-graph-info">
                   <h1> Events Info</h1>
-                  <form class="form-horizontal" role="form" action="">
+                  <form class="form-horizontal" role="form" action="" name="event-Form">
                     <div class="form-group">
                       <label class="col-lg-2 control-label">University Name</label>
                       <div class="col-lg-6">
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" name="university_name">
                       </div>
                     </div>
                     <div class="form-group">
                       <label class="col-lg-2 control-label">Workshop Title</label>
                       <div class="col-lg-6">
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" name="workshop_title">
                       </div>
                     </div>
                     <div class="form-group">
                       <label class="col-lg-2 control-label">Workshop Date</label>
                       <div class="col-lg-6">
-                        <input type="text" class="form-control" placeholder="DD/MM/YYYYY">
+                        <input type="text" class="form-control" placeholder="DD/MM/YYYYY" name="workshop_date">
                       </div>
                     </div>
                     <div class="form-group">
                       <label class="col-lg-2 control-label">Image Input</label>
                       <div class="col-lg-6">
-                        <input type="file" id="logoFile" accept=".png, .jpg, .jpeg" required>
-                        <p class="help-block">Upload Your Events Image Here.</p>
+                        <input type="file" id="logoFileEvents" name="img_url" accept=".png, .jpg, .jpeg" required>
+                        <p class="help-block">Upload an Event Image Here.</p>
                       </div>
                     </div>
 
@@ -894,12 +909,12 @@
                     <section class="panel">
                       <div class="panel-body bio-graph-info">
                         <h1> Client Info</h1>
-                        <form class="form-horizontal" role="form" action="">
+                        <form class="form-horizontal" role="form" action="" name="client-Form">
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Image Input</label>
                             <div class="col-lg-6">
-                              <input type="file" id="logoFile" accept=".jpg, .jpeg, .png" required>
-                              <p class="help-block">Upload Your Client Image Here.</p>
+                              <input type="file" id="logoFileClient" name="img_url" accept=".jpg, .jpeg, .png" required>
+                              <p class="help-block">Upload a Client Image Here.</p>
                             </div>
                           </div>
 
@@ -977,18 +992,18 @@
                     <section class="panel">
                       <div class="panel-body bio-graph-info">
                         <h1> Gallery Info</h1>
-                        <form class="form-horizontal" role="form" action="">
+                        <form class="form-horizontal" role="form" action="" name="amzGallery-Form">
                           <div class="form-group">
                             <label class="col-lg-2 control-label"> Title</label>
                             <div class="col-lg-6">
-                              <input type="text" class="form-control">
+                              <input type="text" class="form-control" name="title">
                             </div>
                           </div>
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Image Input</label>
                             <div class="col-lg-6">
-                              <input type="file" id="logoFile"  accept=".jpg, .jpeg, .png" required>
-                              <p class="help-block">Upload Your Gallery Image Here.</p>
+                              <input type="file" id="logoFileGallery" name="img_url"   accept=".jpg, .jpeg, .png" required>
+                              <p class="help-block">Upload a Gallery Image Here.</p>
                             </div>
                           </div>
 
@@ -1066,12 +1081,12 @@
                     <section class="panel">
                       <div class="panel-body bio-graph-info">
                         <h1> Award Info</h1>
-                        <form class="form-horizontal" role="form" action="">
+                        <form class="form-horizontal" role="form" action="" name="awardGallery-Form">
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Image Input</label>
                             <div class="col-lg-6">
-                              <input type="file" id="logoFile"  accept=".jpg, .jpeg, .png" required>
-                              <p class="help-block">Upload Your Award Image Here.</p>
+                              <input type="file" id="logoFile" name="img_url"  accept=".jpg, .jpeg, .png" required>
+                              <p class="help-block">Upload a Award Image Here.</p>
                             </div>
                           </div>
 
@@ -1134,6 +1149,233 @@
  <script src="../public/vendor/owl.carousel/owl.carousel.js"></script>
   <!--custome script for all page-->
   <script src="../public/vendor/js3.0/scripts.js"></script>
+
+  <script src="../public/vendor/jquery.validate/jquery.validate.min.js"></script>
+
+  <script>
+ 
+   $(function() {
+
+     $("form[name='editAdminprofile-Form']").validate({
+       rules: {
+ 
+         mobile: {
+           minlength: 10,
+           maxlength: 10
+         },
+         password: {
+           required: true,
+           minlength: 5
+         }
+                  
+       },
+       messages: {
+         mobile: "Phone number required 10 digit",
+         password: "Invalid Password,5 Characters required"
+       },
+       submitHandler: function(form) {
+         form.submit();
+       }
+     });
+
+     $("form[name='trustedBy-Form']").validate({
+       rules: {
+ 
+         img_url: {
+           required: true
+         }
+                  
+       },
+       messages: {
+         img_url: "Upload a Trusted By Image"
+       },
+       submitHandler: function(form) {
+         form.submit();
+       }
+     });
+     
+     $("form[name='news-Form']").validate({
+        rules: {
+  
+          heading: {
+            required: true,
+            minlength: 5
+          },
+          description: {
+            required: true,
+            minlength: 10
+          },
+          img_url: {
+           required: true
+         },
+          date: {
+            required: true,
+            minlength: 10,
+            maxlength: 10
+          }
+                   
+        },
+        messages: {
+         heading: "Atleast 5Characters Required",
+         description: "Atleast 10Characters Required",
+         img_url: "Upload News Image",
+         date:"Date Format is Invalid"
+       },
+        submitHandler: function(form) {
+          form.submit();
+        }
+      });
+
+      $("form[name='partner-Form']").validate({
+        rules: {
+
+          img_url: {
+            required: true
+          }
+                  
+        },
+        messages: {
+          img_url: "Upload a Partner Image"
+        },
+        submitHandler: function(form) {
+          form.submit();
+        }
+      });
+
+      $("form[name='video-Form']").validate({
+        rules: {
+          video_url: {
+            required: true,
+            minlength:10
+          },
+          img_url: {
+            required: true
+          }
+                  
+        },
+        messages: {
+          video_url: "Provide a proper video link",
+          img_url: "Upload a Partner Image"
+        },
+        submitHandler: function(form) {
+          form.submit();
+        }
+      });
+     
+      $("form[name='advisory-Form']").validate({
+        rules: {
+  
+          name: {
+            required: true,
+            minlength: 5
+          },
+          designation: {
+            required: true,
+            minlength: 5
+          },
+          img_url: {
+           required: true
+         }
+                   
+        },
+        messages: {
+         name: "Atleast 5Characters Required",
+         designation: "Atleast 10Characters Required",
+         img_url: "Upload News Image"
+       },
+        submitHandler: function(form) {
+          form.submit();
+        }
+      });
+
+      $("form[name='event-Form']").validate({
+        rules: {
+  
+          university_name: {
+            required: true,
+            minlength: 5
+          },
+          workshop_title: {
+            required: true,
+            minlength: 10
+          },
+          img_url: {
+           required: true
+         },
+          workshop_date: {
+            required: true,
+            minlength: 10,
+            maxlength: 10
+          }
+                   
+        },
+        messages: {
+         university_name: "Atleast 5Characters Required",
+         workshop_title: "Atleast 5Characters Required",
+         img_url: "Upload News Image",
+         workshop_date:"Date Format is Invalid"
+       },
+        submitHandler: function(form) {
+          form.submit();
+        }
+      });
+
+      $("form[name='client-Form']").validate({
+        rules: {
+
+          img_url: {
+            required: true
+          }
+                  
+        },
+        messages: {
+          img_url: "Upload a Client Image"
+        },
+        submitHandler: function(form) {
+          form.submit();
+        }
+      });
+
+      $("form[name='amzGallery-Form']").validate({
+        rules: {
+
+          title:{
+            required: true,
+            minlength: 5
+          },
+          img_url: {
+            required: true
+          }
+                  
+        },
+        messages: {
+          img_url: "Upload a Amz Gallery Image"
+        },
+        submitHandler: function(form) {
+          form.submit();
+        }
+      });
+
+      $("form[name='awardGallery-Form']").validate({
+        rules: {
+
+          img_url: {
+            required: true
+          }
+                  
+        },
+        messages: {
+          img_url: "Upload a Award Gallery Image"
+        },
+        submitHandler: function(form) {
+          form.submit();
+        }
+      });
+
+     
+   });
+ 
+ </script>
 
 
 </body>
