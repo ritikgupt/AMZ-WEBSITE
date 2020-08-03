@@ -263,42 +263,42 @@
                     <section class="panel">
                       <div class="panel-body bio-graph-info">
                         <h1> Profile Info</h1>
-                        <form class="form-horizontal" role="form" action="" name="editAdminprofile-Form">
+                        <form class="form-horizontal" role="form" action="" name="editAdminProfile-Form">
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Name</label>
                             <div class="col-lg-6">
-                              <input type="text" class="form-control" id="name" placeholder="" value="Admin Name" disabled>
+                              <input type="text" class="form-control" id="name" name="name" placeholder="" value="Admin Name">
                             </div>
                           </div>
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Company</label>
                             <div class="col-lg-6">
-                              <input type="text" class="form-control" id="company" placeholder=" " value="AMZ Techiversity" disabled>
+                              <input type="text" class="form-control" id="company" name="company" placeholder=" " value="AMZ Techversity">
                             </div>
                           </div>
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Email</label>
                             <div class="col-lg-6">
-                              <input type="text" class="form-control" id="email" placeholder=" " value="admin@gmail.com" disabled>
+                              <input type="text" class="form-control" id="email" name="email" placeholder=" " value="admin@gmail.com">
                             </div>
                           </div>
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Mobile</label>
                             <div class="col-lg-6">
-                              <input type="number" class="form-control" id="mobile" name="mobile" placeholder=" " value="7891456030">
+                              <input type="number" class="form-control" id="mobile" name="mobile" placeholder=" " value="1234567890">
                             </div>
                           </div>
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Image Input</label>
                             <div class="col-lg-6">
-                              <input type="file" id="logoFile" name="img_url" accept=".jpg, .jpeg, .png">
+                              <input type="file"  name="img_url" accept=".jpg, .jpeg, .png">
                               <p class="help-block">Upload Your Image Here.</p>
                             </div>
                           </div>
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Password</label>
                             <div class="col-lg-6">
-                              <input type="password" class="form-control" id="password" name="password" value="123456">
+                              <input type="password" class="form-control" id="password" name="password" value="12345">
                             </div>
                           </div>
 
@@ -356,7 +356,7 @@
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Image Input</label>
                             <div class="col-lg-6">
-                              <input type="file" id="logoFile" name="img_url" accept=".png, .jpg, .jpeg" required>
+                              <input type="file"  name="img_url" accept=".png, .jpg, .jpeg" required>
                               <p class="help-block">Upload Your Logo Image Here.</p>
                             </div>
                           </div>
@@ -1085,7 +1085,7 @@
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Image Input</label>
                             <div class="col-lg-6">
-                              <input type="file" id="logoFile" name="img_url"  accept=".jpg, .jpeg, .png" required>
+                              <input type="file"  name="img_url"  accept=".jpg, .jpeg, .png" required>
                               <p class="help-block">Upload a Award Image Here.</p>
                             </div>
                           </div>
@@ -1156,10 +1156,23 @@
  
    $(function() {
 
-     $("form[name='editAdminprofile-Form']").validate({
+     $("form[name='editAdminProfile-Form']").validate({
        rules: {
- 
+
+         name: {
+           required: true,
+           minlength: 5
+         },
+         company: {
+           required: true,
+           minlength: 5
+         },
+         email: {
+           required: true,
+           email: true
+         },
          mobile: {
+           required: true,
            minlength: 10,
            maxlength: 10
          },
@@ -1170,11 +1183,14 @@
                   
        },
        messages: {
-         mobile: "Phone number required 10 digit",
-         password: "Invalid Password,5 Characters required"
+        name: "Please enter your Name",
+        company: "Please enter Company Name",
+        email: "Please enter a valid Email address",
+        mobile: "Phone number required 10 digit",
+        password: "Invalid Password,5 Characters required"
        },
        submitHandler: function(form) {
-         form.submit();
+        // form.submit();
        }
      });
 
@@ -1349,6 +1365,7 @@
                   
         },
         messages: {
+          title:"Atleast 5Characters Required",
           img_url: "Upload a Amz Gallery Image"
         },
         submitHandler: function(form) {
