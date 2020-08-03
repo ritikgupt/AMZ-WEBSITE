@@ -139,45 +139,39 @@
               <section class="panel">
                 <div class="panel-body bio-graph-info">
                   <h1> Certificate Info</h1>
-                        <form class="form-horizontal" role="form" action="">
-                          <div class="form-group">
-                            <label class="col-lg-2 control-label">Enrollment Id</label>
-                            <div class="col-lg-6">
-                              <input type="text" class="form-control" id="E-Id">
-                            </div>
-                          </div>
-                          <div class="form-group">
-                            <label class="col-lg-2 control-label">Course Name</label>
-                            <div class="col-lg-6">
-                              <input type="text" class="form-control" id="course_name">
-                            </div>
-                          </div>
-                          <div class="form-group">
-                            <label class="col-lg-2 control-label">Name</label>
-                            <div class="col-lg-6">
-                              <input type="text" class="form-control" id="name">
-                            </div>
-                          </div>
-                          <div class="form-group">
-                            <label class="col-lg-2 control-label">Institute</label>
-                            <div class="col-lg-6">
-                              <input type="text" class="form-control" id="institute">
-                            </div>
-                          </div>
-                          <div class="form-group">
-                            <label class="col-lg-2 control-label">Branch</label>
-                            <div class="col-lg-6">
-                              <input type="text" class="form-control" id="institute">
-                            </div>
-                          </div>
+                  <form class="form-horizontal" role="form" action="" name="editCertificate-Form">
+                    <div class="form-group">
+                      <label class="col-lg-2 control-label">Enrollment Id</label>
+                      <div class="col-lg-6">
+                        <input type="text" class="form-control" id="E-Id" name="enrollment_id">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-lg-2 control-label">Name</label>
+                      <div class="col-lg-6">
+                        <input type="text" class="form-control" id="name" name="name">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-lg-2 control-label">Institute</label>
+                      <div class="col-lg-6">
+                        <input type="text" class="form-control" id="institute" name="institute">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-lg-2 control-label">Branch</label>
+                      <div class="col-lg-6">
+                        <input type="text" class="form-control" name="branch" id="branch">
+                      </div>
+                    </div>
 
-                          <div class="form-group">
-                            <div class="col-lg-offset-2 col-lg-10">
-                              <button type="submit" class="btn btn-primary">Save</button>
-                              <button type="button" class="btn btn-danger">Cancel</button>
-                            </div>
-                          </div>
-                        </form>
+                    <div class="form-group">
+                      <div class="col-lg-offset-2 col-lg-10">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                        <button type="button" class="btn btn-danger">Cancel</button>
+                      </div>
+                    </div>
+                  </form>
                 </div>
               </section>
             </div>
@@ -209,7 +203,46 @@
  <script src="../public/vendor/owl.carousel/owl.carousel.js"></script>
   <!--custome script for all page-->
   <script src="../public/vendor/js3.0/scripts.js"></script>
+  <script src="../public/vendor/jquery.validate/jquery.validate.min.js"></script>
 
+  <script>
+    $(function() {
+
+      $("form[name='editCertificate-Form']").validate({
+       rules: {
+
+        enrollment_id: {
+          required: true,
+          minlength: 5
+        },
+         name: {
+           required: true,
+           minlength: 5
+         },
+         institute: {
+           required: true,
+           minlength: 5
+         },
+         branch: {
+           required: true,
+           minlength: 5
+         }
+                  
+       },
+       messages: {
+        enrollment_id: "Invalid Enrollment Id",
+        name: "Please enter your Name",
+        institute: "Invalid Institute Name,5Characters required",
+        branch: "Invalid Branch Name,5Characters required"
+       },
+       submitHandler: function(form) {
+        form.submit();
+       }
+     });
+ 
+    });
+
+  </script>
 
 </body>
 
