@@ -45,7 +45,8 @@ const AdvisoryRoutes = require('./routes/advisory');
 app.use(AdvisoryRoutes);
 const VideoRoutes = require('./routes/video');
 app.use(VideoRoutes);
-
+const ircRoutes = require('./routes/irc');
+app.use(ircRoutes);
 const ForgotRoutes = require('./routes/forgot-password');
 app.use(ForgotRoutes);
 const StudentPortalRoutes = require('./routes/student_portal');
