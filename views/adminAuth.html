@@ -40,16 +40,16 @@
 
   <div class="container">
 
-    <form class="login-form" action="adminHome.html">
+    <form class="login-form" action="" name="validateAdminPassword-Form">
       <div class="login-wrap">
         <p class="login-img"><i class="icon_lock_alt"></i></p>
         <div class="input-group">
           <span class="input-group-addon"><i class="icon_key"></i></span>
-          <input type="password" class="form-control" placeholder="Password" autofocus>
+          <input type="password" class="form-control" name="password" placeholder="Password" autofocus>
         </div>
         <div class="input-group">
             <span class="input-group-addon"><i class="icon_key_alt"></i></span>
-            <input type="password" class="form-control" placeholder="Confirm password">
+            <input type="password" class="form-control" name="cpassword" placeholder="Confirm password">
         </div>
           
         <button class="btn btn-primary btn-lg btn-block" type="submit">Submit</button>
@@ -71,7 +71,37 @@
 <script src="../public/vendor/owl.carousel/owl.carousel.js"></script>
  <!--custome script for all page-->
  <script src="../public/vendor/js3.0/scripts.js"></script>
+ <script src="../public/vendor/jquery.validate/jquery.validate.min.js"></script>
 
+ <script>
+  
+  $(function() {
+    
+    $("form[name='validateAdminPassword-Form']").validate({
+      rules: {
+
+        password: {
+          required: true,
+          minlength: 5
+        },
+        cpassword: {
+          required: true,
+          minlength: 5
+        }
+                  
+      },
+      messages: {
+        password: "Invalid Password,5 Characters required",
+        cpassword: "Invalid Confirm Password,5 Characters required"
+      },
+      submitHandler: function(form) {
+        form.submit();
+      }
+    });
+
+  });
+
+</script>
 </body>
 
 </html>

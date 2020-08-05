@@ -700,19 +700,19 @@
         </div>
         <div class="modal-body">
           <div class="d-flex flex-column text-center">
-            <form class="FormModal-form" action="">
+            <form class="FormModal-form" action="" name="message-Form">
               
               <div class="form-group">
-                <input type="text" class="form-control" name="userRqHeader" id="userEmail" placeholder="USER EMAIL..." autocomplete="off">
+                <input type="text" class="form-control" name="email" id="userEmail" placeholder="USER EMAIL..." autocomplete="off">
               </div>
 
               <div class="form-group">
-                <textarea name="userRqDesc" id="userInfo" cols="5" rows="3" class="form-control" placeholder="DESCRIPTION..." autocomplete="off"></textarea>
+                <textarea name="description" id="userInfo" cols="5" rows="3" class="form-control" placeholder="DESCRIPTION..." autocomplete="off"></textarea>
               </div>
               
               <div class="row">
                 <div class="col-md-6 col-sm-12 offset-md-6 mr-auto">
-                  <button type="button" class="btn btn-info btn-block btn-round">Send</button>
+                  <button type="submit" class="btn btn-info btn-block btn-round">Send</button>
                 </div>
               </div>
 
@@ -742,6 +742,7 @@
   <!--custome script for all page-->
   <script src="../public/vendor/js3.0/scripts.js"></script>
   <script src="../public/vendor/paginate/jquery.paginate.js"></script>
+  <script src="../public/vendor/jquery.validate/jquery.validate.min.js"></script>
 
   <script>
     //Paginate Js
@@ -752,6 +753,36 @@
     prevButtonText: 'prev',
     nextButtonText: 'next'
   });
+</script>
+
+<script>
+  
+  $(function() {
+    
+    $("form[name='message-Form']").validate({
+      rules: {
+
+        email: {
+          required: true,
+          email: true
+        },
+        description:{
+          required:true,
+          minlength:10
+        }
+                  
+      },
+      messages: {
+        email: "Not a valid Email",
+        description: "Atleast 10Characters Required",
+      },
+      submitHandler: function(form) {
+        form.submit();
+      }
+    });
+
+  });
+
 </script>
 </body>
 

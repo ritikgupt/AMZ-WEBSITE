@@ -169,17 +169,17 @@
                     <section class="panel">
                       <div class="panel-body bio-graph-info">
                         <h1> Mechanical Info</h1>
-                        <form class="form-horizontal" role="form" action="">
+                        <form class="form-horizontal" role="form" action="" name="mechanical-Form">
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Course Name</label>
                             <div class="col-lg-6">
-                              <input type="text" class="form-control">
+                              <input type="text" class="form-control" name="name" name="name">
                             </div>
                           </div>
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Image Input</label>
                             <div class="col-lg-6">
-                              <input type="file" id="logoFile" accept=".jpg, .jpeg, .png" required>
+                              <input type="file" name="image" accept=".jpg, .jpeg, .png" required>
                               <p class="help-block">Upload Your Course Image Here.</p>
                             </div>
                           </div>
@@ -258,17 +258,17 @@
               <section class="panel">
                 <div class="panel-body bio-graph-info">
                   <h1> Civil Info</h1>
-                  <form class="form-horizontal" role="form" action="">
+                  <form class="form-horizontal" role="form" action="" name="civil-Form">
                     <div class="form-group">
                       <label class="col-lg-2 control-label">Course Name</label>
                       <div class="col-lg-6">
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" name="name">
                       </div>
                     </div>
                     <div class="form-group">
                       <label class="col-lg-2 control-label">Image Input</label>
                       <div class="col-lg-6">
-                        <input type="file" id="logoFile" accept=".jpg, .jpeg, .png" required>
+                        <input type="file" name="image" accept=".jpg, .jpeg, .png" required>
                         <p class="help-block">Upload Your Course Image Here.</p>
                       </div>
                     </div>
@@ -347,17 +347,17 @@
               <section class="panel">
                 <div class="panel-body bio-graph-info">
                   <h1> Cse Info</h1>
-                  <form class="form-horizontal" role="form" action="">
+                  <form class="form-horizontal" role="form" action="" name="cse-Form">
                     <div class="form-group">
                       <label class="col-lg-2 control-label">Course Name</label>
                       <div class="col-lg-6">
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" name="name">
                       </div>
                     </div>
                     <div class="form-group">
                       <label class="col-lg-2 control-label">Image Input</label>
                       <div class="col-lg-6">
-                        <input type="file" id="logoFile" accept=".jpg, .jpeg, .png" required>
+                        <input type="file" name="image" accept=".jpg, .jpeg, .png" required>
                         <p class="help-block">Upload Your Course Image Here.</p>
                       </div>
                     </div>
@@ -436,17 +436,17 @@
               <section class="panel">
                 <div class="panel-body bio-graph-info">
                   <h1> Electrical & Electronics Info</h1>
-                  <form class="form-horizontal" role="form" action="">
+                  <form class="form-horizontal" role="form" action="" name="eleEce-Form">
                     <div class="form-group">
                       <label class="col-lg-2 control-label">Course Name</label>
                       <div class="col-lg-6">
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" name="name">
                       </div>
                     </div>
                     <div class="form-group">
                       <label class="col-lg-2 control-label">Image Input</label>
                       <div class="col-lg-6">
-                        <input type="file" id="logoFile" accept=".jpg, .jpeg, .png" required>
+                        <input type="file" name="image" accept=".jpg, .jpeg, .png" required>
                         <p class="help-block">Upload Your Course Image Here.</p>
                       </div>
                     </div>
@@ -525,17 +525,17 @@
               <section class="panel">
                 <div class="panel-body bio-graph-info">
                   <h1> Chemical Info</h1>
-                  <form class="form-horizontal" role="form" action="">
+                  <form class="form-horizontal" role="form" action="" name="chemical-Form">
                     <div class="form-group">
                       <label class="col-lg-2 control-label">Course Name</label>
                       <div class="col-lg-6">
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" name="name">
                       </div>
                     </div>
                     <div class="form-group">
                       <label class="col-lg-2 control-label">Image Input</label>
                       <div class="col-lg-6">
-                        <input type="file" id="logoFile" accept=".jpg, .jpeg, .png" required>
+                        <input type="file" name="image" accept=".jpg, .jpeg, .png" required>
                         <p class="help-block">Upload Your Course Image Here.</p>
                       </div>
                     </div>
@@ -601,8 +601,119 @@
  <script src="../public/vendor/owl.carousel/owl.carousel.js"></script>
   <!--custome script for all page-->
   <script src="../public/vendor/js3.0/scripts.js"></script>
-
+  <script src="../public/vendor/jquery.validate/jquery.validate.min.js"></script>
 
 </body>
+
+<script>
+  $(function() {
+
+   $("form[name='mechanical-Form']").validate({
+        rules: {
+  
+          name: {
+            required: true,
+            minlength: 5
+          },
+          image: {
+           required: true
+         }
+                   
+        },
+        messages: {
+         name: "Atleast 5Characters Required",
+         image: "Upload a Course Image"
+       },
+        submitHandler: function(form) {
+          form.submit();
+        }
+      });
+
+      $("form[name='civil-Form']").validate({
+        rules: {
+  
+          name: {
+            required: true,
+            minlength: 5
+          },
+          image: {
+           required: true
+         }
+                   
+        },
+        messages: {
+         name: "Atleast 5Characters Required",
+         image: "Upload a Course Image"
+       },
+        submitHandler: function(form) {
+          form.submit();
+        }
+      });
+
+      $("form[name='eleEce-Form']").validate({
+        rules: {
+  
+          name: {
+            required: true,
+            minlength: 5
+          },
+          image: {
+           required: true
+         }
+                   
+        },
+        messages: {
+         name: "Atleast 5Characters Required",
+         image: "Upload a Course Image"
+       },
+        submitHandler: function(form) {
+          form.submit();
+        }
+      });
+
+      $("form[name='cse-Form']").validate({
+        rules: {
+  
+          name: {
+            required: true,
+            minlength: 5
+          },
+          image: {
+           required: true
+         }
+                   
+        },
+        messages: {
+         name: "Atleast 5Characters Required",
+         image: "Upload a Course Image"
+       },
+        submitHandler: function(form) {
+          form.submit();
+        }
+      });
+
+      $("form[name='chemical-Form']").validate({
+        rules: {
+  
+          name: {
+            required: true,
+            minlength: 5
+          },
+          image: {
+           required: true
+         }
+                   
+        },
+        messages: {
+         name: "Atleast 5Characters Required",
+         image: "Upload a Course Image"
+       },
+        submitHandler: function(form) {
+          form.submit();
+        }
+      });
+  });
+
+</script>
 
 </html>

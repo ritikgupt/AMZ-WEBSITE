@@ -169,47 +169,47 @@
               <section class="panel">
                 <div class="panel-body bio-graph-info">
                   <h1> Student Info</h1>
-                        <form class="form-horizontal" role="form" action="">
+                        <form class="form-horizontal" role="form" action="" name="addStudentProfile-Form">
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Enrollment Id</label>
                             <div class="col-lg-6">
-                              <input type="text" class="form-control" id="E-Id">
+                              <input type="text" class="form-control" id="E-Id" name="enrollment_id">
                             </div>
                           </div>
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Name</label>
                             <div class="col-lg-6">
-                              <input type="text" class="form-control" id="name">
+                              <input type="text" class="form-control" id="name" name="name">
                             </div>
                           </div>
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Institute</label>
                             <div class="col-lg-6">
-                              <input type="text" class="form-control" id="institute">
+                              <input type="text" class="form-control" id="institute" name="institute">
                             </div>
                           </div>
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Branch</label>
                             <div class="col-lg-6">
-                              <input type="text" class="form-control" id="institute">
+                              <input type="text" class="form-control" name="branch" id="branch">
                             </div>
                           </div>
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Email</label>
                             <div class="col-lg-6">
-                              <input type="text" class="form-control" id="email">
+                              <input type="text" class="form-control" id="email" name="email">
                             </div>
                           </div>
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Mobile</label>
                             <div class="col-lg-6">
-                              <input type="number" class="form-control" id="mobile">
+                              <input type="number" class="form-control" id="mobile" name="mobile">
                             </div>
                           </div>
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Password</label>
                             <div class="col-lg-6">
-                              <input type="password" class="form-control" id="password">
+                              <input type="password" class="form-control" id="password" name="password">
                             </div>
                           </div>
 
@@ -312,11 +312,11 @@
               <section class="panel">
                 <div class="panel-body bio-graph-info">
                   <h1> Certificate Info</h1>
-                  <form class="form-horizontal" role="form" action="">
+                  <form class="form-horizontal" role="form" action="" name="certificate-Form">
                     <div class="form-group">
                       <label class="col-lg-2 control-label">File Input</label>
                       <div class="col-lg-6">
-                        <input type="file" id="logoFile" accept=".csv" required>
+                        <input type="file" id="logoFile" name="file_url" accept=".csv" required>
                         <p class="help-block">Upload Your Certificate File Here.</p>
                       </div>
                     </div>
@@ -438,17 +438,17 @@
             <section class="panel">
                 <div class="panel-body bio-graph-info">
                 <h1> Discount Pop Up Info</h1>
-                <form class="form-horizontal" role="form" action="">
+                <form class="form-horizontal" role="form" action="" name="discountPopUp-Form">
                     <div class="form-group">
                     <label class="col-lg-2 control-label">Pop Up Heading</label>
                     <div class="col-lg-6">
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" name="title">
                     </div>
                     </div>
                     <div class="form-group">
                     <label class="col-lg-2 control-label">Last Date</label>
                     <div class="col-lg-6">
-                        <input type="text" class="form-control" placeholder="YYYY/MM/DD">
+                        <input type="text" class="form-control" placeholder="YYYY/MM/DD" name="date">
                     </div>
                     </div>
 
@@ -521,17 +521,17 @@
                 <section class="panel">
                     <div class="panel-body bio-graph-info">
                     <h1> Internship Pop Up Info</h1>
-                    <form class="form-horizontal" role="form" action="">
+                    <form class="form-horizontal" role="form" action="" name="internshipPopUp-Form">
                         <div class="form-group">
                         <label class="col-lg-2 control-label">Pop Up Heading</label>
                         <div class="col-lg-6">
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" name="title">
                         </div>
                         </div>
                         <div class="form-group">
                         <label class="col-lg-2 control-label">Description</label>
                         <div class="col-lg-6">
-                            <textarea class="form-control" rows="3"></textarea>
+                            <textarea class="form-control" rows="3" name="description"></textarea>
                         </div>
                         </div>
     
@@ -662,6 +662,124 @@
  <script src="../public/vendor/owl.carousel/owl.carousel.js"></script>
   <!--custome script for all page-->
   <script src="../public/vendor/js3.0/scripts.js"></script>
+  <script src="../public/vendor/jquery.validate/jquery.validate.min.js"></script>
+
+  <script>
+    $(function() {
+
+      $("form[name='addStudentProfile-Form']").validate({
+       rules: {
+
+        enrollment_id: {
+          required: true,
+          minlength: 5
+        },
+         name: {
+           required: true,
+           minlength: 5
+         },
+         institute: {
+           required: true,
+           minlength: 5
+         },
+         branch: {
+           required: true,
+           minlength: 5
+         },
+         email: {
+           required: true,
+           email: true
+         },
+         mobile: {
+           required: true,
+           minlength: 10,
+           maxlength: 10
+         },
+         password: {
+           required: true,
+           minlength: 5
+         }
+                  
+       },
+       messages: {
+        enrollment_id: "Invalid Enrollment Id",
+        name: "Please enter your Name",
+        institute: "Invalid Institute Name,5Characters required",
+        branch: "Invalid Branch Name,5Characters required",
+        email: "Please enter a valid Email address",
+        mobile: "Phone number required 10 digit",
+        password: "Invalid Password,5Characters required"
+       },
+       submitHandler: function(form) {
+         form.submit();
+       }
+     });
+
+
+      $("form[name='certificate-Form']").validate({
+        rules: {
+
+          file_url: {
+            required: true
+          }
+                  
+        },
+        messages: {
+          file_url: "Upload a Certificate File"
+        },
+        submitHandler: function(form) {
+          form.submit();
+        }
+      });
+
+      $("form[name='discountPopUp-Form']").validate({
+        rules: {
+  
+          title: {
+            required: true,
+            minlength: 5
+          },
+          date: {
+            required: true,
+            minlength: 10,
+            maxlength: 10
+          }
+                   
+        },
+        messages: {
+         title: "Atleast 5Characters Required",
+         date:"Date Format is Invalid"
+       },
+        submitHandler: function(form) {
+          form.submit();
+        }
+      });
+
+
+     $("form[name='internshipPopUp-Form']").validate({
+        rules: {
+  
+          title: {
+            required: true,
+            minlength: 5
+          },
+          description: {
+            required: true,
+            minlength: 10
+          }
+                   
+        },
+        messages: {
+         title: "Atleast 5Characters Required",
+         description: "Atleast 10Characters Required"
+       },
+        submitHandler: function(form) {
+          form.submit();
+        }
+      });
+    });
+
+  </script>
 
 
 </body>
