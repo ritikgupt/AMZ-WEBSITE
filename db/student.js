@@ -55,4 +55,13 @@ student.showOne = (id) => {
       });
   });
 };
+student.request = async(type, heading, description, userid, filepath) => {
+  try {
+    const a = await pool.query('Insert into request (type,heading,description,enroll_id,img_url) values (?,?,?,?,?)',
+      [type, heading, description, userid, filepath]);
+    return true;
+  } catch (e){
+    throw e;
+  }
+};
 module.exports = student;
