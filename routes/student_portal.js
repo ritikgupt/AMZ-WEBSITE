@@ -25,3 +25,17 @@ router.post('/student/request', upload.single('img_url'), jwtAuth, async(req, re
   }
 });
 module.exports = router;
+
+router.post('/student/project', upload.single('img_url'), jwtAuth, async(req, res) => {
+  try {
+    const heading = req.body.heading;
+    const description = req.body.description;
+    const filepath = req.file.path;
+    console.log(filepath);
+    const userid = req.userData.enroll_id;
+    await student.project(heading, description, filepath, userid);
+    res.redirect('/studentportal');
+  } catch (e){
+    throw e;
+  }
+});

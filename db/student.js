@@ -55,13 +55,26 @@ student.showOne = (id) => {
       });
   });
 };
+
 student.request = async(type, heading, description, userid, filepath) => {
   try {
     const a = await pool.query('Insert into request (type,heading,description,enroll_id,img_url) values (?,?,?,?,?)',
       [type, heading, description, userid, filepath]);
-    return true;
+    return a;
   } catch (e){
     throw e;
   }
 };
+
+student.project = async(heading, description, filepath, userid) => {
+  try {
+    const a = await pool.query('insert into project (heading,description,img_url,enroll_id) values (?,?,?,?)',
+      [heading, description, filepath, userid]);
+    console.log(a);
+    return a;
+  } catch (e){
+    throw e;
+  }
+};
+
 module.exports = student;

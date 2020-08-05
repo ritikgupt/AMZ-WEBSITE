@@ -423,18 +423,18 @@
             Add Your Project
           </header>
           <div class="panel-body">
-            <form role="form" action="" name="studentAddProject-Form">
+            <form role="form" action="/student/project" method="POST" name="studentAddProject-Form" enctype="multipart/form-data">
               <div class="form-group">
                 <label for="exampleInputHeading1">Heading</label>
-                <input type="text" class="form-control" id="exampleInputHeading1" name="projectRqHeading" placeholder="Enter Heading">
+                <input type="text" class="form-control" id="exampleInputHeading1" name="heading" placeholder="Enter Heading">
               </div>
               <div class="form-group">
                 <label for="exampleInputDesc1">Description</label>
-                <textarea  class="form-control" rows="3" id="exampleInputDesc1" name="projectRqDesc" placeholder="Enter Description of the Project"></textarea>
+                <textarea  class="form-control" rows="3" id="exampleInputDesc1" name="description" placeholder="Enter Description of the Project"></textarea>
               </div>
               <div class="form-group">
                 <label for="exampleInputFilePrj">File input</label>
-                <input type="file" id="exampleInputFilePrj" name="projectRqImage" accept=".jpg, .jpeg, .png" required>
+                <input type="file" id="exampleInputFilePrj" name="img_url"  required>
                 <p class="help-block">Upload Your Project Image Here.</p>
               </div>
               <button type="submit" class="btn btn-primary">Submit Now</button>
