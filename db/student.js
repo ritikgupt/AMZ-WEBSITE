@@ -66,11 +66,21 @@ student.request = async(type, heading, description, userid, filepath) => {
   }
 };
 
+student.requestShow = () => {
+  return new Promise((resolve, reject) => {
+    pool.query('Select * from request',
+      (err, results) => {
+        if (err)
+          return reject(err);
+        return resolve(results);
+      });
+  });
+};
+
 student.project = async(heading, description, filepath, userid) => {
   try {
     const a = await pool.query('insert into project (heading,description,img_url,enroll_id) values (?,?,?,?)',
       [heading, description, filepath, userid]);
-    console.log(a);
     return a;
   } catch (e){
     throw e;

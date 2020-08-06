@@ -169,8 +169,10 @@
                       <div class="panel-body bio-graph-info">
                         <h1>Research Paper Info</h1>
                         <div class="row">
+                          <%for(var i=0;i<requests.length;i++){%>
+                            <%if(requests[i].type=='Research Paper'){%>
                           <div class="view-row">
-                            <p>ID:AMZ/2020/mech<br>
+                            <p><%=requests[i].enroll_id%><br>
                               Name :Amit Patel
                             </p>
                             <button id="modal-AmzDescriptionModal" data-toggle="modal" data-target="#viewDescriptionModal" class="btn btn-secondary btn-md btn-ircChapter">View Description</button>
@@ -179,23 +181,12 @@
                             <button class="btn btn-danger btn-md btn-ircChapter">Delete</button>
                             <button id="modal-AmzMessageModal" data-toggle="modal" data-target="#messageModal" class="btn btn-primary btn-md btn-ircChapter">Message</button>
                           </div>
-                          <div class="view-row">
-                            <p>ID:AMZ/2020/civil<br>
-                              Name :Amit Patel
-                            </p>
-                            <button id="modal-AmzDescriptionModal" data-toggle="modal" data-target="#viewDescriptionModal" class="btn btn-secondary btn-md btn-ircChapter">View Description</button>
-                            <button class="btn btn-warning btn-md btn-ircChapter">View PDF</button>
-                            <button class="btn btn-success btn-md btn-ircChapter">Download</button>
-                            <button class="btn btn-danger btn-md btn-ircChapter">Delete</button>
-                            <button id="modal-AmzMessageModal" data-toggle="modal" data-target="#messageModal" class="btn btn-primary btn-md btn-ircChapter">Message</button>
-                          </div>
+                        <%}}%>
+                
                         </div>
                       </div>
                     </section>
-                    <section>
-                      <div class="row">
-                      </div>
-                    </section>
+                
                   </div>
                 </div>
               </div>
@@ -672,7 +663,7 @@
                 </div>
                 
                 <div class="form-group">
-                  <textarea name="userRqDesc" id="userInfo" cols="5" rows="4" class="form-control" placeholder="DESCRIPTION..." autocomplete="off" disabled>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo, velit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, excepturi!</textarea>
+                  <textarea name="userRqDesc" id="userInfo" cols="5" rows="4" class="form-control" placeholder="DESCRIPTION..." autocomplete="off" disabled>jkj</textarea>
                 </div>
                 
   
